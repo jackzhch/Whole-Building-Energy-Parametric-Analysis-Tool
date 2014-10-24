@@ -1,6 +1,5 @@
 body {
   padding-bottom: 40px;
-  color: #5a5a5a;
 }
 
 
@@ -9,13 +8,6 @@ body {
 -------------------------------------------------- */
 
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
-.navbar-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-}
 
 
 
@@ -41,6 +33,9 @@ body {
   top: 0;
   left: 0;
   min-height: 400px;
+}
+.row {
+  margin-top: -120px;
 }
 
 
@@ -105,11 +100,6 @@ body {
 
 @media (min-width: 768px) {
 
-  /* Remve the edge padding needed for mobile */
-  .marketing {
-    padding-left: 0;
-    padding-right: 0;
-  }
 
   /* Navbar positioning foo */
   .navbar-wrapper {
@@ -127,6 +117,37 @@ body {
     font-size: 21px;
     line-height: 1.4;
   }
+
+  .navbar-inverse .navbar-brand {
+    color: white;
+  }
+
+  .navbar-inverse .navbar-nav > li > a {
+    color: white;
+  }
+
+
+h1 > small {
+              font-size: 55%;
+              font-style: italic;
+              color: #ddd;
+           }
+           
+    .navbar-inverse .navbar-nav > li > a:hover {
+              background-color: whitesmoke;
+              color: rgb(18, 238, 115);
+           }
+
+    .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+background-color: #1BEE4E;
+}
+
+
+           
+           .thumbnail > img {
+              height: 160px;
+              min-height: 160px;
+           }
 
 }
 
@@ -186,7 +207,7 @@ body {
   background: rgba(252, 171, 55, 0.75);
 }
 .desc.two {
-  background: rgba(169, 160, 50, 0.75);
+  background: rgba(18, 238, 115, 0.75);
 }
 .desc.three {
   background: rgba(83, 70, 54, 0.75);

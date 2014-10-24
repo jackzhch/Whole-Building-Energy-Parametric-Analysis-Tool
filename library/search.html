@@ -16,6 +16,29 @@ and open the template in the editor.
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="../js/bootstrap.js"></script>
         <script src="../../../assets/js/ie10-viewport-bug-workaround.js"></script>
+        <style>
+           body {
+              background-color: #777;
+           }
+           
+           h1 > small {
+              font-size: 55%;
+              font-style: italic;
+              color: #ddd;
+           }
+           
+           .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > .active > a:hover {
+              background-color: whitesmoke;
+              color: black;
+              text-decoration: underline;
+           }
+           
+           .thumbnail > img {
+              height: 160px;
+              min-height: 160px;
+           }
+           
+        </style>
     </head>
 
     <body>
@@ -23,7 +46,7 @@ and open the template in the editor.
             <!--<%@ include file="header.html" %>-->
             <div class="navbar-wrapper">
                 <div class="container">
-                    <div class="navbar navbar-default navbar-fixed-top">
+                    <div class="navbar navbar-inverse navbar-fixed-top">
 
                         <div class="navbar-header">
                             <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -35,7 +58,7 @@ and open the template in the editor.
                         </div>
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav navbar-right">
-                                <li class="active"><a href="#">Home</a></li>
+                                <li class="active"><a href="../index.html">Home</a></li>
                                 <li><a href="#browse" >Browse</a></li>
 
                                 <li class="dropdown">
@@ -48,7 +71,7 @@ and open the template in the editor.
                                 </li>
 
                                 <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Simulation <b class="caret"></b></a>
+                                    <a href="../simulation.html" class="dropdown-toggle" data-toggle="dropdown">Simulation <b class="caret"></b></a>
                                     <ul class="dropdown-menu">
                                         <li><a href="#">Existing Case</a></li>
                                         <li><a href="#">New IDF</a></li>
@@ -71,95 +94,114 @@ and open the template in the editor.
             </div><!-- /navbar wrapper -->
 
             <!-- ============================ Bootstrap core JavaScript ========================== -->
+<!--            <h1></h1>
             <h1></h1>
-            <h1></h1>
-            <h1></h1>
+            <h1></h1>-->
 
-            <div class="container bs-docs-container">
+            <div class="container bs-docs-container" style="margin-top: 20px;">
 
-                <div class="row">
-                    <div class="col-md-9" role="main">
-                        <div class="bs-docs-section">
-                            <h1 id="overview" class="page-header">Overview</h1>
-                            <p class="lead">
-                                From Wikipedia:
-                                Building material is any material which is used for construction purposes.
-                                Many naturally occurring substances, such as clay, rocks, sand, and wood, even twigs and leaves, have been used to construct buildings.
-                                Apart from naturally occurring materials, many man-made products are in use, some more and some less synthetic.
-                                The manufacture of building materials is an established industry in many countries and
-                                the use of these materials is typically segmented into specific specialty trades, such as carpentry, insulation, plumbing, and roofing work.
-                                They provide the make-up of habitats and structures including homes.</p>
-                        </div>
-                    </div>
-                </div>
+                <div class="row" style="background-color: #555; color: whitesmoke;">
+                    <div class="col-md-12" role="main">
+                       <h1 id="overview" class="page-header">Library<br>
+                           <small>Building materials specification database</small>
+                        </h1>
+                       <div class="col-md-9">
+                        <p>
+                             You can use this section of the WBEPT to find completely detailed specification sheets
+                             for any building material you need. Use the tabs on top to select the level of your
+                             building that you're working with, and use the sidebar on the left to navigate through
+                             different material categories in that level.
+                         </p>
+                         <p>
+                            You can also use the button to the right to add new material specification sheets to add
+                            new materials to our library. We certainly appreciate your contribution!
+                         </p>
+                       </div> 
+                       <div class="col-md-3" style="padding-top: 25px;">
+                          <button type="button" class="btn btn-primary center-block">Add new material</button>
+                       </div>
+                     </div>
+               </div>
+               <div class="row" style="background-color:white; margin-bottom: 15px;">
+<!--                  style="width: 25%; display: inline" -->
+                  <div class="col-md-2" style="margin-top: 40px;">
+                      <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary">
+                          <ul class="nav bs-docs-sidenav">
+
+                              <li>
+                                  <a href="#overview">Overview</a>
+                              </li>
+                              <li>
+                                  <a href="#grid-indoor">Indoor</a>
+                                  <ul class="nav">
+                                      <li><a href="#grid-glass">Glass</a></li>
+                                      <li><a href="#grid-light">Light</a></li>
+                                  </ul>
+                              </li>
+                              <li>
+                                  <a href="#grid-outdoor">Outdoor</a>
+                                  <ul class="nav">
+                                      <li><a href="#grid-wall">Wall</a></li>
+                                      <li><a href="#grid-window">Window</a></li>
+                                  </ul>
+                              </li>
+                              <li><a class="back-to-top" href="#top">Back to top</a></li>
+                              <li><a href="#" class="bs-docs-theme-toggle">Preview theme</a></li>
+                          </ul>
+                      </div>
+                  </div>
+<!--                  style="width:75%; display: inline"-->
+                  <div class="col-md-10 bs-docs-section">
+                      <h1 id="grid-indoor" class="page-header">Indoor</h1>
+                      <p>Here is a list of our indoor facilities:</p>
+
+                      <h3 id="grid-glass">Glass</h3>
+                      <div class="row">
+                        <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/glass/glass1.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                        <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/glass/glass2.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                        <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/glass/glass3.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                        <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/glass/glass4.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                        <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/glass/glass5.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                        <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/glass/glass6.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                      </div>
+                      
+                      <h3 id="grid-light">Light</h3>
+                      <div class="row">
+                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/light/light1.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/light/light2.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/light/light3.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/light/light4.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/light/light5.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/light/light6.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                      </div>
+
+                      <h1 id="grid-outdoor" class="page-header">Outdoor</h1>
+                       <p>Here is a list of our indoor facilities:</p>
+
+                      <h3 id="grid-wall">Wall</h3>
+                      <div class="row">
+                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/wall/wall1.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/wall/wall2.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/wall/wall3.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/wall/wall4.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/wall/wall5.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/wall/wall6.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                      </div>
+                      
+                      <h3 id="grid-window">Window</h3>
+                      <div class="row">
+                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/window/window1.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/window/window2.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/window/window3.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/window/window4.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/window/window5.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/window/window6.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                      </div>
+                      
+                  </div>
+               </div>
             </div>
 
-            <div class="col-md-3" style="width: 25%; display: inline">
-                <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary">
-                    <ul class="nav bs-docs-sidenav">
-
-                        <li>
-                            <a href="#overview">Overview</a>
-                        </li>
-                        <li>
-                            <a href="#grid-indoor">Indoor</a>
-                            <ul class="nav">
-                                <li><a href="#grid-glass">Glass</a></li>
-                                <li><a href="#grid-light">Light</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#grid-outdoor">Outdoor</a>
-                            <ul class="nav">
-                                <li><a href="#grid-wall">Wall</a></li>
-                                <li><a href="#grid-window">Window</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <a class="back-to-top" href="#top">Back to top</a>
-                    <a href="#" class="bs-docs-theme-toggle">Preview theme</a>
-                </div>
-            </div>
-            
-            <div class="col-md-9 bs-docs-section" style="width:75%; display: inline">
-                <h1 id="grid-indoor" class="page-header">Indoor</h1>
-                <p>Here is a list of our indoor facilities:</p>
-
-                <h3 id="grid-glass">Glass</h3>
-                <img src="../img/glass/glass1.jpg">
-                <img src="../img/glass/glass2.jpg">
-                <img src="../img/glass/glass3.jpg">
-                <img src="../img/glass/glass4.jpg">
-                <img src="../img/glass/glass5.jpg">
-                <img src="../img/glass/glass6.jpg">
-                
-                <h3 id="grid-light">Light</h3>
-                <img src="../img/light/light1.jpg">
-                <img src="../img/light/light2.jpg">
-                <img src="../img/light/light3.jpg">
-                <img src="../img/light/light4.jpg">
-                <img src="../img/light/light5.jpg">
-                <img src="../img/light/light6.jpg">
-
-                <h1 id="grid-outdoor" class="page-header">Outdoor</h1>
-                 <p>Here is a list of our indoor facilities:</p>
-
-                <h3 id="grid-wall">Wall</h3>
-                 <img src="../img/wall/wall1.jpg">
-                <img src="../img/wall/wall2.jpg">
-                <img src="../img/wall/wall3.jpg">
-                <img src="../img/wall/wall4.jpg">
-                <img src="../img/wall/wall5.jpg">
-                <img src="../img/wall/wall6.jpg">
-
-                <h3 id="grid-window">Window</h3>
-                 <img src="../img/window/window1.jpg">
-                <img src="../img/window/window2.jpg">
-                <img src="../img/window/window3.jpg">
-                <img src="../img/window/window4.jpg">
-                <img src="../img/window/window5.jpg">
-                <img src="../img/window/window6.jpg">
-            </div>
 
             <!-- Bootstrap core JavaScript
             ================================================== -->

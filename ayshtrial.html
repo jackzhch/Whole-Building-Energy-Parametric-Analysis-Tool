@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="BEAM">
+		<meta name="author" content="Ricky Shi">
+		<link rel="icon" href="img/icon.PNG">
+		<title>Tool Selection</title>
+		<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<!-- Custom styles for this template -->
+		<link rel="stylesheet" href="css/jquery.treeview.css" />
+		<link rel="stylesheet" href="css/ToolSelection.css" />
+		<link rel="stylesheet" href="css/dashboard.css" />
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body class='padTop'>
+		<div class="navbar navbar-default navbar-fixed-top" style="background-color:#00324D;height:100px;"role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+			            <span class="sr-only">Toggle navigation</span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+			         </button>
+					<img class="navbar-brand" src='img/Sel_Title.png'/>
+		        </div>
+		        <div class="navbar-collapse collapse">
+			       	<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown" style="display:none;">
+							<a id='switchMode' href="#" class="dropdown-toggle" data-toggle="dropdown" style='color:white'>Mode Switch <span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu" style="height:212%">
+								<li><a href="#" id= 'comparison'>DOE TOOL COMPARISON</a></li>
+								<li><a href="#" id='selection'>DOE TOOL SELECTION</a></li>
+							</ul>
+						</li>
+						<li><a href="#" style='color:white;' id="homeBtn">Home</a></li>
+			          	<li><a href="#" style='color:white;' id="savedBtn">Save Case</a></li>
+						<li class="dropdown">
+							<a id='savedTab' href="#" class="dropdown-toggle" data-toggle="dropdown" style='color:white'>Saved Cases <span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu" id='saveList'>
+								<li class="default"><a href="#">No Saved Cases</a></li>
+							</ul>
+						</li>
+			        </ul>
+		        </div>
+	      	</div>
+		</div>
+	    <div class="container-fluid" style='font-family: Arial;'>
+			<div class="row">
+				<div class="col-xs-3 sidebar" style='overflow-y: auto;'>
+					<div class='row'>
+						<div class="btn-group btn-group-justified" id="treecontrol">
+							<div class="btn-group">
+    							<a type="button" class="btn btn-default" title="Collapse the entire tree below" id="collapseSelections"> Collapse All</a>
+  							</div>
+  							<div class="btn-group">
+    							<a type="button" class="btn btn-default" title="Expand the entire tree below" href="#"> Expand All</a>
+  							</div>
+  							<div class="btn-group">
+    							<a type="button" class="btn btn-default" title="Toggle the tree below, opening closed branches, closing open branches" href="#">Toggle All</a>
+  							</div>
+  							<div class="btn-group">
+    							<button type="button" class="btn btn-default clearSelections" >Clear All</button>
+  							</div>
+						</div>
+					</div>
+					<div style="border-bottom:solid;border-color:#00324D;" class='row'>
+						<label style='cursor:default;color:#00324D;font-size:15pt;'><b>Feature Selection</b></label>
+					</div>
+					<ul class="nav nav-sidebar row">
+						<ul id="tree" class="treeview col-xs-12"></ul>
+					</ul>
+				</div>
+				<div class="col-xs-offset-3 main">
+					<div style="width: 1357px;">
+						<div class='row'>
+							<h2 style="border-bottom:solid;">Available Tools</h2>
+							<button id='hideshow' class="btn btn-default"><span id='toggle' style="font-size:x-large;" class="glyphicon glyphicon-zoom-in"></span></button>
+						</div>
+						<div id="tool_select" class="row" style="margin-bottom:55px;"></div>
+						<div id="tool_bar" style="height:64px;margin-left:-15px;"></div>
+						<div id="tool_bar_spacer" style="height:0px;"></div>
+						<div class='row' id='container'>
+							<div class="categoryBackground">
+								<div class="borderSpacer">
+									<div class='categoryLabel'>
+										<img id = "BuildingContext" src = 'img/Building_Context.png' class="categoryImage"/>
+									</div>
+								</div>
+								<div class="borderSpacer">
+									<div class='categoryLabel'>
+										<img id = "GeometryandZoneFlexibility" src = 'img/Geo_Flex.png' class="categoryImage"/>
+									</div>
+								</div>
+								<div class="borderSpacer">
+									<div class='categoryLabel'>
+										<img id = "BuildingEnvelope" src = 'img/Building_Envelope.png' class="categoryImage"/>
+									</div>
+								</div>
+								<div class="borderSpacer">
+									<div class='categoryLabel'>
+										<img id = "HVACDistributionandControl" src = 'img/HVAC_Dist_Ctrl.png' class="categoryImage"/>
+									</div>
+								</div>
+								<div class="borderSpacer">
+									<div class='categoryLabel'>
+										<img id = "HVACHeatingSystems" src = 'img/HVAC_Heating.png' class="categoryImage"/>
+									</div>
+								</div>
+								<div class="borderSpacer">
+									<div class='categoryLabel'>
+										<img id = "HVACCoolingSystems" src = 'img/HVAC_Cooling.png' class="categoryImage"/>
+									</div>
+								</div>
+								<div class="borderSpacer">
+									<div class='categoryLabel'>
+										<img id = "WaterHeaters" src = 'img/Water_Heaters.png' class="categoryImage"/>
+									</div>
+								</div>
+								<div class="borderSpacer">
+									<div class='categoryLabel'>
+										<img id = "RenewableEnergySystems" src = 'img/Renew_Sys.png' class="categoryImage"/>
+									</div>
+								</div>
+								<div class="borderSpacer">
+									<div class='categoryLabel'>
+										<img id = "InternalLoads" src = 'img/Internal_Loads.png' class="categoryImage"/>
+									</div>
+								</div>
+								<div class="borderSpacer">
+									<div class='categoryLabel'>
+										<img id = "Validation" src = 'img/Validation.png' class="categoryImage"/>
+									</div>
+								</div>
+								<div class="borderSpacer">
+									<div class='categoryLabel'>
+										<img id = "Comprehensibility" src = 'img/Comprehensibility.png' class="categoryImage"/>
+									</div>
+								</div>
+								<div class="borderSpacer">
+									<div class='categoryLabel'>
+										<img id = "OutputCapability" src = 'img/Output_Cap.png' class="categoryImage"/>
+									</div>
+								</div>
+								<div class="borderSpacer">
+									<div class='categoryLabel'>
+										<img id = "Interoperability" src = 'img/Interoperability.png' class="categoryImage"/>
+									</div>
+								</div>
+							</div>
+							<div>
+								<div class='row' id="display"></div>
+							</div>
+						</div>
+					</div>
+					<div id='legend' class="row" style='margin-top:5px;display:none;padding:0px'>
+						<div class='col-xs-10' style='margin-left:50px;'>
+							<div class="row"><img class="imgThumbnail" src="img/redTile.png"/> Red tiles indicate mandatory inputs required for the simulation</div>
+							<div class="row" style='margin-top:5px;'><img class="imgThumbnail" src="img/blueTile.png"/> Blue tiles indicate available but not mandatory inputs</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	    <!-- Bootstrap core JavaScript
+	    ================================================== -->
+	    <!-- Placed at the end of the document so the pages load faster -->
+		<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+		<script type="text/javascript" src="js/jquery.treeview.js"></script>
+		<script type="text/javascript" src="js/ToolSelection.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#selection").click();
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,73 @@
+	#tree{
+		margin-left:20px;
+	}
+	.major{
+		font-weight:bold;
+	}
+	.sidebar li{
+		background-color:#f5f5f5 !important;
+	}
+	label{
+		cursor: pointer;
+	}
+	.imgThumbnail{
+		width:27px;
+		height:27px;
+	}
+	.spacer{
+		display:inline-block;
+		width:15px;
+	}
+	#spacer{
+		width:400px;
+		height:100px;
+		float:left;
+		/*border: 1px solid black;*/
+	}
+	#toolSelect{
+		float:left;
+		margin-left:1px;
+		height:100px;
+		/*border: 1px solid black;*/
+	}
+	#separater{
+		height:1px;
+		clear:both;
+	}
+	#categorySelect{
+		width:400px;
+		float:left;
+		/*border: 1px solid black;*/
+	}
+	#display{
+		float:left;
+		margin-left:1px;
+		/*border: 1px solid black;*/
+	}
+	#wrapper_1{
+		width:525px;
+	}
+	#clearSelections{
+		color: -webkit-link;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+	.tab{
+		display:inline-block;
+		font-size:20px;
+		color:#989898;
+		line-height:30px;
+		cursor:pointer;
+		margin-left:30px;
+		padding:10px;
+		background:#FFF;
+	}
+	.tab:active{
+		text-shadow: 1px 1px 1px #989898;
+	}
+	.saveStateItem{
+		cursor: pointer;
+		line-height: 30px;
+		text-align: center;
+		text-decoration: underline;
+	}

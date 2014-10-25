@@ -120,6 +120,8 @@ body {
 
   .navbar-inverse .navbar-brand {
     color: #13A135;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
   }
 
   .navbar-inverse .navbar-brand:hover {

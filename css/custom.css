@@ -1,8 +1,13 @@
 body {
   padding-bottom: 40px;
+  /*background-color: #999;*/
+  background-image: url("../img/background_grey.png");
 }
 
-
+.footer {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
@@ -16,7 +21,7 @@ body {
 
 /* Carousel base class */
 .carousel {
-  margin-bottom: 60px;
+  margin-bottom: 25px;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -34,11 +39,6 @@ body {
   left: 0;
   min-height: 400px;
 }
-.row {
-  margin-top: -120px;
-}
-
-
 
 /* MARKETING CONTENT
 -------------------------------------------------- */
@@ -119,35 +119,38 @@ body {
   }
 
   .navbar-inverse .navbar-brand {
-    color: white;
+    color: #13A135;
   }
 
+  .navbar-inverse .navbar-brand:hover {
+      color: #1BEE4E;
+  }
+  
   .navbar-inverse .navbar-nav > li > a {
-    color: white;
+    color: #13A135;
   }
 
 
-h1 > small {
-              font-size: 55%;
-              font-style: italic;
-              color: #ddd;
-           }
+  h1 > small {
+      font-size: 55%;
+      font-style: italic;
+      color: #ddd;
+  }
            
-    .navbar-inverse .navbar-nav > li > a:hover {
-              background-color: whitesmoke;
-              color: rgb(18, 238, 115);
-           }
-
-    .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
-background-color: #1BEE4E;
+.navbar-inverse .navbar-nav > li > a:hover {
+    background-color: whitesmoke;
+    color: rgb(19, 161, 53);
 }
 
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+    background-color: #1BEE4E;
+    font-weight: bold;
+}
 
-           
-           .thumbnail > img {
-              height: 160px;
-              min-height: 160px;
-           }
+.thumbnail > img {
+    height: 160px;
+    min-height: 160px;
+}
 
 }
 
@@ -159,7 +162,7 @@ background-color: #1BEE4E;
   -webkit-transform: rotate(120deg);
   transform: rotate(120deg);
   cursor: pointer;
-  height: 440px;
+  height: 250px;
   overflow: hidden;
   visibility: hidden;
   width: 220px;
@@ -207,17 +210,22 @@ background-color: #1BEE4E;
   background: rgba(252, 171, 55, 0.75);
 }
 .desc.two {
-  background: rgba(18, 238, 115, 0.75);
+  background: rgba(27, 238, 78, 0.75);
 }
 .desc.three {
   background: rgba(83, 70, 54, 0.75);
 }
 .desc h2 {
-  margin: 165px 20px 0 20px;
+  margin: 100px 20px 0 20px;
 }
 .desc p {
-  font-size: .5em;
+/*  font-size: .5em;*/
   text-transform: lowercase;
+}
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
 }
 
 /* Dashboard template CSS

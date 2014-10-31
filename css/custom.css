@@ -1,7 +1,7 @@
 body {
   padding-bottom: 40px;
-  /*background-color: #999;*/
-  background-image: url("../img/background_grey.png");
+  background-color: #fff;
+  /*background-image: url("../img/watermark.jpg");*/
 }
 
 .footer {
@@ -291,7 +291,6 @@ body {
   background-color: #428bca;
 }
 
-
 /*
  * Main content
  */
@@ -299,6 +298,7 @@ body {
 .main {
   padding: 20px;
 }
+
 @media (min-width: 768px) {
   .main {
     padding-right: 40px;
@@ -309,6 +309,23 @@ body {
   margin-top: 10;
 }
 
+.page-header {
+    margin-top: 20px;
+    border-bottom: 2px solid #1bee4e;
+}
+
+blockquote {
+    border-left: 5px solid #1BEE4E;
+}
+
+.bs-docs-sidenav a {
+    color: #ffffff;
+}
+
+.bs-docs-sidenav a:hover {
+    color: black;
+    /*text-decoration: underline;*/
+}
 
 /*
  * Placeholder dashboard ideas

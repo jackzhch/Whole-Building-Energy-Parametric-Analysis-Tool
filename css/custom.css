@@ -16,9 +16,8 @@ body {
   background-color: green;
 }
 
-#copy > #logo2 {
-  height: 10px;
-  width: 10px;
+p {
+  font-family: 'Josefin Slab', serif;
 }
 
 /* CUSTOMIZE THE NAVBAR

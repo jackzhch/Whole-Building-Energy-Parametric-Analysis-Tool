@@ -21,6 +21,9 @@ body {
     width: 100%;
 }
 
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover {
+	border-bottom: 5px solid #1bee4e;
+}
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */

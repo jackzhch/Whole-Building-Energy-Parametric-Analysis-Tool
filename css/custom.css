@@ -1,7 +1,9 @@
 body {
   padding-bottom: 40px;
-  background-color: #fff;
+  background-color: #333;
+  color: #ffffff;
   /*background-image: url("../img/watermark.jpg");*/
+  font-family: 'Roboto';
 }
 
 .footer {
@@ -13,7 +15,11 @@ body {
 -------------------------------------------------- */
 
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
-
+.container {
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+}
 
 
 /* CUSTOMIZE THE CAROUSEL
@@ -21,7 +27,7 @@ body {
 
 /* Carousel base class */
 .carousel {
-  margin-bottom: 25px;
+  margin-bottom: 0px;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -128,10 +134,21 @@ body {
       color: #1BEE4E;
   }
   
+  .nav > li > a {
+      padding-top: 15px;
+      padding-bottom: 10px;
+  }
+  
+  .nav .bs-docs-sidenav > li > a:hover, .nav .sidenav-subgroup > li > a:hover {
+      padding-right: 8px;
+      border-right: 7px solid #1bee4e;
+      font-weight: bold;
+  }
+  
   .navbar-inverse .navbar-nav > li > a {
     color: #13A135;
+    font-weight: bold;
   }
-
 
   h1 > small {
       font-size: 55%;
@@ -142,11 +159,12 @@ body {
 .navbar-inverse .navbar-nav > li > a:hover {
     background-color: whitesmoke;
     color: rgb(19, 161, 53);
+    border-bottom: 5px solid #1bee4e;
 }
 
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
-    background-color: #1BEE4E;
-    font-weight: bold;
+    background-color: #13a135;
+    border-bottom: 5px solid #1bee4e;
 }
 
 .thumbnail > img {
@@ -310,6 +328,7 @@ body {
 }
 
 .page-header {
+    color: #13A135;
     margin-top: 20px;
     border-bottom: 2px solid #1bee4e;
 }
@@ -324,7 +343,7 @@ blockquote {
 
 .bs-docs-sidenav a:hover {
     color: black;
-    /*text-decoration: underline;*/
+    text-decoration: none;
 }
 
 /*

@@ -14,9 +14,6 @@ and open the template in the editor.
         <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
         <link href="../css/custom.css" rel="stylesheet" type="text/css">
         <link href="../css/fonts.css" rel="stylesheet" type="text/css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="../js/bootstrap.js"></script>
-        <script src="../../../assets/js/ie10-viewport-bug-workaround.js"></script>
     </head>
 
     <body>
@@ -217,14 +214,10 @@ and open the template in the editor.
 
             <!-- Bootstrap core JavaScript
             ================================================== -->
-            <!-- Placed at the end of the document so the pages load faster -->
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-            <script src="../dist/js/bootstrap.min.js"></script>
-            <script src="../assets/js/docs.min.js"></script>
-
-            <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-            <script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
-
+            <script src="../js/jquery-1.11.1.min.js"></script>
+            <script src="../js/bootstrap.js"></script>
+            <!-- <script src="../js/docs.min.js"></script> -->
+            <script src="../js/ie10-viewport-bug-workaround.js"></script>
 
             <script>
                 window.twttr = (function(d, s, id) {
@@ -251,7 +244,7 @@ and open the template in the editor.
                     t.async = true;
                     t.id = 'gauges-tracker';
                     t.setAttribute('data-site-id', '4f0dc9fef5a1f55508000013');
-                    t.src = '//secure.gaug.es/track.js';
+                    t.src = 'http://secure.gaug.es/track.js';
                     var s = document.getElementsByTagName('script')[0];
                     s.parentNode.insertBefore(t, s);
                 })();

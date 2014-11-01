@@ -129,9 +129,12 @@ body {
 
   .navbar-inverse .navbar-brand {
     color: #13A135;
+  }
+
+.navbar-brand {
     padding-top: 2.5px;
     padding-bottom: 2.5px;
-  }
+}
 
   .navbar-inverse .navbar-brand:hover {
       color: #1BEE4E;

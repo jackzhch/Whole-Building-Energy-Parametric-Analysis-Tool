@@ -33,11 +33,11 @@ and open the template in the editor.
                  </div>
                  <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                       <li><a href="../home.html">Home</a></li>
-                       <li><a href="../browse.html" >Browse</a></li>
+                       <li><a href="../home.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                       <li><a href="../browse.html" ><span class="glyphicon glyphicon-folder-open"></span> Browse</a></li>
 
                        <li class="dropdown active">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Library <b class="caret"></b></a>
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-book"></span> Library <b class="caret"></b></a>
                           <ul class="dropdown-menu">
                              <li><a href="#">Submit</a></li>
                              <li><a href="search.html">Search</a></li>
@@ -46,7 +46,7 @@ and open the template in the editor.
                        </li>
 
                        <li class="dropdown">
-                          <a href="../simulation.html" class="dropdown-toggle" data-toggle="dropdown">Simulation <b class="caret"></b></a>
+                          <a href="../simulation.html" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-stats"></span> Simulation <b class="caret"></b></a>
                           <ul class="dropdown-menu">
                              <li><a href="../simulation.html">Existing Case</a></li>
                              <li><a href="#">New IDF</a></li>
@@ -54,7 +54,7 @@ and open the template in the editor.
                        </li>
 
                        <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Monitor <b class="caret"></b></a>
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-eye-open"></span> Monitor <b class="caret"></b></a>
                           <ul class="dropdown-menu">
                              <li><a href="#">eeAHUB</a></li>
                           </ul>
@@ -91,8 +91,11 @@ and open the template in the editor.
                             </p>
                          </blockquote>
                       </div> 
-                      <div class="col-md-3" style="padding-top: 40px;">
-                         <button type="button" class="btn btn-success center-block">Add new material</button>
+                      <div class="col-md-3">
+                         <button type="button" class="btn btn-success center-block" data-toggle="modal" data-target="#searchModal" style="margin-top: 15px;">
+                               <span class="glyphicon glyphicon-search"></span>Search for material
+                         </button>
+                         <button type="button" class="btn btn-success center-block" style="margin-top: 25px;"><span class="glyphicon glyphicon-plus"></span>Add new material</button>
                       </div>
                    </div>
                </div>
@@ -101,8 +104,7 @@ and open the template in the editor.
                   <div class="col-md-2" style="margin-top: 20px; padding-left: 0px; padding-right: 0px;">
                       <div class="bs-docs-sidebar nav nav-stacked fixed hidden-xs hidden-sm" role="complementary">
                           <ul class="nav bs-docs-sidenav">
-
-                              <li>
+<!--                              <li>
                                   <a href="#overview">Overview</a>
                               </li>
                               <li>
@@ -118,13 +120,51 @@ and open the template in the editor.
                                       <li><a href="#grid-wall">Wall</a></li>
                                       <li><a href="#grid-window">Window</a></li>
                                   </ul>
+                              </li>-->
+                              <li>
+                                 <a href="#">Material definition</a>
+                                 <ul class="nav sidenav-subgroup">
+                                    <li><a href="#">Mass material</a></li>
+                                    <li><a href="#">No mass material</a></li>
+                                    <li><a href="#">Infrared transparent material</a></li>
+                                    <li><a href="#">Air gap material</a></li>
+                                    <li><a href="#">Roof vegetation material</a></li>
+                                    <li><a href="#">Don't know material type</a></li>
+                                 </ul>
                               </li>
-                              <li><a class="back-to-top" href="#top">Back to top</a></li>
+                              <li>
+                                 <a href="#">Opaque envelope component definition type</a>
+                                 <ul class="nav sidenav-subgroup">
+                                    <li><a href="#">Layer-by-layer definition</a></li>
+                                    <li><a href="#">C-Factor underground wall</a></li>
+                                    <li><a href="#">F-Factor ground floor</a></li>
+                                    <li><a href="#">Internal source</a></li>
+                                    <li><a href="#">Don't know construction type</a></li>
+                                 </ul>
+                              </li>
+                              <li>
+                                 <a href="#">Window definition type</a>
+                                 <ul class="nav sidenav-subgroup">
+                                    <li><a href="#">Glazing system: simple glazing system</a></li>
+                                    <li><a href="#">Glazing system: layer by layer definition</a></li>
+                                    <li><a href="#">Glazing</a></li>
+                                    <li><a href="#">Gas</a></li>
+                                    <li><a href="#">Gas mixture</a></li>
+                                    <li><a href="#">Frame and dividers</a></li>
+                                    <li><a href="#">Blind</a></li>
+                                    <li><a href="#">Shade</a></li>
+                                    <li><a href="#">Screen</a></li>
+                                    <li><a href="#">Don't know window type</a></li>
+                                 </ul>
+                              </li>
+                              <li>
+                                 <a class="back-to-top" href="#top">Back to top</a>
+                              </li>
                           </ul>
                       </div>
                   </div>
 <!--                  style="width:75%; display: inline"-->
-                  <div class="col-md-10 bs-docs-section" style="background-color: white;">
+                  <div class="col-md-10 bs-docs-section" style="background-color: white; color: black; font-size: 18px; padding-left: 35px;">
                       <h1 id="grid-indoor" class="page-header">Indoor</h1>
                       <p>Here is a list of our indoor facilities:</p>
 
@@ -213,6 +253,47 @@ and open the template in the editor.
                </div>
             </div>
 
+<div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="myModalLabel">Search</h4>
+         </div>
+         <div class="modal-body">
+            <form action="#">
+               <div class="form-group col-sm-12">
+                  <label for="searchterm">Material name:</label>
+                  <input type="text" class="form-control" id="searchterm" placeholder="Enter name of material">
+               </div>
+               <div class="form-group col-sm-6">
+                  <label for="category">Category:</label>
+                  <select class="form-control" id="category">
+                     <option>Select material category</option>
+                     <option>Material definition</option>
+                     <option>Opaque envelope component definition type</option>
+                     <option>Window definition type</option>
+                  </select>
+               </div>
+               <div class="form-group col-sm-6">
+                  <label for="subcategory">Subcategory:</label>
+                  <select class="form-control" id="subcategory">
+                     <option>Select material subcategory</option>
+                     <option>Mass material</option>
+                     <option>Infrared transparent material</option>
+                     <option>Air gap material</option>
+                     <option>Roof vegetation material</option>
+                     <option>Don't know material type</option>
+                  </select>
+               </div>
+            </form>
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+         </div>
+      </div>
+   </div>
+</div>
 
             <!-- Bootstrap core JavaScript
             ================================================== -->

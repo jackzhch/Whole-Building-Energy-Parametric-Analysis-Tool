@@ -149,12 +149,6 @@ p {
       padding-bottom: 10px;
   }
   
-  /*This is a green stripe on the right side of the nav sidebar*/
-  .nav .bs-docs-sidenav > li > a:hover, .nav .sidenav-subgroup > li > a:hover {
-      padding-right: 8px;
-      border-right: 7px solid #1bee4e;
-      font-weight: bold;
-  }
   
   /*Font color in navbar*/
   .navbar-inverse .navbar-nav > li > a {
@@ -175,6 +169,18 @@ p {
     border-bottom: 5px solid #1bee4e;
 }
 
+/*Glyphicon spacing in navbar*/
+.glyphicon {
+    margin-right: 7px;
+}
+
+/*Sidenav hover effect.*/
+  .nav .bs-docs-sidenav > li > a:hover, .nav .sidenav-subgroup > li > a:hover {
+      padding-right: 8px;
+      border-right: 7px solid #1bee4e;
+      font-weight: bold;
+  }
+  
 /*Make all thumbnails in a gallery the same size for uniformity*/
 .thumbnail > img {
     height: 160px;
@@ -354,6 +360,7 @@ blockquote {
 
 .bs-docs-sidenav a {
     color: #ffffff;
+    font-weight: bold;
 }
 
 .bs-docs-sidenav a:hover {
@@ -361,6 +368,30 @@ blockquote {
     text-decoration: none;
 }
 
+.bs-docs-sidenav .sidenav-subgroup a {
+    padding-left: 30px;
+    font-weight: normal;
+}
+
+/*Modal styling*/
+.modal {
+    color: black;
+}
+
+.modal-header {
+    color: white;
+    font-weight: bold;
+    background-color: #13a135;
+    border-bottom: 1px solid #1bee4e;
+}
+
+.modal-body {
+    height: 250px;
+}
+
+.modal-footer {
+    background-color: #aaa;
+}
 /*
  * Placeholder dashboard ideas
  */

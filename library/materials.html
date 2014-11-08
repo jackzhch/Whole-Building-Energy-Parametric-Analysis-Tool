@@ -39,7 +39,7 @@ and open the template in the editor.
                        <li class="dropdown active">
                           <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-book"></span> Library <b class="caret"></b></a>
                           <ul class="dropdown-menu">
-                             <li><a href="#"><span class="glyphicon glyphicon-folder-open"></span>Browse</a></li>
+                             <li><a href="search.html"><span class="glyphicon glyphicon-folder-open"></span>Browse</a></li>
                              <li><a href="../purchase.html"><span class="glyphicon glyphicon-shopping-cart"></span>Purchase</a></li>
                              <li><a href="#"><span class="glyphicon glyphicon-plus"></span>New</a></li>
                              <!--<li><a href="#">User Guide</a></li>-->
@@ -72,65 +72,144 @@ and open the template in the editor.
             <h1></h1>
             <h1></h1>-->
 
-            <div class="container" style="margin-top: 20px;">
+            <div class="container bs-docs-container" style="margin-top: 20px;">
 
                <!--Page header section-->
                 <div class="row">
-                   <div class="col-md-12" role="main">
+                   <div class="col-md-12" role="main" style="padding-bottom: 15px;">
                       <h1 id="overview" class="page-header"  style="margin-top: 40px; color: #1bee4e;">Library browse</h1>
                       <h4 style="font-style: italic; font-weight: bold; color: #1BEE4E;">Building properties database</h4>
-                      <div class="col-md-9">
-                         <blockquote>
-                            <p>
-                               You can use this library to find specification sheets for building materials, components, 
-                               and systems. You can also add new items to the library and purchase products you are interested in.
-                            </p>
-                            <p>You can find a detailed user guide for this library <a href="#" id="instruction">here</a>.</p>
-                         </blockquote>
-                      </div> 
-                      <div class="col-md-3">
-                         <button type="button" class="btn btn-success center-block" data-toggle="modal" data-target="#searchModal">
+                      <div class="row">
+                         <div class="col-md-9" style="padding-top: 30px;">
+                            <div class="col-sm-4"><a href="#" style="width: 250px;" class="btn btn-success center-block">Materials</a></div>
+                            <div class="col-sm-4"><a href="#" style="width: 250px;" class="btn btn-danger center-block">Components</a></div>
+                            <div class="col-sm-4"><a href="#" style="width: 250px;" class="btn btn-danger center-block">Systems</a></div>
+                         </div> 
+                         <div class="col-md-3">
+                            <button type="button" class="btn btn-success center-block" data-toggle="modal" data-target="#searchModal">
                                <span class="glyphicon glyphicon-search"></span>Search for material
-                         </button>
-                         <button type="button" class="btn btn-success center-block" style="margin-top: 25px;"><span class="glyphicon glyphicon-plus"></span>Add new material</button>
+                            </button>
+                            <button type="button" class="btn btn-success center-block" style="margin-top: 25px;"><span class="glyphicon glyphicon-plus"></span>Add new material</button>
+                         </div>
                       </div>
                    </div>
                </div> <!-- End of page header section -->
+               <div class="row" style="background-color: #777;">
+<!--                  style="width: 25%; display: inline" -->
+                  <div class="col-md-2" style="margin-top: 20px; padding-left: 0px; padding-right: 0px;">
+                      <div class="bs-docs-sidebar nav nav-stacked fixed hidden-xs hidden-sm" role="complementary">
+                          <ul class="nav bs-docs-sidenav">
+<!--                              <li>
+                                  <a href="#overview">Overview</a>
+                              </li>
+                              <li>
+                                  <a href="#grid-indoor">Indoor</a>
+                                  <ul class="nav sidenav-subgroup">
+                                      <li><a href="#grid-glass">Glass</a></li>
+                                      <li><a href="#grid-light">Light</a></li>
+                                  </ul>
+                              </li>
+                              <li>
+                                  <a href="#grid-outdoor">Outdoor</a>
+                                  <ul class="nav sidenav-subgroup">
+                                      <li><a href="#grid-wall">Wall</a></li>
+                                      <li><a href="#grid-window">Window</a></li>
+                                  </ul>
+                              </li>-->
+                              <li>
+                                 <a href="#grid-material">Material definition</a>
+                                 <ul class="nav sidenav-subgroup">
+                                    <li><a href="#">Mass material</a></li>
+                                    <li><a href="#">No mass material</a></li>
+                                    <li><a href="#">Infrared transparent material</a></li>
+                                    <li><a href="#">Air gap material</a></li>
+                                    <li><a href="#">Roof vegetation material</a></li>
+                                    <li><a href="#">Don't know material type</a></li>
+                                 </ul>
+                              </li>
+                              <li>
+                                 <a href="#grid-opaque">Opaque envelope component definition type</a>
+                                 <ul class="nav sidenav-subgroup">
+                                    <li><a href="#">Layer-by-layer definition</a></li>
+                                    <li><a href="#">C-Factor underground wall</a></li>
+                                    <li><a href="#">F-Factor ground floor</a></li>
+                                    <li><a href="#">Internal source</a></li>
+                                    <li><a href="#">Don't know construction type</a></li>
+                                 </ul>
+                              </li>
+                              <li>
+                                 <a href="#grid-window">Window definition type</a>
+                                 <ul class="nav sidenav-subgroup">
+                                    <li><a href="#">Glazing system: simple glazing system</a></li>
+                                    <li><a href="#">Glazing system: layer by layer definition</a></li>
+                                    <li><a href="#">Glazing</a></li>
+                                    <li><a href="#">Gas</a></li>
+                                    <li><a href="#">Gas mixture</a></li>
+                                    <li><a href="#">Frame and dividers</a></li>
+                                    <li><a href="#">Blind</a></li>
+                                    <li><a href="#">Shade</a></li>
+                                    <li><a href="#">Screen</a></li>
+                                    <li><a href="#">Don't know window type</a></li>
+                                 </ul>
+                              </li>
+                              <li>
+                                 <a class="back-to-top" href="#top">Back to top</a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+<!--                  style="width:75%; display: inline"-->
+                  <div class="col-md-10 bs-docs-section" style="background-color: white; color: black; font-size: 18px; padding-left: 35px;">
+                     <a id="grid-material" class="anchor"></a>
+                     <h1 class="page-header">Material definition</h1>
+                      <p>Here is a list of our indoor facilities:</p>
 
-               <!--Main content section-->
-               <div class="row" style="background-color: white; padding-top: 35px; padding-bottom: 35px;">
-                  <div class="col-lg-4">
-                     <div class="panel panel-success">
-                        <div class="panel-heading">
-                           <h3 class="panel-title text-center">MATERIALS</h3>
-                        </div>
-                        <div class="panel-body">
-                           A definition of what materials are.
-                           <a class="btn btn-lg btn-success center-block" href="materials.html" style="width: 250px;">View materials</a>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-lg-4">
-                     <div class="panel panel-danger">
-                        <div class="panel-heading">
-                           <h3 class="panel-title text-center">COMPONENTS</h3>
-                        </div>
-                        <div class="panel-body">
-                           A definition of what components are.
-                           <a class="btn btn-lg btn-danger center-block" href="#" style="width: 250px;">View components</a>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-lg-4">
-                     <div class="panel panel-danger">
-                        <div class="panel-heading">
-                           <h3 class="panel-title text-center">SYSTEMS</h3>
-                        </div>
-                        <div class="panel-body">
-                           A definition of what systems are.
-                           <a class="btn btn-lg btn-danger center-block" href="#" style="width: 250px;">View systems</a>
-                        </div>
-                     </div>
+                      <h3 id="grid-glass">Glass</h3>
+                      <div class="row">
+                        <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/glass/glass1.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                        <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/glass/glass2.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                        <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/glass/glass3.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                        <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/glass/glass4.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                        <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/glass/glass5.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                        <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/glass/glass6.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                      </div>
+                      
+                      <h3 id="grid-light">Light</h3>
+                      <div class="row">
+                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/light/light1.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/light/light2.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/light/light3.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/light/light4.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/light/light5.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/light/light6.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                      </div>
+
+                      <a id="grid-opaque" class="anchor"></a>
+                      <h1 class="page-header">Opaque envelope component definition type</h1>
+                       <p>Here is a list of our indoor facilities:</p>
+
+                      <h3 id="grid-wall">Wall</h3>
+                      <div class="row">
+                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/wall/wall1.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/wall/wall2.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/wall/wall3.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/wall/wall4.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/wall/wall5.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/wall/wall6.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                      </div>
+                      
+                      <a id="grid-window" class="anchor"></a>
+                      <h1 class="page-header">Window definition type</h1>
+                      <h3 id="grid-window-sub">Window</h3>
+                      <div class="row">
+                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/window/window1.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/window/window2.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/window/window3.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/window/window4.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/window/window5.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/window/window6.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                      </div>
+                      
                   </div>
                </div>
                

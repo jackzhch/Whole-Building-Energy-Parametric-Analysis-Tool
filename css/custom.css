@@ -34,6 +34,13 @@ a.anchor {
     top: -50px; 
     visibility: hidden;
 }
+
+.bs-docs-section > .row > a.back-to-top {
+    color: #13A135;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 
@@ -46,6 +53,15 @@ a.anchor {
 
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover {
 	border-bottom: 5px solid #1bee4e;
+}
+
+/*Customize bread crumbs*/
+.breadcrumb {
+    margin-bottom: 0px;
+}
+
+.breadcrumb > li > a {
+    color: #13A135;
 }
 
 /* CUSTOMIZE THE CAROUSEL

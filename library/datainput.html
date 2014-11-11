@@ -39,10 +39,9 @@ and open the template in the editor.
                        <li class="dropdown active">
                           <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-book"></span> Library <b class="caret"></b></a>
                           <ul class="dropdown-menu">
-                             <li><a href="search.html"><span class="glyphicon glyphicon-folder-open"></span>Browse</a></li>
+                             <li><a href="library.html"><span class="glyphicon glyphicon-folder-open"></span>Browse</a></li>
                              <li><a href="../purchase.html"><span class="glyphicon glyphicon-shopping-cart"></span>Purchase</a></li>
-                             <li><a href="#"><span class="glyphicon glyphicon-plus"></span>New</a></li>
-                             <!--<li><a href="#">User Guide</a></li>-->
+                             <li><a href="#"><span class="glyphicon glyphicon-pencil"></span>Data input</a></li>
                           </ul>
                        </li>
 
@@ -98,8 +97,8 @@ and open the template in the editor.
                      <div class="row" style="margin-bottom: 15px;">
                         <ol class="breadcrumb col-sm-12">
                            <li><a href="../home.html">Home</a></li>
-                           <li><a href="search.html">Library</a></li>
-                           <li class="active">Add input to library</li>
+                           <li><a href="library.html">Library</a></li>
+                           <li class="active">Data input</li>
                         </ol> 
                      </div> <!-- End of bread crumbs -->
                      <!--<h1 class="page-header">Add input to library</h1>-->
@@ -146,6 +145,9 @@ and open the template in the editor.
                               </select>
                            </div>
                         </div>
+                        <button type="button" class="btn btn-success pull-right" data-toggle="modal" data-target="#submitModal" style="margin: 0px 5px;">
+                           <span class="glyphicon glyphicon-send"></span>Submit data
+                        </button>
                      </form>
                   </div>
                </div>
@@ -189,40 +191,16 @@ and open the template in the editor.
             </div>
 
 <!-- ============SEARCH MODAL=========== -->
-<div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="submitModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
    <div class="modal-dialog">
       <div class="modal-content">
          <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            <h4 class="modal-title" id="myModalLabel">Search</h4>
+            <h4 class="modal-title" id="myModalLabel">Submission successful!</h4>
          </div>
-         <div class="modal-body">
-            <form action="#">
-               <div class="form-group col-sm-12">
-                  <label for="searchterm">Material name:</label>
-                  <input type="text" class="form-control" id="searchterm" placeholder="Enter name of material">
-               </div>
-               <div class="form-group col-sm-6">
-                  <label for="category">Category:</label>
-                  <select class="form-control" id="category">
-                     <option>Select material category</option>
-                     <option>Material definition</option>
-                     <option>Opaque envelope component definition type</option>
-                     <option>Window definition type</option>
-                  </select>
-               </div>
-               <div class="form-group col-sm-6">
-                  <label for="subcategory">Subcategory:</label>
-                  <select class="form-control" id="subcategory">
-                     <option>Select material subcategory</option>
-                     <option>Mass material</option>
-                     <option>Infrared transparent material</option>
-                     <option>Air gap material</option>
-                     <option>Roof vegetation material</option>
-                     <option>Don't know material type</option>
-                  </select>
-               </div>
-            </form>
+         <div class="modal-body" style="font-size: 24px; text-align: center;">
+            <p>Thank you very much for your contribution to our library! Your input is greatly appreciated.</p>
+            <p>The information you submitted will be reviewed by our staff and published to the library soon.</p>
          </div>
          <div class="modal-footer">
             <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>

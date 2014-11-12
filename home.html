@@ -15,7 +15,7 @@
         <!-- Custom styles for this template -->
         <link href="css/custom.css" rel="stylesheet">
         <link href="css/fonts.css" rel="stylesheet" type="text/css">
-        <link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Bitter:400italic' rel='stylesheet' type='text/css'>
 
         <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
         <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script>
@@ -33,7 +33,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="js/bootstrap.js"></script>
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-        <script src="../js/ie10-viewport-bug-workaround.js"></script>
+        <script src="js/ie10-viewport-bug-workaround.js"></script>
 
     </head>
 
@@ -43,56 +43,56 @@
 
 
        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-          <div class="container-fluid">
+              <div class="container-fluid">
+                 <div class="navbar-header">
+                    <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                       <span class="icon-bar"></span>
+                       <span class="icon-bar"></span>
+                       <span class="icon-bar"></span>
+                    </a>
+                    <a class="navbar-brand" href="#"><img src="img/WBEPT_logo1.png" alt="WBEPTlogo" style="max-height: 45px;"></a>
+                 </div>
+                 <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                       <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                       <!--<li><a href="../browse.html" ><span class="glyphicon glyphicon-folder-open"></span> Browse</a></li>-->
 
-             <div class="navbar-header">
-                <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                   <span class="icon-bar"></span>
-                   <span class="icon-bar"></span>
-                   <span class="icon-bar"></span>
-                </a>
-                <a class="navbar-brand" href="home.html"><img src="img/WBEPT_logo1.png" alt="WBEPTlogo" style="max-height: 45px;"></a>
-             </div>
-             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                   <li class="active"><a href="home.html">Home</a></li>
-                   <li><a href="Browse.html" >Browse</a></li>
+                       <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-book"></span> Library <b class="caret"></b></a>
+                          <ul class="dropdown-menu">
+                             <li><a href="library/library.html"><span class="glyphicon glyphicon-folder-open"></span>Browse</a></li>
+                             <li><a href="purchase.html"><span class="glyphicon glyphicon-shopping-cart"></span>Purchase</a></li>
+                             <li><a href="library/datainput.html"><span class="glyphicon glyphicon-pencil"></span>Data input</a></li>
+                             <!--<li><a href="#">User Guide</a></li>-->
+                          </ul>
+                       </li>
 
-                   <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Library <b class="caret"></b></a>
-                      <ul class="dropdown-menu">
-                         <li><a href="#">Submit</a></li>
-                         <li><a href="library/search.html">Search</a></li>
-                         <li><a id="instruction">User Guide</a></li>
-                      </ul>
-                   </li>
+                       <li class="dropdown">
+                          <a href="simulation.html" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-stats"></span> Simulation <b class="caret"></b></a>
+                          <ul class="dropdown-menu">
+                             <li><a href="simulation.html">Existing Case</a></li>
+                             <li><a href="#">New IDF</a></li>
+                          </ul>
+                       </li>
 
-                   <li class="dropdown">
-                      <a href="simulation.html" class="dropdown-toggle" data-toggle="dropdown">Simulation <b class="caret"></b></a>
-                      <ul class="dropdown-menu">
-                         <li><a href="simulation.html">Existing Case</a></li>
-                         <li><a href="#">New IDF</a></li>
-                      </ul>
-                   </li>
+                       <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-eye-open"></span> Monitor <b class="caret"></b></a>
+                          <ul class="dropdown-menu">
+                             <li><a href="#">eeAHUB</a></li>
+                          </ul>
+                       </li>
+<!--                       <li><a href="#weather" data-toggle="modal" data-target="#weatherModal">Weather  </a></li>-->
 
-                   <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Monitor <b class="caret"></b></a>
-                      <ul class="dropdown-menu">
-                         <li><a href="#">eeAHUB</a></li>
-                      </ul>
-                   </li>
-                   <li><a href="#weather" data-toggle="modal" data-target="#weatherModal">Weather  </a></li>
-
-                </ul>
-             </div>
-          </div>
-       </nav>
+                    </ul>
+                 </div>
+              </div>
+           </nav>
 
 
 
         <!-- Carousel
         ================================================== -->
-        <div id="myCarousel" class="carousel slide" data-interval="3000">
+        <div id="myCarousel" class="carousel slide" data-interval="3000" style="border-bottom: 15px solid #1bee4e;">
             <!-- Indicators -->
             <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -146,14 +146,14 @@
         ================================================== -->
         <!-- Wrap the rest of the page in another container to center all the content. -->
 
-        <div class="container marketing well">
+        <div class="container marketing well" style="margin-bottom: 0;">
 
            <!-- Three columns of text below the carousel -->
            <div class="row">
               <div class="col-md-3">
                  <div class="hexagon col-centered">
                     <div class="hex1">
-                    <a href="Browse.html">
+                    <a href="purchase.html">
                        <div class="hex2" style="background: url('img/indoor2.jpg') center no-repeat">
                           <div class="desc">
                              <h2>Browse</h2>
@@ -170,7 +170,7 @@
               <div class="col-md-3">
                  <div class="hexagon col-centered">
                     <div class="hex1">
-                    <a href="library/search.html">
+                    <a href="library/library.html">
                        <div class="hex2" style="background: url('img/outdoor.jpg') center no-repeat">
                           <div class="desc">
                              <h2>Library</h2>
@@ -216,43 +216,42 @@
            <!--<hr style="border-color: #ccc;">-->
         </div><!-- /.container -->
         
-            <!-- FOOTER -->
-            <section class="section-footer footer">
-               <div class="container">
-                  <div class="col-lg-6 about-text">
-                     <p class="col-lg-12">This project is focused on the systematic development process of whole building energy simulation models as benchmarks for retrofit projects. building 661, Navy Yard, PA is selected as the case study to demonstrate the proposed process. The study suggests energy model development approach for retrofit projects.</p>
-                  </div>
-                  <ul class="col-lg-3 col-sm-9 col-xs-9">
-                     <li><a href="/about" data-track="link" data-event="About Us menu">Learn about us</a></li>
-                     <li><a href="http://blog.fundbox.com" data-track="link" data-event="Blog menu">Read our blog</a></li>
-                     <li><a href="/contact-us" data-track="link" data-event="Contact us menu">Contact Us</a></li>            
-                     <li>
-                        <a href="#">Terms of Use</a> &
-                        <a href="#">Privacy Policy</a>
-                     </li>
-                  </ul>
-
-                  <div class="col-lg-2 col-sm-3 col-xs-3 pull-right social">
-                     <a target="_blank" href="http://facebook.com/fundboxcom"><img
-                           src="https://d2k0u7ej7vpxec.cloudfront.net/static/img/homepage_v3/facebook.svg" alt="Follow Fundbox on Facebook"/></a>
-                     <a target="_blank" href="http://twitter.com/fundbox"><img src="https://d2k0u7ej7vpxec.cloudfront.net/static/img/homepage_v3/twitter.svg"
-                                                                               alt="Follow Fundbox on Twitter"/></a>
-                     <a target="_blank" href="http://linkedin.com/company/fundbox"><img
-                           src="https://d2k0u7ej7vpxec.cloudfront.net/static/img/homepage_v3/linkedin.svg" alt="Follow Fundbox on Linkedin"/></a>
-                     <a target="_blank" href="https://plus.google.com/112520500941208906342"><img
-                           src="https://d2k0u7ej7vpxec.cloudfront.net/static/img/homepage_v3/google_plus.svg" alt="Follow Fundbox on Google+"/></a>
-                  </div>
+            <!-- ============================== FOOTER ============================== -->
+               <div style="padding-bottom: 10px;">
+                     <div class="footer-bar" style="height: 15px;"></div>
+                  <section class="footer">
+                     <div class="container">
+                        <ul class="col-lg-3 col-sm-9 col-xs-9" style="padding-left: 35px;">
+                           <li><a href="/about" data-track="link" data-event="About Us menu">Learn about us</a></li>
+                           <li><a href="http://blog.fundbox.com" data-track="link" data-event="Blog menu">Read our blog</a></li>
+                           <li><a href="/contact-us" data-track="link" data-event="Contact us menu">Contact Us</a></li>            
+                           <li>
+                              <a href="#">Terms of Use</a> & <a href="#">Privacy Policy</a>
+                           </li>
+                        </ul>
+                        <div class="col-lg-6 text-center">
+                           <img src="img/mainlogo.png" style="max-height: 45px;">
+                           <img src="img/doe_logo.png" style="max-height: 45px; margin-left: 25px;">
+                           <img src="img/Sel_Title.png" style="max-height: 45px; margin-left: 25px;">
+                        </div>
+                        <div class="col-lg-3 text-right">
+                           <a target="_blank" href="http://facebook.com/fundboxcom">
+                              <img src="https://d2k0u7ej7vpxec.cloudfront.net/static/img/homepage_v3/facebook.svg" alt="Follow Fundbox on Facebook"/>
+                           </a>
+                           <a target="_blank" href="http://twitter.com/fundbox">
+                              <img src="https://d2k0u7ej7vpxec.cloudfront.net/static/img/homepage_v3/twitter.svg" alt="Follow Fundbox on Twitter"/>
+                           </a>
+                           <a target="_blank" href="http://linkedin.com/company/fundbox">
+                              <img
+                                 src="https://d2k0u7ej7vpxec.cloudfront.net/static/img/homepage_v3/linkedin.svg" alt="Follow Fundbox on Linkedin"/>
+                           </a>
+                           <a target="_blank" href="https://plus.google.com/112520500941208906342">
+                              <img src="https://d2k0u7ej7vpxec.cloudfront.net/static/img/homepage_v3/google_plus.svg" alt="Follow Fundbox on Google+"/>
+                           </a>
+                        </div>
+                     </div>
+                  </section>
                </div>
-            </section>
-
-            <section class="section-footer footer-bar">
-               <div class="row">
-                     <div class="col-md-3 pull-right">
-                     <img src="img/mainlogo.png" height="60" width="200">
-                     
-                  </div>
-               </div>
-            </section>
 
         <!-- Weather Modal -->
         <div class="modal fade" id="weatherModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

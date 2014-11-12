@@ -34,14 +34,14 @@ and open the template in the editor.
                  <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
                        <li><a href="../home.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-                       <li><a href="../browse.html" ><span class="glyphicon glyphicon-folder-open"></span> Browse</a></li>
+                       <!--<li><a href="../browse.html" ><span class="glyphicon glyphicon-folder-open"></span> Browse</a></li>-->
 
                        <li class="dropdown active">
                           <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-book"></span> Library <b class="caret"></b></a>
                           <ul class="dropdown-menu">
-                             <li><a href="#">Submit</a></li>
-                             <li><a href="search.html">Search</a></li>
-                             <li><a id="instruction">User Guide</a></li>
+                             <li><a href="library.html"><span class="glyphicon glyphicon-folder-open"></span>Browse</a></li>
+                             <li><a href="../purchase.html"><span class="glyphicon glyphicon-shopping-cart"></span>Purchase</a></li>
+                             <li><a href="datainput.html"><span class="glyphicon glyphicon-pencil"></span>Data input</a></li>
                           </ul>
                        </li>
 
@@ -61,10 +61,10 @@ and open the template in the editor.
                        </li>
 <!--                       <li><a href="#weather" data-toggle="modal" data-target="#weatherModal">Weather  </a></li>-->
 
-                    </ul>
+                    </ul> <!-- Pull right navbar elements -->
                  </div>
               </div>
-           </nav>
+           </nav> <!-- End of navbar -->
 
             <!-- ============================ Bootstrap core JavaScript ========================== -->
 <!--            <h1></h1>
@@ -73,56 +73,50 @@ and open the template in the editor.
 
             <div class="container bs-docs-container" style="margin-top: 20px;">
 
-                <div class="row">
-                   <div class="col-md-12" role="main">
-                      <h1 id="overview" class="page-header"  style="margin-top: 40px; color: #1bee4e;">Library</h1>
-                      <h4 style="font-style: italic; font-weight: bold; color: #1BEE4E;">Building materials specification database</h4>
-                      <div class="col-md-9">
-                         <blockquote>
-                            <p>
-                               You can use this section of the WBEPT to find completely detailed specification sheets
-                               for any building material you need. Use the tabs on top to select the level of your
-                               building that you're working with, and use the sidebar on the left to navigate through
-                               different material categories in that level.
-                            </p>
-                            <p>
-                               You can also use the button to the right to add new material specification sheets to add
-                               new materials to our library. We certainly appreciate your contribution!
-                            </p>
-                         </blockquote>
-                      </div> 
-                      <div class="col-md-3">
-                         <button type="button" class="btn btn-success center-block" data-toggle="modal" data-target="#searchModal" style="margin-top: 15px;">
-                               <span class="glyphicon glyphicon-search"></span>Search for material
-                         </button>
-                         <button type="button" class="btn btn-success center-block" style="margin-top: 25px;"><span class="glyphicon glyphicon-plus"></span>Add new material</button>
-                      </div>
-                   </div>
-               </div>
+               <!--Page header section-->
+               <div>
+                  <div class="row" style="margin-top:30px;">
+                     <div class="col-md-12" role="main">
+                        <!--Headings-->
+                        <h1 id="overview" class="page-header"  style="color: #1bee4e;">Library</h1>
+                     </div>
+                  </div>
+                  <div class="row" style="padding-bottom: 10px;">
+                     <div class="col-md-8">
+                        <h4 style="font-style: italic; font-weight: bold; color: #1BEE4E;">Building properties database</h4>
+                     </div>
+                     <!--Page header buttons-->
+                     <div class="col-md-4">
+                        <div class="pull-right">
+                           <div class="btn-group">
+                              <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                                 <span class="glyphicon glyphicon-chevron-right"></span>Go to <span class="caret"></span>
+                              </button>
+                              <ul class="dropdown-menu" role="menu">
+                                 <li><a href="#">Materials</a></li>
+                                 <li><a href="#">Components</a></li>
+                                 <li><a href="#">Systems</a></li>
+                              </ul>
+                           </div>
+                           <button type="button" class="btn btn-success" data-toggle="modal" data-target="#searchModal" style="margin: 0px 5px;">
+                              <span class="glyphicon glyphicon-search"></span>Search
+                           </button>
+                           <a href="datainput.html" class="btn btn-success">
+                              <span class="glyphicon glyphicon-pencil"></span>Data input
+                           </a>
+                        </div>
+                     </div>
+                  </div> <!-- End of page header buttons -->
+               </div> <!-- End of page header section -->
+               
+               <!--Lower half of page-->
                <div class="row" style="background-color: #777;">
-<!--                  style="width: 25%; display: inline" -->
+                  <!--Left sidebar-->
                   <div class="col-md-2" style="margin-top: 20px; padding-left: 0px; padding-right: 0px;">
                       <div class="bs-docs-sidebar nav nav-stacked fixed hidden-xs hidden-sm" role="complementary">
                           <ul class="nav bs-docs-sidenav">
-<!--                              <li>
-                                  <a href="#overview">Overview</a>
-                              </li>
                               <li>
-                                  <a href="#grid-indoor">Indoor</a>
-                                  <ul class="nav sidenav-subgroup">
-                                      <li><a href="#grid-glass">Glass</a></li>
-                                      <li><a href="#grid-light">Light</a></li>
-                                  </ul>
-                              </li>
-                              <li>
-                                  <a href="#grid-outdoor">Outdoor</a>
-                                  <ul class="nav sidenav-subgroup">
-                                      <li><a href="#grid-wall">Wall</a></li>
-                                      <li><a href="#grid-window">Window</a></li>
-                                  </ul>
-                              </li>-->
-                              <li>
-                                 <a href="#">Material definition</a>
+                                 <a href="#grid-material">Material definition</a>
                                  <ul class="nav sidenav-subgroup">
                                     <li><a href="#">Mass material</a></li>
                                     <li><a href="#">No mass material</a></li>
@@ -133,7 +127,7 @@ and open the template in the editor.
                                  </ul>
                               </li>
                               <li>
-                                 <a href="#">Opaque envelope component definition type</a>
+                                 <a href="#grid-opaque">Opaque envelope component definition type</a>
                                  <ul class="nav sidenav-subgroup">
                                     <li><a href="#">Layer-by-layer definition</a></li>
                                     <li><a href="#">C-Factor underground wall</a></li>
@@ -143,7 +137,7 @@ and open the template in the editor.
                                  </ul>
                               </li>
                               <li>
-                                 <a href="#">Window definition type</a>
+                                 <a href="#grid-window">Window definition type</a>
                                  <ul class="nav sidenav-subgroup">
                                     <li><a href="#">Glazing system: simple glazing system</a></li>
                                     <li><a href="#">Glazing system: layer by layer definition</a></li>
@@ -162,65 +156,85 @@ and open the template in the editor.
                               </li>
                           </ul>
                       </div>
-                  </div>
-<!--                  style="width:75%; display: inline"-->
-                  <div class="col-md-10 bs-docs-section" style="background-color: white; color: black; font-size: 18px; padding-left: 35px;">
-                      <h1 id="grid-indoor" class="page-header">Indoor</h1>
-                      <p>Here is a list of our indoor facilities:</p>
+                  </div> <!-- End of left sidebar -->
+                  
+                  <!--Main content div-->
+                  <div class="col-md-10 bs-docs-section" style="background-color: white; color: black; font-size: 18px; padding-left: 35px; padding-top: 10px; padding-bottom: 20px;">
+                     <!--Bread crumbs-->
+                     <div class="row">
+                        <ol class="breadcrumb col-sm-12">
+                           <li><a href="../home.html">Home</a></li>
+                           <li><a href="library.html">Library</a></li>
+                           <li class="active">Materials</li>
+                        </ol> 
+                     </div> <!-- End of bread crumbs -->
 
-                      <h3 id="grid-glass">Glass</h3>
-                      <div class="row">
+                     <!--Start of main content-->
+                     <a id="grid-material" class="anchor"></a>
+                     <h1 class="page-header">Material definition</h1>
+                     <p>Here is a list of our indoor facilities:</p>
+
+                     <h3 id="grid-glass">Glass</h3>
+                     <div class="row">
                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/glass/glass1.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/glass/glass2.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/glass/glass3.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/glass/glass4.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/glass/glass5.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/glass/glass6.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
-                      </div>
-                      
-                      <h3 id="grid-light">Light</h3>
-                      <div class="row">
-                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/light/light1.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
-                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/light/light2.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
-                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/light/light3.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
-                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/light/light4.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
-                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/light/light5.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
-                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/light/light6.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
-                      </div>
+                     </div>
 
-                      <h1 id="grid-outdoor" class="page-header">Outdoor</h1>
-                       <p>Here is a list of our indoor facilities:</p>
+                     <h3 id="grid-light">Light</h3>
+                     <div class="row">
+                        <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/light/light1.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                        <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/light/light2.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                        <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/light/light3.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                        <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/light/light4.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                        <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/light/light5.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                        <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/light/light6.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                     </div>
 
-                      <h3 id="grid-wall">Wall</h3>
-                      <div class="row">
-                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/wall/wall1.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
-                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/wall/wall2.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
-                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/wall/wall3.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
-                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/wall/wall4.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
-                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/wall/wall5.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
-                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/wall/wall6.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
-                      </div>
-                      
-                      <h3 id="grid-window">Window</h3>
-                      <div class="row">
-                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/window/window1.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
-                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/window/window2.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
-                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/window/window3.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
-                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/window/window4.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
-                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/window/window5.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
-                         <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/window/window6.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
-                      </div>
-                      
-                  </div>
+                     <div class="row"><a class="back-to-top pull-right" href="#top">Back to top</a></div>
+
+                     <a id="grid-opaque" class="anchor"></a>
+                     <h1 class="page-header">Opaque envelope component definition type</h1>
+                     <p>Here is a list of our indoor facilities:</p>
+
+                     <h3 id="grid-wall">Wall</h3>
+                     <div class="row">
+                        <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/wall/wall1.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                        <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/wall/wall2.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                        <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/wall/wall3.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                        <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/wall/wall4.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                        <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/wall/wall5.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                        <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/wall/wall6.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                     </div>
+
+                     <div class="row"><a class="back-to-top pull-right" href="#top">Back to top</a></div>
+
+                     <a id="grid-window" class="anchor"></a>
+                     <h1 class="page-header">Window definition type</h1>
+                     <h3 id="grid-window-sub">Window</h3>
+                     <div class="row">
+                        <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/window/window1.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                        <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/window/window2.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                        <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/window/window3.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                        <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/window/window4.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                        <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/window/window5.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                        <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/window/window6.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                     </div>
+
+                     <div class="row"><a class="back-to-top pull-right" href="#top">Back to top</a></div>
+
+                  </div> <!-- End of main content div -->
                </div>
+               
+               <!-- ============================== FOOTER ============================== -->
                <div class="row" style="padding-bottom: 10px;">
-                  <!-- ============================== FOOTER ============================== -->
-                  <section class="section-footer footer">
+                     <div class="footer-bar" style="height: 15px;"></div>
+                  <section class="footer">
                      <div class="container">
-                        <div class="col-lg-6 about-text">
-                           <p class="col-lg-12">This project is focused on the systematic development process of whole building energy simulation models as benchmarks for retrofit projects. building 661, Navy Yard, PA is selected as the case study to demonstrate the proposed process. The study suggests energy model development approach for retrofit projects.</p>
-                        </div>
-                        <ul class="col-lg-3 col-sm-9 col-xs-9">
+                        <ul class="col-lg-3 col-sm-9 col-xs-9" style="padding-left: 35px;">
                            <li><a href="/about" data-track="link" data-event="About Us menu">Learn about us</a></li>
                            <li><a href="http://blog.fundbox.com" data-track="link" data-event="Blog menu">Read our blog</a></li>
                            <li><a href="/contact-us" data-track="link" data-event="Contact us menu">Contact Us</a></li>            
@@ -228,31 +242,32 @@ and open the template in the editor.
                               <a href="#">Terms of Use</a> & <a href="#">Privacy Policy</a>
                            </li>
                         </ul>
-
-                        <div class="col-lg-2 col-sm-3 col-xs-3 pull-right social">
-                           <a target="_blank" href="http://facebook.com/fundboxcom"><img
-                                 src="https://d2k0u7ej7vpxec.cloudfront.net/static/img/homepage_v3/facebook.svg" alt="Follow Fundbox on Facebook"/></a>
-                           <a target="_blank" href="http://twitter.com/fundbox"><img src="https://d2k0u7ej7vpxec.cloudfront.net/static/img/homepage_v3/twitter.svg"
-                                                                                     alt="Follow Fundbox on Twitter"/></a>
-                           <a target="_blank" href="http://linkedin.com/company/fundbox"><img
-                                 src="https://d2k0u7ej7vpxec.cloudfront.net/static/img/homepage_v3/linkedin.svg" alt="Follow Fundbox on Linkedin"/></a>
-                           <a target="_blank" href="https://plus.google.com/112520500941208906342"><img
-                                 src="https://d2k0u7ej7vpxec.cloudfront.net/static/img/homepage_v3/google_plus.svg" alt="Follow Fundbox on Google+"/></a>
+                        <div class="col-lg-6 text-center">
+                           <img src="../img/mainlogo.png" style="max-height: 45px;">
+                           <img src="../img/doe_logo.png" style="max-height: 45px; margin-left: 25px;">
+                           <img src="../img/Sel_Title.png" style="max-height: 45px; margin-left: 25px;">
+                        </div>
+                        <div class="col-lg-3 text-right">
+                           <a target="_blank" href="http://facebook.com/fundboxcom">
+                              <img src="https://d2k0u7ej7vpxec.cloudfront.net/static/img/homepage_v3/facebook.svg" alt="Follow Fundbox on Facebook"/>
+                           </a>
+                           <a target="_blank" href="http://twitter.com/fundbox">
+                              <img src="https://d2k0u7ej7vpxec.cloudfront.net/static/img/homepage_v3/twitter.svg" alt="Follow Fundbox on Twitter"/>
+                           </a>
+                           <a target="_blank" href="http://linkedin.com/company/fundbox">
+                              <img
+                                 src="https://d2k0u7ej7vpxec.cloudfront.net/static/img/homepage_v3/linkedin.svg" alt="Follow Fundbox on Linkedin"/>
+                           </a>
+                           <a target="_blank" href="https://plus.google.com/112520500941208906342">
+                              <img src="https://d2k0u7ej7vpxec.cloudfront.net/static/img/homepage_v3/google_plus.svg" alt="Follow Fundbox on Google+"/>
+                           </a>
                         </div>
                      </div>
                   </section>
+               </div> <!-- End of footer -->
+            </div> <!-- End of lower half of page -->
 
-                  <section class="section-footer footer-bar">
-               <div class="row">
-                     <div class="col-md-3 pull-right">
-                     <img src="../img/mainlogo.png" height="60" width="200">
-                     
-                  </div>
-               </div>
-            </section>
-               </div>
-            </div>
-
+<!-- ============SEARCH MODAL=========== -->
 <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
    <div class="modal-dialog">
       <div class="modal-content">
@@ -332,15 +347,6 @@ and open the template in the editor.
                     s.parentNode.insertBefore(t, s);
                 })();
             </script>
-
         </div>
-        
-        <script type="text/javascript">
-                $(document).ready(function(){
-                    $("#instruction").click(function(){
-                       window.open('instruction.pdf');
-                    });
-                });
-        </script>
     </body>
 </html>

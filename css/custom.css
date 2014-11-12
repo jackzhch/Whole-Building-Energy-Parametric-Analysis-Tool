@@ -12,12 +12,34 @@ body {
 }
 
 .footer-bar, #copy {
-
-  background-color: #449d44;
+  background-color: #1BEE4E;
+  /*width: 100%;*/
 }
 
 p {
-  font-family: 'Josefin Slab', serif;
+  font-family: 'Bitter', serif;
+  font-style: italic;
+}
+
+a, a:hover {
+    color: #1BEE4E;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a.anchor {
+    display: block; 
+    position: relative; 
+    top: -50px; 
+    visibility: hidden;
+}
+
+.bs-docs-section > .row > a.back-to-top {
+    color: #13A135;
+    margin-right: 10px;
+    font-size: 14px;
 }
 
 /* CUSTOMIZE THE NAVBAR
@@ -32,6 +54,25 @@ p {
 
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover {
 	border-bottom: 5px solid #1bee4e;
+}
+
+.navbar-header {
+	border-left: 5px solid black;
+}
+
+.navbar-header:hover {
+    background-color: #ddd;
+    border-left: 5px solid #1bee4e;
+    border-right: 5px solid #1bee4e;
+}
+
+/*CUSTOMIZE BREADCRUMB*/
+.breadcrumb {
+    margin-bottom: 0px;
+}
+
+.breadcrumb > li > a {
+    color: #13A135;
 }
 
 /* CUSTOMIZE THE CAROUSEL
@@ -172,6 +213,10 @@ p {
 /*Glyphicon spacing in navbar*/
 .glyphicon {
     margin-right: 7px;
+}
+
+.dropdown-menu > li > a .glyphicon {
+    margin-right: 12px;
 }
 
 /*Sidenav hover effect.*/

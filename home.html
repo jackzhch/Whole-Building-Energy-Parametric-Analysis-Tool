@@ -282,7 +282,7 @@
                 $('.desc').hide();
                 $('.hexagon').hover(
                         function() {
-                            $(this).find('.desc').fadeIn('fast');
+                            $(this).find('.desc').stop().fadeIn('fast');
                             counter++;
                             if (counter === 0) {
                                 color = 'base';
@@ -293,7 +293,7 @@
                             $(this).find('.desc').addClass(color);
                         },
                         function() {
-                            $(this).find('.desc').fadeOut('fast', function() {
+                            $(this).find('.desc').stop().fadeOut('fast', function() {
                                 $(this).removeClass(color);
                             });
                         });

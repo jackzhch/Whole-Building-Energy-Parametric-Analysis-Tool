@@ -40,7 +40,7 @@
     <!-- HTML code from Bootply.com editor -->
 
     <body>
-
+       <div>
 
        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
               <div class="container-fluid">
@@ -54,39 +54,23 @@
                  </div>
                  <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                       <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-                       <!--<li><a href="../browse.html" ><span class="glyphicon glyphicon-folder-open"></span> Browse</a></li>-->
-
-                       <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-book"></span> Library <b class="caret"></b></a>
-                          <ul class="dropdown-menu">
-                             <li><a href="library/library.html"><span class="glyphicon glyphicon-folder-open"></span>Browse</a></li>
-                             <li><a href="purchase.html"><span class="glyphicon glyphicon-shopping-cart"></span>Purchase</a></li>
-                             <li><a href="library/datainput.html"><span class="glyphicon glyphicon-pencil"></span>Data input</a></li>
-                             <!--<li><a href="#">User Guide</a></li>-->
-                          </ul>
-                       </li>
-
+                       <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+                       <li><a href="library/library.html"><span class="glyphicon glyphicon-book"></span>Library</a></li>
+                       <li><a href="purchase.html"><span class="glyphicon glyphicon-shopping-cart"></span>Purchase</a></li>
                        <li class="dropdown">
                           <a href="simulation.html" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-stats"></span> Simulation <b class="caret"></b></a>
                           <ul class="dropdown-menu">
-                             <li><a href="simulation.html">Existing Case</a></li>
-                             <li><a href="#">New IDF</a></li>
+                             <li><a href="simulation.html">Example model</a></li>
+                             <li><a href="#">New model</a></li>
+                             <li><a href="#">Compare models</a></li>
                           </ul>
                        </li>
 
-                       <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-eye-open"></span> Monitor <b class="caret"></b></a>
-                          <ul class="dropdown-menu">
-                             <li><a href="#">eeAHUB</a></li>
-                          </ul>
-                       </li>
-<!--                       <li><a href="#weather" data-toggle="modal" data-target="#weatherModal">Weather  </a></li>-->
-
+                       <li><a href="#"><span class="glyphicon glyphicon-eye-open"></span>Monitor</a></li>
                     </ul>
                  </div>
               </div>
-           </nav>
+           </nav> <!-- End of navbar -->
 
 
 
@@ -106,7 +90,7 @@
                        <div class="carousel-caption">
                           <h1>Welcome! </h1>
                           <p>This is Whole Building Energy Parametric Analysis Tool.</p>
-                          <p><a class="btn btn-lg btn-primary" href="http://getbootstrap.com">Learn More</a></p>
+                          <p><a class="btn btn-lg btn-success" href="http://getbootstrap.com">Learn More</a></p>
                        </div>
                     </div>
                 </div>
@@ -116,7 +100,7 @@
                         <div class="carousel-caption">
                             <h1>Changes to the Grid</h1>
                             <p>Bootstrap 3 still features a 12-column grid, but many of the CSS class names have completely changed.</p>
-                            <p><a class="btn btn-large btn-primary" href="#">Learn more</a></p>
+                            <p><a class="btn btn-lg btn-success" href="#">Learn more</a></p>
                         </div>
                     </div>
                 </div>
@@ -126,7 +110,7 @@
                         <div class="carousel-caption">
                             <h1>Percentage-based sizing</h1>
                             <p>With "mobile-first" there is now only one percentage-based grid.</p>
-                            <p><a class="btn btn-large btn-primary" href="#">Browse gallery</a></p>
+                            <p><a class="btn btn-lg btn-success" href="#">Browse gallery</a></p>
                         </div>
                     </div>
                 </div>
@@ -146,35 +130,19 @@
         ================================================== -->
         <!-- Wrap the rest of the page in another container to center all the content. -->
 
-        <div class="container marketing well" style="margin-bottom: 0;">
+        <div style="background-color: white; margin-bottom: 0;">
 
            <!-- Three columns of text below the carousel -->
-           <div class="row">
-              <div class="col-md-3">
-                 <div class="hexagon col-centered">
-                    <div class="hex1">
-                    <a href="purchase.html">
-                       <div class="hex2" style="background: url('img/indoor2.jpg') center no-repeat">
-                          <div class="desc">
-                             <h2>Browse</h2>
-                             <p>website</p>
-                             
-                          </div>  
-                       </div><!--/hex2--> 
-                       </a>
-                    </div><!--/hex1-->
-                 </div><!--/hexagon--> 
+           <div class="row" style="padding: 20px 100px; margin: 0px;">
 
-              </div>
-
-              <div class="col-md-3">
+              <div class="col-md-3" style="padding: 0px 0px;">
                  <div class="hexagon col-centered">
                     <div class="hex1">
                     <a href="library/library.html">
                        <div class="hex2" style="background: url('img/outdoor.jpg') center no-repeat">
                           <div class="desc">
                              <h2>Library</h2>
-                             <p>website</p>
+                             <p>Browse database for materials and their properties</p>
                           </div>  
                        </div><!--/hex2--> 
                        </a>
@@ -182,14 +150,29 @@
                  </div><!--/hexagon--> 
               </div>
 
-              <div class="col-md-3">
+              <div class="col-md-3" style="padding: 0px 0px;">
+                 <div class="hexagon col-centered">
+                    <div class="hex1">
+                    <a href="purchase.html">
+                       <div class="hex2" style="background: url('img/indoor2.jpg') center no-repeat">
+                          <div class="desc">
+                             <h2>Purchase</h2>
+                             <p>Order materials from manufacturers for your building</p>
+                          </div>  
+                       </div><!--/hex2--> 
+                       </a>
+                    </div><!--/hex1-->
+                 </div><!--/hexagon--> 
+              </div>
+              
+              <div class="col-md-3" style="padding: 0px 0px;">
                  <div class="hexagon col-centered">
                     <div class="hex1">
                     <a href="Simulation.html">
                        <div class="hex2" style="background: url('img/indoor.jpg') center no-repeat">
                           <div class="desc">
                              <h2>Simulation</h2>
-                             <p>website</p>
+                             <p>Create and manipulate a whole building model</p>
                           </div>  
                        </div><!--/hex2--> 
                        </a>
@@ -197,14 +180,14 @@
                  </div><!--/hexagon--> 
               </div>
 
-              <div class="col-md-3">
+              <div class="col-md-3" style="padding: 0px 0px;">
                  <div class="hexagon col-centered">
                     <div class="hex1">
-                    <a href="Monitor.html">
+                    <a href="#">
                        <div class="hex2" style="background: url('img/outdoor2.jpg') center no-repeat">
                           <div class="desc">
                              <h2>Monitor</h2>
-                             <p>website</p>
+                             <p>Manage live feedback data of your whole building in real time</p>
                           </div>  
                        </div><!--/hex2--> 
                        </a>
@@ -213,7 +196,6 @@
               </div>
 
            </div><!-- /.row -->
-           <!--<hr style="border-color: #ccc;">-->
         </div><!-- /.container -->
         
             <!-- ============================== FOOTER ============================== -->
@@ -254,7 +236,7 @@
                </div>
 
         <!-- Weather Modal -->
-        <div class="modal fade" id="weatherModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<!--        <div class="modal fade" id="weatherModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -272,7 +254,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
 
         <!-- Honeycomb effects  -->
         <script type="text/javascript">
@@ -307,5 +289,7 @@
                 });
         });
         </script>
+        
+       </div>
     </body>
 </html>

@@ -1,5 +1,5 @@
 body {
-  padding-bottom: 40px;
+  /*padding-bottom: 10px;*/
   background-color: #333;
   color: #ffffff;
   /*background-image: url("../img/watermark.jpg");*/
@@ -14,6 +14,11 @@ body {
 .footer-bar, #copy {
   background-color: #1BEE4E;
   /*width: 100%;*/
+}
+
+.footer-center > a > img {
+    max-height: 45px;
+    padding: 0px 12px;
 }
 
 p {

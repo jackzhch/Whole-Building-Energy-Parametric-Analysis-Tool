@@ -65,12 +65,6 @@ a.anchor {
 	border-left: 5px solid black;
 }
 
-.navbar-header:hover {
-    background-color: #ddd;
-    border-left: 5px solid #1bee4e;
-    border-right: 5px solid #1bee4e;
-}
-
 /*CUSTOMIZE BREADCRUMB*/
 .breadcrumb {
     margin-bottom: 0px;
@@ -177,6 +171,12 @@ a.anchor {
     border-radius: 4px;
   }
 
+  .navbar-header:hover {
+    background-color: #ddd;
+    border-left: 5px solid #1bee4e;
+    border-right: 5px solid #1bee4e;
+}
+  
   /* Bump up size of carousel content */
   .carousel-caption p {
     margin-bottom: 20px;
@@ -275,8 +275,8 @@ a.anchor {
   -webkit-transform: rotate(-60deg);
   transform: rotate(-60deg);
   height: 100%;
-  /*@include background-size(($width + ($width * .20)) ($width + ($width * .20)));
-  background-position: 50%;*/
+/*  @include background-size(($width + ($width * .20)) ($width + ($width * .20)));*/
+  background-position: 50%;
   position: relative;
   visibility: visible;
   width: 100%;
@@ -287,7 +287,7 @@ a.anchor {
   font-family: 'Lato', sans-serif;
   font-size: 1.5em;
   font-weight: 300;
-  height: 440px;
+  height: 250px;
   line-height: 1.5em;
   position: absolute;
   text-align: center;
@@ -295,22 +295,22 @@ a.anchor {
   width: 220px;
 }
 .desc.base {
-  background: rgba(230, 0, 98, 0.75);
+  background: rgba(230, 0, 98, 0.80);
 }
 .desc.one {
-  background: rgba(252, 171, 55, 0.75);
+  background: rgba(252, 171, 55, 0.80);
 }
 .desc.two {
-  background: rgba(27, 238, 78, 0.75);
+  background: rgba(19, 161, 53, 0.85);
 }
 .desc.three {
-  background: rgba(83, 70, 54, 0.75);
+  background: rgba(83, 70, 54, 0.80);
 }
 .desc h2 {
-  margin: 100px 20px 0 20px;
+  margin: 80px 20px 0 20px;
 }
 .desc p {
-/*  font-size: .5em;*/
+  font-size: 16px;
   text-transform: lowercase;
 }
 

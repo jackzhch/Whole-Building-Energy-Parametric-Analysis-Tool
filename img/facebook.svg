@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="30px" height="29px" viewBox="0 0 30 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>facebook</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Group" sketch:type="MSLayerGroup" transform="translate(0.000000, -40.000000)" fill="#00BD9C">
+            <path d="M3.00001915,40 C1.34315432,40 0,41.3420599 0,42.9976126 L0,66.0346455 C0,67.6901812 1.34731857,69.0322581 3.00001915,69.0322581 L26.9999809,69.0322581 C28.6568457,69.0322581 30,67.6901982 30,66.0346455 L30,42.9976126 C30,41.3420769 28.6526814,40 26.9999809,40 L3.00001915,40 Z M12.8151278,51.6687222 L11,51.6687222 L11,54.4809098 L12.8151278,54.4809098 L12.8151278,62.7419355 L16.3055802,62.7419355 L16.3055802,54.4457704 L18.7407561,54.4457704 L19,51.6687222 L16.3055802,51.6687222 L16.3055802,50.0868517 C16.3055802,49.4320615 16.4445,49.1728288 17.111121,49.1728288 L18.9999579,49.1728288 L18.9999579,46.2903226 L16.5833355,46.2903226 C13.9861007,46.2903226 12.8151278,47.3756099 12.8151278,49.4541035 L12.8151278,51.6687222 Z M12.8151278,51.6687222" id="Rectangle-3-copy" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

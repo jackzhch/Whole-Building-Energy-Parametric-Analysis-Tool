@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="30px" height="29px" viewBox="0 0 30 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>google_plus</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Group" sketch:type="MSLayerGroup" transform="translate(0.000000, -120.000000)" fill="#00BD9C">
+            <path d="M3.00001915,120 C1.34315432,120 0,121.34206 0,122.997613 L0,146.034645 C0,147.690181 1.34731857,149.032258 3.00001915,149.032258 L26.9999809,149.032258 C28.6568457,149.032258 30,147.690198 30,146.034645 L30,122.997613 C30,121.342077 28.6526814,120 26.9999809,120 L3.00001915,120 Z M24,133.555556 L16.4444444,133.555556 L16.4444444,126 L14.5555556,126 L14.5555556,133.555556 L7,133.555556 L7,135.444444 L14.5555556,135.444444 L14.5555556,143 L16.4444444,143 L16.4444444,135.444444 L24,135.444444 L24,133.555556 Z M24,133.555556" id="Rectangle-3-copy-3" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

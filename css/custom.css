@@ -21,6 +21,11 @@ body {
     padding: 0px 12px;
 }
 
+h1 {
+    color: #1BEE4E;
+    border-bottom: 2px solid #1bee4e;
+}
+
 p {
   font-family: 'Bitter', serif;
   font-style: italic;
@@ -62,7 +67,7 @@ a.anchor {
 }
 
 .navbar-header {
-	border-left: 5px solid black;
+	border-left: 5px solid #222;
 }
 
 /*CUSTOMIZE BREADCRUMB*/

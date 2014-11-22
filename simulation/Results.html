@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Whole Building Energy Parametric Analysis Tool - Simulation Results</title>
+  <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+  <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="../css/jasny-bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="../css/custom.css" rel="stylesheet" type="text/css">
+  <link href="../css/fonts.css" rel="stylesheet" type="text/css">
+  <link href="../css/easyTree.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div>
+   <!--Navbar-->
+   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+     <div class="navbar-header">
+      <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </a>
+     <a class="navbar-brand" href="../home.html"><img src="../img/WBEPT_logo1.png" alt="WBEPTlogo" style="max-height: 45px;"></a>
+   </div>
+   <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav navbar-right">
+     <li><a href="../home.html"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+     <li><a href="../library/library.html"><span class="glyphicon glyphicon-book"></span>Library</a></li>
+     <li><a href="../purchase.html"><span class="glyphicon glyphicon-shopping-cart"></span>Purchase</a></li>
+     <li  class="active dropdown">
+      <a href="simulation.html" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-pencil"></span> Simulation <b class="caret"></b></a>
+      <ul class="dropdown-menu">
+       <li><a href="simulation.html">Example model</a></li>
+       <li><a href="../simulationNew.html">New model</a></li>
+       <li><a href="../simulationCompare.html">Compare models</a></li>
+     </ul>
+   </li>
+
+   <li><a href="../comingsoon.html"><span class="glyphicon glyphicon-stats"></span>Monitor</a></li>
+ </ul>
+</div>
+</div>
+</nav> <!-- End of navbar -->
+
+<!-- ============================ Bootstrap core JavaScript ========================== -->
+
+<div class="container" style="margin-top: 20px;">
+
+ <!--Page header section-->
+ <div class="row">
+   <div class="col-md-12" role="main">
+  </div>
+</div> <!-- End of page header section -->
+
+<!--Main content section-->
+<div class="row" style="background-color: #777; padding-top:40px">
+  <div class="col-lg-3" style="padding-bottom:50px">
+   <div class="easy-tree">
+    <ul>
+      <li>Zone: PLENUM-1</li>
+      <li>Zone: PLENUM-2</li>
+      <li>Zone: PLENUM-1
+        <ul>
+          <li>Surface: WALL-1PF</li>
+          <li>Zone: SPACE1-1
+            <ul>
+              <li>Surface: WALL-1PF</li>
+              <li>Surface: SB12</li>
+              <li>Surface: SB13</li>
+              <li>Surface: SB14</li>
+            </ul>
+          </li>
+          <li>EZone: SPACE2-1</li>
+          <li>Zone: SPACE2-3</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="col-lg-6" style="background-color: white; padding: 10px 18px 20px; color: black;">
+ <div class="row" >
+  <h2 id="overview" class="page-header"  style="background-color:black; color: #1bee4e; margin-top:-8px; padding:5px">Result</h2>
+</div>
+
+<div>
+  <img src="../img/sampleidf.png" width="600px" height="300px" class="img-thumbnail">
+</div>
+
+<div class="well" style="padding-bottom:90px">
+<div class="col-lg-6">
+<p>File Name: Sample.idf</p>
+<p>Construct Name: ROOF-1</p>
+<p>Layer-1: BR01</p>
+</div>
+<div class="col-lg-6">
+<p>Layer-2: IN46</p>
+<p>Layer-3: WD01</p>
+<p>Layer-4: IU70</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="col-lg-3 text-center" style="padding-bottom:60px">
+  <!--<h1 class="page-header">Add input to library</h1>-->
+  <form role="form" class="form-horizontal">
+    <div class="form-group">
+     <label for="input-layer" class="control-label col-sm-3">Layer-1</label>
+     <div class="col-sm-6">
+      <select class="form-control" id="input-type">
+       <option>--Select Material--</option>
+       <option>Sub1</option>
+       <option>Sub2</option>
+       <option>Sub3</option>
+     </select>
+   </div>
+ </div>
+
+ <div class="form-group">
+   <label for="input-layer" class="control-label col-sm-3">Layer-2</label>
+   <div class="col-sm-6">
+    <select class="form-control" id="input-type">
+     <option>--Select Material--</option>
+     <option>Sub1</option>
+     <option>Sub2</option>
+     <option>Sub3</option>
+   </select>
+ </div>
+</div>
+
+<div class="form-group">
+  <label for="input-layer" class="control-label col-sm-3">Layer-3</label>
+  <div class="col-sm-6">
+    <select class="form-control" id="input-type">
+     <option>--Select Material--</option>
+     <option>Sub1</option>
+     <option>Sub2</option>
+     <option>Sub3</option>
+   </select>
+ </div>
+</div>
+
+<div class="form-group">
+ <label for="input-layer" class="control-label col-sm-3">Layer-4</label>
+ <div class="col-sm-6">
+  <select class="form-control" id="input-type">
+   <option>--Select Material--</option>
+   <option>Sub1</option>
+   <option>Sub2</option>
+   <option>Sub3</option>
+ </select>
+</div>
+</div>
+<button type="button" class="btn btn-success" data-toggle="modal" data-target="#submitModal" style="margin: 0px 5px;">
+ <span class="glyphicon glyphicon-send"></span>Substitute
+</button>
+</form>
+</div>
+</div>
+</div>
+
+<!-- ============================== FOOTER ============================== -->
+<div class="navbar-fixed-bottom" style="padding-bottom: 10px;background-color:black">
+ <div class="footer-bar" style="height: 15px;"></div>
+ <section class="footer">
+   <div class="container">
+    <div class="col-lg-3 col-sm-9 col-xs-9" style="padding-left: 35px; line-height: 2;">
+     <a href="../about.html" class="btn btn-xs btn-success"><span class="glyphicon glyphicon-user"></span>About us</a>
+     <a href="../about.html" class="btn btn-xs btn-success"><span class="glyphicon glyphicon-envelope"></span>Contact us</a>
+     <a href="../comingsoon.html" class="btn btn-xs btn-success"><span class="glyphicon glyphicon-list-alt"></span>Terms of use</a>
+   </div>
+   <div class="col-lg-7 footer-center text-center">
+     <a href="http://www.cmu.edu"><img src="../img/cmulogo.png" alt="CMU"></a>
+     <a href="http://www.cbei.psu.edu/"><img src="../img/eebhublogo.png" alt="eebhub"></a>
+     <a href="http://www.cbei.psu.edu/"><img src="../img/Sel_Title.png" alt="cBEI"></a>
+     <a href="http://www.energy.gov"><img src="../img/doe-wide-logo.png" alt="DOE"></a>
+   </div>
+   <div class="col-lg-2 text-right">
+     <a target="_blank" href="https://www.facebook.com/pages/Carnegie-Mellon-School-of-Architecture/286447510184">
+      <img src="https://d2k0u7ej7vpxec.cloudfront.net/static/img/homepage_v3/facebook.svg" alt="Follow CMU School of Architecture on Facebook"/>
+    </a>
+    <a target="_blank" href="https://twitter.com/cmusoarch">
+      <img src="https://d2k0u7ej7vpxec.cloudfront.net/static/img/homepage_v3/twitter.svg" alt="Follow CMU School of Architecture on Twitter"/>
+    </a>
+    <a target="_blank" href="https://www.linkedin.com/edu/carnegie-mellon-university-19232">
+      <img
+      src="https://d2k0u7ej7vpxec.cloudfront.net/static/img/homepage_v3/linkedin.svg" alt="Follow CMU on Linkedin"/>
+    </a>
+    <a target="_blank" href="https://plus.google.com/+carnegiemellon/">
+      <img src="https://d2k0u7ej7vpxec.cloudfront.net/static/img/homepage_v3/google_plus.svg" alt="Follow CMU on Google+"/>
+    </a>
+  </div>
+</div>
+</section>
+</div> <!-- End of footer -->
+
+<!-- ============SEARCH MODAL=========== -->
+<div class="modal fade" id="submitModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+ <div class="modal-dialog">
+  <div class="modal-content">
+   <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+    <h4 class="modal-title" id="myModalLabel">Submission successful!</h4>
+  </div>
+  <div class="modal-body" style="font-size: 24px; text-align: center;">
+    <p>Thank you very much for your contribution to our library! Your input is greatly appreciated.</p>
+    <p>The information you submitted will be reviewed by our staff and published to the library soon.</p>
+  </div>
+  <div class="modal-footer">
+   <a href="datainput.html" class="btn btn-success pull-right"><span class="glyphicon glyphicon-ok"></span>Done</a>
+   <!-- <button type="button" class="btn btn-success" data-dismiss="modal">Close</button> -->
+ </div>
+</div>
+</div>
+</div>
+
+            <!-- Bootstrap core JavaScript
+            ================================================== -->
+            <script src="../js/jquery-1.11.1.min.js"></script>
+            <script src="../js/bootstrap.js"></script>
+            <script src="../js/jasny-bootstrap.js"></script>
+            <script src="../js/ie10-viewport-bug-workaround.js"></script>
+            <script src="../js/easyTree.js"></script>
+
+
+            <script>
+              window.twttr = (function(d, s, id) {
+                var t, js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id))
+                  return;
+                js = d.createElement(s);
+                js.id = id;
+                js.async = 1;
+                js.src = "https://platform.twitter.com/widgets.js";
+                fjs.parentNode.insertBefore(js, fjs);
+                return window.twttr || (t = {_e: [], ready: function(f) {
+                  t._e.push(f)
+                }});
+              }(document, "script", "twitter-wjs"));
+            </script>
+
+<!-- TreeView JavaScript
+  ================================================== -->
+  <script>
+    (function ($) {
+      function init() {
+        $('.easy-tree').EasyTree({
+          selectable: true,
+          deletable: false,
+          editable: false,
+          addable: false,
+        });
+      }
+
+      window.onload = init();
+    })(jQuery)
+  </script>
+
+
+</body>
+</html>

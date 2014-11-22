@@ -380,6 +380,7 @@ a.anchor {
 .nav-sidebar > li > a {
   padding-right: 20px;
   padding-left: 20px;
+  color: black;
 }
 .nav-sidebar > .active > a,
 .nav-sidebar > .active > a:hover,
@@ -468,5 +469,10 @@ blockquote {
   display: inline-block;
   border-radius: 50%;
 }
+
+.table-striped > tbody > tr:nth-child(odd) > th {
+  background-color: #E6E600;
+}
+
 
 

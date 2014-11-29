@@ -1,0 +1,54 @@
+.accordion-caption {
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 200px;
+    padding: 25px;
+}
+
+#firstcaption.accordion-caption {
+    background-color: rgba(19,161,53,0.7);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    padding: 20px;
+}
+
+.accordion-caption > h1 {
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 30px;
+    border: none;
+    margin: 0;
+}
+
+.accordion-caption > p {
+    color: white;
+    font-size: 16px;
+    margin: 20px 0 0;
+}
+
+.slider-closed > .accordion-caption > p {
+    display: none;
+}
+
+.slider-closed > #firstcaption.accordion-caption, .slider-closed > .accordion-caption {
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    width: 400px;
+    height: 100%;
+    vertical-align: top;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 50px;
+}
+
+.slider-closed > #firstcaption.accordion-caption > h1, .slider-closed > .accordion-caption > h1 {
+    text-transform: lowercase;
+}

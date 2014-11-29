@@ -1,0 +1,545 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<title>zAccordion Examples</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+		<script src="js/jquery.zaccordion.js"></script>
+		<style type="text/css">
+			/* Just some styles to set the page layout. */
+			* {margin:0;padding:0;font-family:Arial, Verdana, sans-serif;}
+			body {padding:20px;line-height:20px;font-size:12px;color:#000;}
+			h1 {font-size:18px;margin:10px 0;line-height:1;}
+			h2 {font-size:14px;margin:10px 0;line-height:1;}
+			p {font-size:12px;margin:10px 0;}
+			small {font-size:11px;margin:10px 0;color:#333;}
+			a {font-size:12px;text-decoration:none;color:#f00;}
+			p span {color:#00f;}
+			#container {width:960px;margin:0 auto;padding-bottom:40px;}
+			#examples {margin-top:60px;}
+			pre {font-family:"Courier New", Courier, monospace;font-size:11px;margin:20px 0 100px 0;border:1px dashed #ddd;padding:10px;background:#f6f6f6;}
+			pre.html {margin:10px 0;}
+			.clear {clear:both;}
+		</style>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("pre.js").each(function(index) {
+					eval($(this).text());
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="container">
+			<h1>zAccordion Examples</h1>
+			<p>There are a number of examples below. Each example shows the JavaScript needed to build the accordion.  For HTML and CSS, please view the page source.</p>
+			<div id="examples">
+
+
+
+
+
+			<h2>Example 1 - A Basic Accordion</h2>
+			<ul id="example1">
+				<li>
+					<img src="images/slide0.gif" width="600" height="270" alt="" />
+				</li>
+				<li>
+					<img src="images/slide1.gif" width="600" height="270" alt="" />
+				</li>
+				<li>
+					<img src="images/slide2.gif" width="600" height="270" alt="" />
+				</li>
+				<li>
+					<img src="images/slide3.gif" width="600" height="270" alt="" />
+				</li>
+				<li>
+					<img src="images/slide4.gif" width="600" height="270" alt="" />
+				</li>
+			</ul>
+			<p>This example demonstrates the best way to fire the accordion. Each slide contains an image measuring 600 x 270 pixels. The <strong>width</strong> of the accordion is required and set to <em>960</em>. The <strong>slideWidth</strong> is set to <em>600</em> in order to display the full slide. The size of the tabs will be calculated automatically.</p>
+			<p>A <strong>height</strong> is required and set to <em>270</em>. The <strong>timeout</strong> setting below will change the slides every <em>4000</em> milliseconds instead of the default <em>6000</em> milliseconds.</p>
+<pre class="js">
+$("#example1").zAccordion({
+	timeout: 4000,
+	slideWidth: 600,
+	width: 960,
+	height: 270
+});
+</pre>
+
+
+
+
+
+			<h2>Example 2 - Percentages</h2>
+			<div id="example2">
+				<div>
+					<img src="images/slide0.gif" width="100%" height="100%" alt="" />
+				</div>
+				<div>
+					<img src="images/slide1.gif" width="100%" height="100%" alt="" />
+				</div>
+				<div>
+					<img src="images/slide2.gif" width="100%" height="100%" alt="" />
+				</div>
+			</div>
+			<p>The example above shows how to use percentages. The <strong>width</strong> of the accordion is set to <em>100%</em> (in quotes below) and the <strong>tabWidth</strong> to <em>10%</em>. The size of the slides will be calculated automatically.</p>
+			<p>The <strong>startingSlide</strong> is set to <em>1</em> (the second slide in a zero-based index). The accordion has <strong>auto</strong> set to <em>false</em> and will not switch slides on a timer. Instead of a click, the slide change will <strong>trigger</strong> on <em>mouseover</em>.</p>
+			<p>The <strong>height</strong> setting is required and set to <em>200</em> pixels.</p>
+<pre class="js">
+$("#example2").zAccordion({
+	startingSlide: 1,
+	auto: false,
+	tabWidth: "10%",
+	width: "100%",
+	height: 220,
+	trigger: "mouseover"
+});
+</pre>
+
+
+
+
+
+			<h2>Example 3 - Creating Navigation</h2>
+			<style type="text/css">
+				#thumbs {list-style:none;float:left;}
+				#thumbs li {display:inline;}
+				#thumbs a {margin-left:5px;float:left;}
+				#start {display:none;float:left;}
+				#stop {float:left;}
+			</style>
+			<ul id="example3">
+				<li><img src="images/slide0.gif" width="600" height="200" /></li>
+				<li><img src="images/slide1.gif" width="600" height="200" /></li>
+				<li><img src="images/slide2.gif" width="600" height="200" /></li>
+				<li><img src="images/slide3.gif" width="600" height="200" /></li>
+				<li><img src="images/slide4.gif" width="600" height="200" /></li>
+			</ul>
+			<p>
+				<a id="start" href="#">Start</a>
+				<a id="stop" href="#">Stop</a>
+			</p>
+			<ul id="thumbs">
+				<li><a href="#">0</a></li>
+				<li><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+			</ul>
+			<div class="clear"></div>
+			<p>This might be the most practical example when it comes to rotating featured content. Each slide has its own class and custom background image.</p>
+<pre class="js">
+$("#example3").zAccordion({
+	slideWidth: "500px",
+	width: "800px",
+	height: "200px",
+	timeout: 2000
+});
+$("#start").click(function() {
+	$("#example3").zAccordion("start");
+	$(this).css("display", "none");
+	$("#stop").css("display", "block");
+	return false;
+});
+$("#stop").click(function() {
+	$("#example3").zAccordion("stop");
+	$(this).css("display", "none");
+	$("#start").css("display", "block");
+	return false;
+});
+$("#thumbs a").click(function() {
+	$("#example3").zAccordion("trigger", $(this).parent().index());
+	return false;
+});
+</pre>
+
+
+
+
+
+			<h2>Example 4 - An Advanced Example</h2>
+			<style type="text/css">
+				#example4 ul {list-style:none;}
+				#example4 h3 {color:#fff;text-transform:uppercase;font-size:24px;line-height:1;}
+				#example4 p {color:#fff;}
+				#example4 .frame-0 {background:url(images/slide0.gif) top left repeat;}
+				#example4 .frame-1 {background:url(images/slide1.gif) top left repeat;}
+				#example4 .frame-2 {background:url(images/slide2.gif) top left repeat;}
+				#example4 .frame-3 {background:url(images/slide3.gif) top left repeat;}
+				#example4 .frame-content {width:400px;padding:50px;}
+				#example4 .frame-closed .frame-content {display:none;}
+				#example4 .frame-open .frame-content {display:block;}
+			</style>
+			<div id="example4">
+				<ul>
+					<li class="frame-0">
+						<div class="frame-content">
+							<h3>Lorem ipsum dolor sit</h3>
+							<p>Vivamus vel neque nec est hendrerit aliquet. Donec sed cursus sapien. Aenean auctor egestas turpis nec aliquam.</p>
+						</div>
+					</li>
+					<li class="frame-1">
+						<div class="frame-content">
+							<h3>Donec a elit nisi</h3>
+							<p>Proin sit amet massa vel elit pulvinar hendrerit eu nec odio. Maecenas faucibus odio sit amet nunc semper accumsan.</p>
+						</div>
+					</li>
+					<li class="frame-2">
+						<div class="frame-content">
+							<h3>Duis vitae suscipit neque</h3>
+							<p>Nunc porta commodo dolor, in vestibulum neque ullamcorper non. Nunc elementum ante in metus mollis sit amet consequat justo facilisis.</p>
+						</div>
+					</li>
+					<li class="frame-3">
+						<div class="frame-content">
+							<h3>Sed a scelerisque lorem</h3>
+							<p>Phasellus non ante in lectus eleifend scelerisque ut eget velit.</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<p>This example is very common with featured content. Each slide has a background image set with CSS. The text within the slides is only displayed for the open slide. In snippet below, the <strong>slideClass</strong> is set to <em>frame</em>. This setting will add a class of <em>frame</em> to each of the list-items. It will also add a class of <em>frame-open</em> for the open slide, <em>frame-closed</em> for the closed slides, and <em>frame-previous</em> for the slide that was previously open.</p>
+			<p>By default zAccordion will not add classes to the content. However, the option to add classes exists to make styling easy.</p>
+<pre class="js">
+$(document).ready(function() {
+	$("#example4 ul").zAccordion({
+		slideWidth: 600,
+		width: 900,
+		height: 250,
+		timeout: 3000,
+		slideClass: "frame"
+	});
+});
+</pre>
+
+
+
+
+
+			<h2>Example 5 - Using the HTML5 Data Attribute</h2>
+			<div id="example5" data-width="900" data-slidewidth="500" data-height="250">
+				<img src="images/slide0.gif" width="500" height="250" alt="" />
+				<img src="images/slide1.gif" width="500" height="250" alt="" />
+				<img src="images/slide2.gif" width="500" height="250" alt="" />
+				<img src="images/slide3.gif" width="500" height="250" alt="" />
+			</div>
+			<p>HTML5 gave web developers the ability to add custom data attributes to HTML elements. Instead of defining options with JavaScript, zAccordion can pull its options from data attributes. A simple example is below. The <strong>width</strong>, <strong>slideWidth</strong>*, and <strong>height</strong> are prefixed with <em>data-</em>.</p>
+			<small>* Note: Notice the lowercase <strong>slidewidth</strong>. In order to match HTML5 specs, the data attributes should be defined as lowercase instead of camelcase with JavaScript.</small>
+<pre class="html">
+&lt;div id="example5" data-width="900" data-slidewidth="500" data-height="250"&gt;
+</pre>
+<pre class="js">
+$(document).ready(function() {
+	$("#example5").zAccordion();
+});
+</pre>
+
+
+
+
+
+			<h2>Example 6 - The Destroy Function</h2>
+			<style type="text/css">
+				#example6 ul {list-style:none;}
+				#example6 li {display:inline;}
+				#example6 img {float:left;display:block;}
+			</style>
+			<ul id="example6">
+				<li><img src="images/slide0.gif" width="320" height="100" alt="" /></li>
+				<li><img src="images/slide1.gif" width="320" height="100" alt="" /></li>
+				<li><img src="images/slide2.gif" width="320" height="100" alt="" /></li>
+				<li><img src="images/slide3.gif" width="320" height="100" alt="" /></li>
+				<li><img src="images/slide4.gif" width="320" height="100" alt="" /></li>
+			</ul>
+			<div class="clear"></div>
+			<p>
+				<a id="destroy" href="#">Destroy</a><br/>
+				<a id="rebuild" href="#">Destroy and Rebuild a Smaller Accordion</a>
+			</p>
+			<div class="clear"></div>
+			<p>An accordion can be destroyed at any time. In this example, the <strong>slideClass</strong> has been set to <em>destroy-me</em>. With the snippet below, once the accordion is destroyed, and classes set by zAccordion will be removed. zAccordion will also completely remove the style attribute.</p>
+<pre class="js">
+$(document).ready(function() {
+	$("#example6").zAccordion({
+		slideWidth: 320,
+		width: 600,
+		height: 100,
+		timeout: 2000,
+		slideClass: "destroy-me",
+		speed: 500,
+		pause: false
+	});
+	$("#destroy").click(function() {
+		$("#example6").zAccordion("destroy", {
+			removeStyleAttr: true, /* This attribute will default to true and remove all inline styles. */
+			removeClasses: true, /* This attribute will default to false and remove any classes that have been set by zAccordion. */
+			destroyComplete: {
+				afterDestroy: function() {
+					$("#destroy").fadeOut(1000);
+					$("#rebuild").fadeOut(1000);
+				}
+			}
+		});
+		return false;
+	});
+	$("#rebuild").click(function() {
+		$("#example6").zAccordion("destroy", {
+			removeStyleAttr: true, /* This attribute will default to true and remove all inline styles. */
+			removeClasses: true, /* This attribute will default to false and remove any classes that have been set by zAccordion. */
+			destroyComplete: {
+				rebuild: {
+					slideWidth: 320,
+					width: 400,
+					height: 100,
+					timeout: 2000,
+					slideClass: "destroy-me",
+					speed: 500,
+					pause: false
+				}
+			}
+		});
+		return false;
+	});
+});
+</pre>
+
+
+
+
+
+			<h2>Example 7 - Maximum Tab Width</h2>
+			<ul id="example7">
+				<li><img src="images/slide0.gif" width="600" height="150" alt="" /></li>
+				<li><img src="images/slide1.gif" width="600" height="150" alt="" /></li>
+				<li><img src="images/slide2.gif" width="600" height="150" alt="" /></li>
+				<li><img src="images/slide3.gif" width="600" height="150" alt="" /></li>
+			</ul>
+			<div class="clear"></div>
+			<p>The example demonstrates how to set up zAccordion using <strong>width</strong> and <strong>tabWidth</strong>. The accordion has a width of 800 pixels. The <strong>tabWidth</strong> will need to be set to less than <em>200</em> pixels. Anything over <em>200</em> and the accordion will not build. It is best to set the <strong>tabWidth</strong> to less than <em>200</em> pixels in this example so the slides will be free to animate.</p>
+<pre class="js">
+$(document).ready(function() {
+	$("#example7").zAccordion({
+		tabWidth: "200",
+		width: "800",
+		height: "150"
+	});
+});
+</pre>
+
+
+
+
+
+			<h2>Example 8 - Minimum Slide Width</h2>
+			<ul id="example8">
+				<li><img src="images/slide0.gif" width="600" height="150" alt="" /></li>
+				<li><img src="images/slide1.gif" width="600" height="150" alt="" /></li>
+				<li><img src="images/slide2.gif" width="600" height="150" alt="" /></li>
+				<li><img src="images/slide3.gif" width="600" height="150" alt="" /></li>
+			</ul>
+			<p>This is example is similar to the example above, but this time <strong>slideWidth</strong> is set to <em>200</em> pixels. <strong>slideWidth</strong> should really be set to higher than <em>200</em> to allow for some animation.</p>
+<pre class="js">
+$(document).ready(function() {
+	$("#example8").zAccordion({
+		slideWidth: "200",
+		width: "800",
+		height: "150"
+	});
+});
+</pre>
+
+
+
+
+
+			<h2>Example 9 - animationStart and animationComplete</h2>
+			<style type="text/css">
+				#animation span {color:#}
+			</style>
+			<ol id="example9">
+				<li><img src="images/slide0.gif" width="100%" height="150" alt="" /></li>
+				<li><img src="images/slide1.gif" width="100%" height="150" alt="" /></li>
+				<li><img src="images/slide2.gif" width="100%" height="150" alt="" /></li>
+				<li><img src="images/slide3.gif" width="100%" height="150" alt="" /></li>
+				<li><img src="images/slide4.gif" width="100%" height="150" alt="" /></li>
+			</ol>
+			<p id="animation"><span></span></p>
+			<p>This example shows how to fire an event when slide animation starts and when it is complete. The <strong>timeout</strong> is increased to 8 seconds in the snippet below in order to see the how the <strong>animationStart</strong> and <strong>animationComplete</strong> options work.</p>
+<pre class="js">
+$(document).ready(function() {
+	$("#example9").zAccordion({
+		timeout: 8000,
+		speed: 5000,
+		tabWidth: "10%",
+		width: "100%",
+		height: "150",
+		animationStart: function () {
+			$("#animation span").html("Animation started...");
+		},
+		animationComplete: function () {
+			$("#animation span").html("Animation complete.");
+		}
+	});
+});
+</pre>
+
+
+
+
+
+			<h2>Example 10 - Another Advanced Example</h2>
+			<style type="text/css">
+				#example10 li {position:relative;}
+				#example10 div.slider-bg {background:#000;top:300px;height:102px;width:600px;left:0;position:absolute;z-index:10;opacity:.5;}
+				#example10 div.slider-info {top:300px;height:72px;left:0;position:absolute;width:65px;z-index:15;padding:15px;}
+				#example10 div.slider-info strong {font-size:18px;color:#fff;margin-bottom:5px;}
+				#example10 div.slider-info p {display:none;font-size:12px;line-height:14px;color:#fff;margin:0 !important;}
+				#example10 li.slider-open div.slider-info {width:570px;}
+				#example10 li.slider-open div.slider-info strong {font-size:22px;}
+				#example10 li.slider-open div.slider-info p {display:block;}
+			</style>
+			<ul id="example10">
+				<li>
+					<img src="images/slide0.gif" width="600" height="400" alt="" />
+					<div class="slider-bg"></div>
+					<div class="slider-info">
+						<strong>Lorem ipsum</strong>
+						<p class="slider-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porttitor lacus sollicitudin ligula sagittis a ultricies nulla ultricies. Ut odio nisi, posuere sed blandit at, bibendum non dolor.</p>
+					</div>
+				</li>
+				<li>
+					<img src="images/slide1.gif" width="600" height="400" alt="" />
+					<div class="slider-bg"></div>
+					<div class="slider-info">
+						<strong>Dolor Sit</strong>
+						<p class="slider-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in condimentum sem. Aenean faucibus dignissim auctor. In ut libero vitae augue laoreet iaculis at a tellus.</p>
+					</div>
+				</li>
+				<li>
+					<img src="images/slide2.gif" width="600" height="400" alt="" />
+					<div class="slider-bg"></div>
+					<div class="slider-info">
+						<strong>Donec Ultrices</strong>
+						<p class="slider-text">Duis viverra velit orci. Sed vestibulum mi nec est imperdiet sed ullamcorper augue molestie. Donec ultrices facilisis erat at porttitor.</p>
+					</div>
+				</li>
+				<li>
+					<img src="images/slide3.gif" width="600" height="400" alt="" />
+					<div class="slider-bg"></div>
+					<div class="slider-info">
+						<strong>Est Imper</strong>
+						<p class="slider-text">Phasellus sed lectus nisl, eget cursus eros. Suspendisse posuere orci eu lorem luctus et porta nunc posuere. Cras sed lectus vitae leo accumsan adipiscing.</p>
+					</div>
+				</li>
+			</ul>
+			<p>The example above demonstrates a unique way to rotate featured content. Similar to other examples, it uses classes set with <strong>slideClass</strong> to create the effect above.</p>
+<pre class="js">
+$(document).ready(function() {
+	$("#example10").zAccordion({
+		width: 884,
+		speed: 600,
+		slideClass: "slider",
+		slideWidth: 600,
+		height: 400
+	});
+});
+</pre>
+
+
+
+
+
+			<h2>Example 11 - Easing</h2>
+			<ol id="example11">
+				<li><img src="images/slide0.gif" width="600" height="150" alt="" /></li>
+				<li><img src="images/slide1.gif" width="600" height="150" alt="" /></li>
+				<li><img src="images/slide2.gif" width="600" height="150" alt="" /></li>
+				<li><img src="images/slide3.gif" width="600" height="150" alt="" /></li>
+				<li><img src="images/slide4.gif" width="600" height="150" alt="" /></li>
+			</ol>
+			<p>This example shows a quick way to add <strong>easing</strong> to the accordion using the jQuery Easing Plugin.</p>
+<pre class="js">
+$(document).ready(function() {
+	$("#example11").zAccordion({
+		easing: "easeOutBounce",
+		height: "150px",
+		slideWidth: "600px",
+		width: "900px"
+	});
+});
+</pre>
+
+
+
+
+
+			<h2>Example 12 - Firing a Function using afterBuild</h2>
+			<ol id="example12">
+				<li><img src="images/slide0.gif" width="700" height="150" alt="" /></li>
+				<li><img src="images/slide1.gif" width="700" height="150" alt="" /></li>
+				<li><img src="images/slide2.gif" width="700" height="150" alt="" /></li>
+				<li><img src="images/slide3.gif" width="700" height="150" alt="" /></li>
+			</ol>
+			<p id="build"><span></span></p>
+			<p>The <strong>afterBuild</strong> option can be set up to fire a function once the accordion is built. Below, the <strong>afterBuild</strong> option will change the text of an <em>id</em>. As a practical example, this option could be used to set the accordion's CSS position from off screen to on screen, hiding the initial build and showing the accordion only when it is ready.</p>
+<pre class="js">
+$(document).ready(function() {
+	$("#example12").zAccordion({
+		height: "150",
+		slideWidth: "700",
+		width: "960",
+		buildComplete: function () {
+			$("#build span").html("Build complete.");
+		}
+	});
+});
+</pre>
+
+
+
+
+
+			<h2>Example 13 - Using Error Messaging</h2>
+			<ul id="example13">
+				<li><img src="images/slide0.gif" width="700" height="150" alt="" /></li>
+				<li><img src="images/slide1.gif" width="700" height="150" alt="" /></li>
+				<li><img src="images/slide2.gif" width="700" height="150" alt="" /></li>
+				<li><img src="images/slide3.gif" width="700" height="150" alt="" /></li>
+			</ul>
+			<p>In Example 7 the <strong>tabWidth</strong> was set to 200 pixels, or one fourth of the accordion's <strong>width</strong>. This example sets the <strong>tabWidth</strong> to 300 pixels. The accordion should throw an error in the JavaScript console and not build. The <strong>errors</strong> option is set to <em>true</em>.</p>
+<pre class="js">
+$(document).ready(function() {
+	$("#example13").zAccordion({
+		tabWidth: "300",
+		width: "800",
+		height: "150",
+		errors: true
+	});
+});
+</pre>
+
+
+
+
+
+			<h2>Example 14 - 100% Height and 100% Width</h2>
+			<p>Please see the included <a href="percentage.html">percentage.html</a> file.</p>
+
+
+
+
+
+			<h2>Example 15 - A Responsive Example using Media Queries</h2>
+			<p>Please see the included <a href="responsive.html">responsive.html</a> file.</p>
+
+
+
+
+
+			</div>
+		</div>
+	</body>
+</html>

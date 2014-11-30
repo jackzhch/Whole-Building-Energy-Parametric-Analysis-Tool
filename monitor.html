@@ -8,6 +8,7 @@ and open the template in the editor.
    <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="X-Frame-Options" content="allow">
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <link rel="icon" href="img/favicon.ico" type="image/x-icon">
@@ -23,34 +24,34 @@ and open the template in the editor.
    </head>
    <body>
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-         <div class="container-fluid">
-            <div class="navbar-header">
-               <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-               </a>
-               <a class="navbar-brand" href="home.html"><img src="img/WBEPT_logo1.png" alt="WBEPTlogo" style="max-height: 45px;"></a>
-            </div>
-            <div class="navbar-collapse collapse">
-               <ul class="nav navbar-nav navbar-right">
-                  <li><a href="home.html"><span class="glyphicon glyphicon-home"></span>Home</a></li>
-                  <li><a href="library/library.html"><span class="glyphicon glyphicon-book"></span>Library</a></li>
-                  <li><a href="purchase.html"><span class="glyphicon glyphicon-shopping-cart"></span>Purchase</a></li>
-                  <li class="dropdown">
-                     <a href="simulation.html" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-pencil"></span> Simulation <b class="caret"></b></a>
-                     <ul class="dropdown-menu">
-                        <li><a href="simulation.html">Example model</a></li>
-                        <li><a href="#">New model</a></li>
-                        <li><a href="#">Compare models</a></li>
-                     </ul>
-                  </li>
+              <div class="container-fluid">
+                 <div class="navbar-header">
+                    <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                       <span class="icon-bar"></span>
+                       <span class="icon-bar"></span>
+                       <span class="icon-bar"></span>
+                    </a>
+                    <a class="navbar-brand" href="#"><img src="img/WBEPT_logo1.png" alt="WBEPTlogo" style="max-height: 45px;"></a>
+                 </div>
+                 <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                       <li class="active"><a href="home.html"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+                       <li><a href="library/library.html"><span class="glyphicon glyphicon-book"></span>Library</a></li>
+                       <li><a href="purchase.html"><span class="glyphicon glyphicon-shopping-cart"></span>Purchase</a></li>
+                       <li class="dropdown">
+                          <a href="simulation.html" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-pencil"></span> Simulation <b class="caret"></b></a>
+                          <ul class="dropdown-menu">
+                             <li><a href="simulation/simulation.html">Example model</a></li>
+                             <li><a href="simulation/simulationNew.html">New model</a></li>
+                             <li><a href="simulation/simulationCompare.html">Compare models</a></li>
+                          </ul>
+                       </li>
 
-                  <li><a href="#"><span class="glyphicon glyphicon-stats"></span>Monitor</a></li>
-               </ul>
-            </div>
-         </div>
-      </nav> <!-- End of navbar -->
+                       <li><a href="monitor.html"><span class="glyphicon glyphicon-stats"></span>Monitor</a></li>
+                    </ul>
+                 </div>
+              </div>
+           </nav>  <!-- End of navbar -->
 
       <div class="container" style="width: 100%;">
          <div class="row" style="padding-top:50px;padding-bottom:70px;">

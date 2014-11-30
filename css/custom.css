@@ -107,11 +107,9 @@ a.anchor {
   height: 350px;
   background-color:#555;
 }
-.carousel img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 350px;
+
+.carousel-inner > .item > .img-responsive {
+  min-height: 100%;
 }
 
 /* MARKETING CONTENT
@@ -254,9 +252,15 @@ a.anchor {
 }
 
 @media (max-width: 767px) {
-	.navbar-brand {
+	
+  .navbar-brand {
 		padding: 2.5px 15px;
 	}
+
+  .navbar-fixed-bottom {
+    display: none;
+  }
+
 }
 
 /* HEXAGON CSS

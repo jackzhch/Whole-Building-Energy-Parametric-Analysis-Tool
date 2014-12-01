@@ -38,31 +38,67 @@ and open the template in the editor.
                   <li><a href="library/library.html"><span class="glyphicon glyphicon-book"></span>Library</a></li>
                   <li><a href="purchase.html"><span class="glyphicon glyphicon-shopping-cart"></span>Purchase</a></li>
                   <li class="dropdown">
-                     <a href="simulation.html" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-pencil"></span> Simulation <b class="caret"></b></a>
+                     <a href="simulation/simulation.html" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-pencil"></span> Simulation <b class="caret"></b></a>
                      <ul class="dropdown-menu">
-                        <li><a href="simulation.html">Example model</a></li>
-                        <li><a href="#">New model</a></li>
-                        <li><a href="#">Compare models</a></li>
+                        <li><a href="simulation/simulation.html">Example model</a></li>
+                        <li><a href="simulation/simulationNew.html">New model</a></li>
+                        <li><a href="simulation/simulationCompare.html">Compare models</a></li>
                      </ul>
                   </li>
 
-                  <li><a href="#"><span class="glyphicon glyphicon-stats"></span>Monitor</a></li>
+                  <li><a href="monitor.html"><span class="glyphicon glyphicon-stats"></span>Monitor</a></li>
                </ul>
             </div>
          </div>
       </nav> <!-- End of navbar -->
 
-      <div class="container">
-         <div class="row">
-            <div class="col-sm-12 text-center" style="margin-top: 50px; height: 620px; background-color: white; padding-top: 50px;">
-               <div class="col-sm-offset-1 col-sm-8" style="padding-top: 100px; color: #13A135; text-align: right; padding-right: 25px;">
-                  <p style="font-size: 36px;">"Patience you must have, young padawan..."</p>
-                  <p>-Yoda, Star Wars Episode V: The Empire Strikes Back</p>
-                  <p style="margin-top: 75px; text-align: center; font-size: 24px; color: black;">We are working on this right now, but we'll be done real soon!</p>
-               </div>
-               <div class="col-sm-2">
-                  <img src="img/yoda.png" alt=""/>
-               </div>
+      <div class="container" style="margin-top: 20px;">
+
+         <!--Main content section-->
+         <div class="row" style="background-color: #777; padding-top: 20px;">
+            <!--Sidebar-->
+            <div class="col-lg-3" style="padding-top: 20px;">
+               <h2 style="font-weight: bold; color: white; font-style: italic;">Contact us</h2>
+               <p style="font-size: 18px;">
+                  You can use this form to ask our team any questions or suggestions that you may
+                  have regarding our Whole Building Energy Parametric Analysis Tool.
+               </p>
+               <p style="font-size: 18px;">
+                  Thank you for your feedback.
+               </p>
+            </div> <!-- End of sidebar -->
+            <div class="col-lg-9" style="background-color: white; padding: 20px 35px 20px; color: black; min-height: 600px;">
+               <!--Bread crumbs-->
+               <div class="row" style="margin-bottom: 15px;">
+                  <ol class="breadcrumb col-sm-12">
+                     <li><a href="home.html">Home</a></li>
+                     <li class="active">Contact us</li>
+                  </ol> 
+               </div> <!-- End of bread crumbs -->
+               <!--Form controls-->
+               <form role="form" class="form-horizontal" style="padding-top: 35px;">
+                  <div class="form-group">
+                     <label for="subject" class="control-label col-sm-3">Subject</label>
+                     <div class="col-sm-7">
+                        <input type="text" class="form-control" placeholder="What do you want to tell us about?" id="subject">
+                     </div>
+                  </div>
+                  <div class="form-group">
+                     <label for="msgbody" class="control-label col-sm-3">Message</label>
+                     <div class="col-sm-7"><textarea id="msgbody" class="form-control" rows="10" placeholder="Write your questions and suggestions here..."></textarea></div>
+                  </div>
+                  <div class="form-group">
+                     <label for="reply" class="control-label col-sm-3">Your email</label>
+                     <div class="col-sm-7">
+                        <input type="text" class="form-control" placeholder="Where can we reach you?" id="reply">
+                     </div>
+                  </div>
+                  <div class="col-sm-2 col-sm-offset-8" style="padding-right: 0px; padding-top: 25px;">
+                     <button type="button" class="btn btn-success pull-right" data-toggle="modal" data-target="#sendModal" style="margin: 0px 5px;">
+                        <span class="glyphicon glyphicon-send"></span>Send
+                     </button>
+                  </div>
+               </form> <!-- End of forms -->
             </div>
          </div>
       </div>
@@ -74,7 +110,7 @@ and open the template in the editor.
             <div class="container">
                <div class="col-lg-3 col-sm-9 col-xs-9" style="padding-left: 35px; line-height: 2;">
                   <a href="about.html" class="btn btn-xs btn-success"><span class="glyphicon glyphicon-user"></span>About us</a>
-                  <a href="contact.html" class="btn btn-xs btn-success"><span class="glyphicon glyphicon-envelope"></span>Contact us</a>
+                  <a href="#" class="btn btn-xs btn-success"><span class="glyphicon glyphicon-envelope"></span>Contact us</a>
                </div>
                <div class="col-lg-7 footer-center text-center">
                   <a href="http://www.cmu.edu"><img src="img/cmulogo.png" alt="CMU"></a>
@@ -101,6 +137,25 @@ and open the template in the editor.
          </section>
       </div> <!-- End of footer -->
 
+      <!-- ============SEND MODAL=========== -->
+      <div class="modal fade" id="sendModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Message sent!</h4>
+               </div>
+               <div class="modal-body" style="font-size: 24px; text-align: center; padding-top: 40px;">
+                  <p>Thank you very much for your feedback.</p>
+                  <p>A member of our staff will review your comments and contact you if necessary.</p>
+               </div>
+               <div class="modal-footer">
+               <a href="home.html" class="btn btn-success pull-right"><span class="glyphicon glyphicon-ok"></span>Done</a>
+               </div>
+            </div>
+         </div>
+      </div>
+      
       <!--Supporting scripts-->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
       <script src="js/bootstrap.js"></script>

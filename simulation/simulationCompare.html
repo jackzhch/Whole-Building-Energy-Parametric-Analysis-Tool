@@ -66,7 +66,7 @@ and open the template in the editor.
 
                <!--Main content section-->
                <div class="row text-center" style="background-color: #777;">
-                  <div class="col-lg-2">
+                  <div class="col-sm-2">
                      <h2 style="font-weight: bold; color: white; font-style: italic;">Model Compare</h2>
                      <p style="font-size: 18px;">
                         You can input two model parameters to compare the results.
@@ -74,10 +74,12 @@ and open the template in the editor.
                      </p>
                   </div>
 
-                  <div class="col-lg-5" style="background-color: white; padding: 10px 18px 120px; color: black;">
-                       <h2 id="overview" class="page-header"  style="background-color:grey; color: #1bee4e; margin-top:-8px; padding:5px">Model-1</h2>
-                     <!--<h1 class="page-header">Add input to library</h1>-->
-                     <form role="form" class="form-horizontal">
+                  <div class="col-sm-10" style="background-color: white; padding: 10px 18px 50px; color: black; min-height: 450px;">
+                     <div class="col-sm-6">
+                        <div class="panel panel-success">
+                        <div class="panel-heading"><h2 id="overview">Model-1</h2></div>
+                     <div class="panel-body">
+                        <form role="form" class="form-horizontal">
                         <div class="form-group">
                            <label for="File" class="control-label col-sm-2">File</label>
                            <div class="col-sm-10">                        
@@ -106,13 +108,15 @@ and open the template in the editor.
                               </select>
                            </div>
                         </div>
-                     </form>
-                  </div>
-
-                   <div class="col-lg-5" style="background-color: #DADAE6; padding: 10px 18px 120px; color: black;">
-                       <h2 id="overview" class="page-header"  style="background-color:grey; color: #1bee4e; margin-top:-8px; padding:5px">Model-2</h2>
-                     <!--<h1 class="page-header">Add input to library</h1>-->
-                     <form role="form" class="form-horizontal">
+                        </form>
+                     </div>
+                     </div>
+                     </div>
+                     <div class="col-sm-6">
+                        <div class="panel panel-success">
+                        <div class="panel-heading"><h2 id="overview">Model-2</h2></div>
+                     <div class="panel-body">
+                        <form role="form" class="form-horizontal">
                         <div class="form-group">
                            <label for="File" class="control-label col-sm-2">File</label>
                            <div class="col-sm-10">                        
@@ -141,10 +145,13 @@ and open the template in the editor.
                               </select>
                            </div>
                         </div>
-                     </form>
+                        </form>
+                     </div>
+                     </div>
+                     </div>
+                     <div class="col-sm-12"><a href="Simulation.html" class="btn btn-success pull-right" style="margin-top: 25px; width: 130px;"><span class="glyphicon glyphicon-stats"></span>Compare</a></div>
                   </div>
                </div>
-                        <a href="Simulation.html" class="btn btn-success pull-right" style="margin-top: 25px; width: 130px;"><span class="glyphicon glyphicon-stats"></span>Compare</a>
             </div>
 
                <!-- ============================== FOOTER ============================== -->

@@ -22,157 +22,147 @@ and open the template in the editor.
 
 <body>
   <div>
-   <!--Navbar-->
-   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
-     <div class="navbar-header">
-      <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-       <span class="icon-bar"></span>
-       <span class="icon-bar"></span>
-       <span class="icon-bar"></span>
-     </a>
-     <a class="navbar-brand" href="../home.html"><img src="../img/WBEPT_logo1.png" alt="WBEPTlogo" style="max-height: 45px;"></a>
-   </div>
-   <div class="navbar-collapse collapse">
-    <ul class="nav navbar-nav navbar-right">
-     <li><a href="../home.html"><span class="glyphicon glyphicon-home"></span>Home</a></li>
-     <li><a href="../library/library.html"><span class="glyphicon glyphicon-book"></span>Library</a></li>
-     <li><a href="../purchase.html"><span class="glyphicon glyphicon-shopping-cart"></span>Purchase</a></li>
-     <li  class="active dropdown">
-      <a href="simulation.html" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-pencil"></span> Simulation <b class="caret"></b></a>
-      <ul class="dropdown-menu">
-       <li><a href="simulationWelcome.html">Example model</a></li>
-       <li><a href="../simulationNew.html">New model</a></li>
-       <li><a href="../simulationCompare.html">Compare models</a></li>
-     </ul>
-   </li>
+     <!--Navbar-->
+     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+           <div class="navbar-header">
+              <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+              </a>
+              <a class="navbar-brand" href="../home.html"><img src="../img/WBEPT_logo1.png" alt="WBEPTlogo" style="max-height: 45px;"></a>
+           </div>
+           <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-right">
+                 <li><a href="../home.html"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+                 <li><a href="../library/library.html"><span class="glyphicon glyphicon-book"></span>Library</a></li>
+                 <li><a href="../purchase.html"><span class="glyphicon glyphicon-shopping-cart"></span>Purchase</a></li>
+                 <li  class="active dropdown">
+                    <a href="simulation.html" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-pencil"></span> Simulation <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                       <li><a href="simulationWelcome.html">Example model</a></li>
+                       <li><a href="simulationNew.html">New model</a></li>
+                       <li><a href="simulationCompare.html">Compare models</a></li>
+                    </ul>
+                 </li>
 
-   <li><a href="../monitor.html"><span class="glyphicon glyphicon-stats"></span>Monitor</a></li>
- </ul>
-</div>
-</div>
-</nav> <!-- End of navbar -->
+                 <li><a href="../monitor.html"><span class="glyphicon glyphicon-stats"></span>Monitor</a></li>
+              </ul>
+           </div>
+        </div>
+     </nav> <!-- End of navbar -->
 
 <!-- ============================ Bootstrap core JavaScript ========================== -->
 
 <div class="container" style="margin-top: 20px;">
 
- <!--Page header section-->
- <div class="row">
-   <div class="col-md-12" role="main">
-  </div>
-</div> <!-- End of page header section -->
+   <!--Page header section-->
+   <div class="row">
+      <div class="col-md-12" role="main">
+      </div>
+   </div> <!-- End of page header section -->
 
-<!--Main content section-->
-<div class="row" style="background-color: #777; padding-top:40px">
-  <div class="col-lg-3" style="padding-bottom:50px">
-   <div class="easy-tree">
-    <ul>
-      <li>Zone: PLENUM-1</li>
-      <li>Zone: PLENUM-2</li>
-      <li>Zone: PLENUM-1
-        <ul>
-          <li>Surface: WALL-1PF</li>
-          <li>Zone: SPACE1-1
+   <!--Main content section-->
+   <div class="row" style="background-color: #777; padding-top: 30px; padding-bottom: 50px;">
+      <div class="col-sm-12" style="padding: 0px;">
+         <div class="col-sm-3"><div class="easy-tree">
             <ul>
-              <li>Surface: WALL-1PF</li>
-              <li>Surface: SB12</li>
-              <li>Surface: SB13</li>
-              <li>Surface: SB14</li>
+               <li>Zone: PLENUM-1</li>
+               <li>Zone: PLENUM-2</li>
+               <li>Zone: PLENUM-1
+                  <ul>
+                     <li>Surface: WALL-1PF</li>
+                     <li>Zone: SPACE1-1
+                        <ul>
+                           <li>Surface: WALL-1PF</li>
+                           <li>Surface: SB12</li>
+                           <li>Surface: SB13</li>
+                           <li>Surface: SB14</li>
+                        </ul>
+                     </li>
+                     <li>EZone: SPACE2-1</li>
+                     <li>Zone: SPACE2-3</li>
+                  </ul>
+               </li>
             </ul>
-          </li>
-          <li>EZone: SPACE2-1</li>
-          <li>Zone: SPACE2-3</li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-</div>
+         </div></div>
+         <div class="col-lg-9" style="background-color: white; color: black; padding-bottom: 50px;">
+            <h2 id="overview" class="page-header" >Result</h2>
+            <img src="../img/sampleidf.png" width="600" height="300" class="img-thumbnail">
+            <div class="row well" style="margin: 10px 20px;">
+               <div class="col-lg-6">
+                  <p>File Name: Sample.idf</p>
+                  <p>Construct Name: ROOF-1</p>
+                  <p>Layer-1: BR01</p>
+               </div>
+               <div class="col-lg-6">
+                  <p>Layer-2: IN46</p>
+                  <p>Layer-3: WD01</p>
+                  <p>Layer-4: IU70</p>
+               </div>
+            </div>
+            <h2 id="overview" class="page-header">Substitute</h2>
+            <div class="row">
+               <form role="form" class="col-sm-12 form-horizontal" style="margin-top: 13px">
+                  <div class="col-sm-3"><div class="form-group">
+                     <label for="input-layer" class="control-label">Layer-1</label>
+                     <div>
+                        <select class="form-control" id="input-type">
+                           <option>--Select Material--</option>
+                           <option>Sub1</option>
+                           <option>Sub2</option>
+                           <option>Sub3</option>
+                        </select>
+                     </div>
+                  </div></div>
 
-<div class="col-lg-6" style="background-color: white; padding: 10px 18px 20px; color: black;">
- <div class="row" >
-  <h2 id="overview" class="page-header"  style="background-color:grey; color: #1bee4e; margin-top:-8px; padding:5px">Result</h2>
-</div>
+                  <div class="col-sm-3"><div class="form-group">
+                     <label for="input-layer" class="control-label">Layer-2</label>
+                     <div>
+                        <select class="form-control" id="input-type">
+                           <option>--Select Material--</option>
+                           <option>Sub1</option>
+                           <option>Sub2</option>
+                           <option>Sub3</option>
+                        </select>
+                     </div>
+                  </div></div>
 
-<div>
-  <img src="../img/sampleidf.png" width="600px" height="300px" class="img-thumbnail">
-</div>
+                  <div class="col-sm-3"><div class="form-group">
+                     <label for="input-layer" class="control-label">Layer-3</label>
+                     <div>
+                        <select class="form-control" id="input-type">
+                           <option>--Select Material--</option>
+                           <option>Sub1</option>
+                           <option>Sub2</option>
+                           <option>Sub3</option>
+                        </select>
+                     </div>
+                  </div></div>
 
-<div class="well" style="padding-bottom:90px">
-<div class="col-lg-6">
-<p>File Name: Sample.idf</p>
-<p>Construct Name: ROOF-1</p>
-<p>Layer-1: BR01</p>
-</div>
-<div class="col-lg-6">
-<p>Layer-2: IN46</p>
-<p>Layer-3: WD01</p>
-<p>Layer-4: IU70</p>
-</div>
-</div>
+                  <div class="form-group col-sm-3">
+                     <label for="input-layer" class="control-label">Layer-4</label>
+                     <div>
+                        <select class="form-control" id="input-type">
+                           <option>--Select Material--</option>
+                           <option>Sub1</option>
+                           <option>Sub2</option>
+                           <option>Sub3</option>
+                        </select>
+                     </div>
+                  </div>
+               </form>
+               <div class="col-sm-12 pull-right" style="text-align: right; padding-top: 15px;"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#" style="margin: 0px 5px;">
+                  <span class="glyphicon glyphicon-send"></span>Substitute
+               </button></div>
+            </div>
+         </div>
+      </div>
 
-</div>
 
 
-<div class="col-lg-3 text-center" style="background-color: white; padding:10px 18px 215px">
-  <!--<h1 class="page-header">Add input to library</h1>-->
-   <div class="row" >
-  <h2 id="overview" class="page-header"  style="background-color:grey; color: #1bee4e; margin-top:-8px; padding:5px">Substitute</h2>
-</div>
-  <form role="form" class="form-horizontal" style="margin-top: 13px">
-    <div class="form-group">
-     <label for="input-layer" class="control-label col-sm-3">Layer-1</label>
-     <div class="col-sm-6">
-      <select class="form-control" id="input-type">
-       <option>--Select Material--</option>
-       <option>Sub1</option>
-       <option>Sub2</option>
-       <option>Sub3</option>
-     </select>
    </div>
- </div>
-
- <div class="form-group">
-   <label for="input-layer" class="control-label col-sm-3">Layer-2</label>
-   <div class="col-sm-6">
-    <select class="form-control" id="input-type">
-     <option>--Select Material--</option>
-     <option>Sub1</option>
-     <option>Sub2</option>
-     <option>Sub3</option>
-   </select>
- </div>
-</div>
-
-<div class="form-group">
-  <label for="input-layer" class="control-label col-sm-3">Layer-3</label>
-  <div class="col-sm-6">
-    <select class="form-control" id="input-type">
-     <option>--Select Material--</option>
-     <option>Sub1</option>
-     <option>Sub2</option>
-     <option>Sub3</option>
-   </select>
- </div>
-</div>
-
-<div class="form-group">
- <label for="input-layer" class="control-label col-sm-3">Layer-4</label>
- <div class="col-sm-6">
-  <select class="form-control" id="input-type">
-   <option>--Select Material--</option>
-   <option>Sub1</option>
-   <option>Sub2</option>
-   <option>Sub3</option>
- </select>
-</div>
-</div>
-<button type="button" class="btn btn-success" data-toggle="modal" data-target="#submitModal" style="margin: 0px 5px;">
- <span class="glyphicon glyphicon-send"></span>Substitute
-</button>
-</form>
-</div>
-</div>
 </div>
 
 <!-- ============================== FOOTER ============================== -->
@@ -208,26 +198,6 @@ and open the template in the editor.
 </div>
 </section>
 </div> <!-- End of footer -->
-
-<!-- ============SEARCH MODAL=========== -->
-<div class="modal fade" id="submitModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
- <div class="modal-dialog">
-  <div class="modal-content">
-   <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-    <h4 class="modal-title" id="myModalLabel">Submission successful!</h4>
-  </div>
-  <div class="modal-body" style="font-size: 24px; text-align: center;">
-    <p>Thank you very much for your contribution to our library! Your input is greatly appreciated.</p>
-    <p>The information you submitted will be reviewed by our staff and published to the library soon.</p>
-  </div>
-  <div class="modal-footer">
-   <a href="#" class="btn btn-success pull-right"><span class="glyphicon glyphicon-ok"></span>Done</a>
-   <!-- <button type="button" class="btn btn-success" data-dismiss="modal">Close</button> -->
- </div>
-</div>
-</div>
-</div>
 
             <!-- Bootstrap core JavaScript
             ================================================== -->

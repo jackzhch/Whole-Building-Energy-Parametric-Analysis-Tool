@@ -38,7 +38,15 @@ and open the template in the editor.
                        <li class="active"><a href="home.html"><span class="glyphicon glyphicon-home"></span>Home</a></li>
                        <li><a href="library/library.html"><span class="glyphicon glyphicon-book"></span>Library</a></li>
                        <li><a href="purchase.html"><span class="glyphicon glyphicon-shopping-cart"></span>Purchase</a></li>
-                       <li><a href="simulation/simulationWelcome.html"><span class="glyphicon glyphicon-pencil"></span>Simulation</a></li>
+                       <li class="dropdown">
+                          <a href="simulation.html" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-pencil"></span> Simulation <b class="caret"></b></a>
+                          <ul class="dropdown-menu">
+                             <li><a href="simulation/simulationWelcome.html">Example model</a></li>
+                             <li><a href="simulation/simulationNew.html">New model</a></li>
+                             <li><a href="simulation/simulationCompare.html">Compare models</a></li>
+                          </ul>
+                       </li>
+
                        <li><a href="monitor.html"><span class="glyphicon glyphicon-stats"></span>Monitor</a></li>
                     </ul>
                  </div>
@@ -46,8 +54,26 @@ and open the template in the editor.
            </nav>  <!-- End of navbar -->
 
       <div class="container" style="width: 100%;">
-         <div class="row" style="padding-top:50px;padding-bottom:70px;">
-            <iframe height=445px width=100% src="http://128.2.109.83:8888/WBEPATool/DashBoard.html"></iframe>
+         <div class="row" style="padding-top:50px;">
+            <div style="padding: 20px 20px">
+              <img src="img/green-title.png" height="60" style="float: left;">
+            </div>
+         </div>
+      </div>
+      <div class="container" style="width: 100%;">
+         <div class="row" style="padding-bottom:0px;">
+            <div style="padding: 20px 40px">
+              <img src="img/monitor_pic1.png" height="312" style="float: left;">
+              <img src="img/monitor_pic2.png" style="float: right;">
+            </div>
+         </div>
+      </div>
+      <div class="container" style="width: 100%;">
+        <div class="row" style="padding-bottom:100px;">
+            <div style="padding: 40px 40px">
+              <img src="img/monitor_pic4.png" height="312" style="float: left;">
+              <img src="img/monitor_pic3.png" width="815" height="312" style="float: right;">
+            </div>
          </div>
       </div>
 

@@ -22,9 +22,7 @@
 
    </head>
    <body>
-        <div>
-           <!--<%@ include file="header.html" %>-->
-           <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
               <div class="container-fluid">
                  <div class="navbar-header">
                     <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -32,23 +30,22 @@
                        <span class="icon-bar"></span>
                        <span class="icon-bar"></span>
                     </a>
-                    <a class="navbar-brand" href="../home.html"><img src="../img/WBEPT_logo1.png" alt="WBEPTlogo" style="max-height: 45px;"></a>
+                    <a class="navbar-brand" href="#"><img src="../img/WBEPT_logo1.png" alt="WBEPTlogo" style="max-height: 45px;"></a>
                  </div>
                  <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                       <li><a href="../home.html"><span class="glyphicon glyphicon-home"></span>Home</a></li>
-                       <li class="active"><a href="library.html"><span class="glyphicon glyphicon-book"></span>Library</a></li>
-                       <li><a href="../purchase.html"><span class="glyphicon glyphicon-shopping-cart"></span>Purchase</a></li>
+                       <li ><a href="../home.html"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+                       <li class="active"><a href="#"><span class="glyphicon glyphicon-book"></span>Library</a></li>
                        <li><a href="../simulation/simulationWelcome.html"><span class="glyphicon glyphicon-pencil"></span>Simulation</a></li>
-                       <li><a href="../comingsoon.html"><span class="glyphicon glyphicon-stats"></span>Monitor</a></li>
+                       <li><a href="../monitor.html"><span class="glyphicon glyphicon-stats"></span>Monitor</a></li>
                     </ul>
                  </div>
               </div>
-           </nav> <!-- End of navbar -->
-            <div class="container bs-docs-container" style="margin-top: 10px;">            
-			   <!--Page header section-->
-                  <div class="row" style="padding-left: 20px;">
-					<h1 id="overview" class="page-header"  style="margin-top: 40px; color: #1bee4e;">Library</h1>
+           </nav>  <!-- End of navbar -->
+
+            <!-- ============================ MAIN CONTENT ========================== -->
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+               <h1 id="overview" class="page-header"  style="margin-top: 40px; color: #1bee4e;">Library</h1>
                <h4 style="font-style: italic; font-weight: bold; color: #1BEE4E;">Building properties database</h4>
                <div class="col-md-9">
                   <blockquote>
@@ -65,14 +62,14 @@
                   </button>
                   <a href="datainput.html" class="btn btn-success center-block" style="margin-top: 25px; width: 130px;"><span class="glyphicon glyphicon-pencil"></span>Data input</a>
                </div>
-               </div> <!-- End of page header section -->
-               
-               <!--Lower half of page-->
-               <div class="row" style="background-color: #777;">
-                  <!--Left sidebar-->
-                  <div class="col-md-2" style="margin-top: 20px; padding-left: 0px; padding-right: 0px;">
-                      <div class="bs-docs-sidebar nav nav-stacked fixed hidden-xs hidden-sm" role="complementary">
-                         <ul class="nav nav-sidebar">
+            </div>
+
+            <div class="container-fluid" style="margin-top: 20px;">
+               <!--Main content section-->
+               <div class="row">
+                  <!-- Side panel -->       
+                  <div class="col-sm-3 col-md-2 sidebar">
+                     <ul class="nav nav-sidebar">
                         <ul id="tree" class="treeview col-xs-12"><li class="expandable">
                               <div class="hitarea expandable-hitarea"></div>
                               <span id="span_1" class="major">Building Context</span><ul id="ul_1" class="treeview" style="display: none;"><li class="tree-branch expandable lastExpandable">
@@ -125,31 +122,19 @@
                                     <span id="span_13_3">Interoperability</span><ul id="ul_13_3" style="display: none;"><li class="tree-branch"><input type="checkbox" id="Interoperability_ImportGeometryFromCAD" class="categorySelection" parentspan="3" grandpaspan="13"><label for="Interoperability_ImportGeometryFromCAD">Import Geometry From CAD</label></li><li class="tree-branch"><input type="checkbox" id="Interoperability_ImportDataFromBIM" class="categorySelection" parentspan="3" grandpaspan="13"><label for="Interoperability_ImportDataFromBIM">Import Data From BIM</label></li><li class="tree-branch"><input type="checkbox" id="Interoperability_ImportDataFromLBNLWINDOW" class="categorySelection" parentspan="3" grandpaspan="13"><label for="Interoperability_ImportDataFromLBNLWINDOW">Import Data From LBNL WINDOW</label></li><li class="tree-branch"><input type="checkbox" id="Interoperability_ExportResultToCSVText" class="categorySelection" parentspan="3" grandpaspan="13"><label for="Interoperability_ExportResultToCSVText">Export Result To CSV/Text</label></li><li class="tree-branch last"><input type="checkbox" id="Interoperability_ExportResultToBIM" class="categorySelection" parentspan="3" grandpaspan="13"><label for="Interoperability_ExportResultToBIM">Export Result To BIM</label></li></ul></li></ul></li></ul>
 
                      </ul>
-                 </div>
-                  </div> <!-- End of left sidebar -->
-                  
-                  <!--Main content div-->
-                  <div class="col-md-10 bs-docs-section" style="background-color: white; color: black; font-size: 18px; padding-left: 35px; padding-top: 10px; padding-bottom: 20px;">
-                     <!--Bread crumbs-->
-					<div class="row">
-					<ol class="breadcrumb col-sm-12">
-					<li><a href="../home.html">Home</a></li>
-					<li><a class="active">Library</a></li>
-					</ol> 
-					</div>
-					<!-- End of bread crumbs -->
-
-                     <!--Start of main content-->
-         			<h4>Dashboard</h4>
+                  </div>                
+                  <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                     <h4>Dashboard</h4>
                      <!-- bar chart canvas element -->
                      <canvas id="income" width="500" height="270"></canvas>
                      <!-- pie chart canvas element -->
                      <canvas id="countries" width="500" height="270"></canvas>
-					 
-                  </div> <!-- End of main content div -->
+                  </div>
                </div>
-			   <!-- End of lower half of page -->
-    <!-- ============================== FOOTER ============================== -->
+            </div>
+            <!-- End of main content -->
+            
+          <!-- ============================== FOOTER ============================== -->
     <div class="navbar-fixed-bottom" style="padding-bottom: 10px;background-color:black">
          <div class="footer-bar" style="height: 15px;"></div>
       <section class="footer">

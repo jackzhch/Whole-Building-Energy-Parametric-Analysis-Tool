@@ -571,9 +571,13 @@ blockquote {
   padding-left: -40px;
 }
 
+.edison-label {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
 label {
   font-size: 13pt;
-  padding: 20px 0;
 }
 
 label span {

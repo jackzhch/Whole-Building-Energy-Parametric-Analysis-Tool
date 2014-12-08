@@ -39,7 +39,7 @@
                             <li><a href="../home.html"><span class="glyphicon glyphicon-home"></span>Home</a></li>
                             <li class="active"><a href="library.html"><span class="glyphicon glyphicon-book"></span>Library</a></li>
                             <li><a href="../simulation/simulationWelcome.html"><span class="glyphicon glyphicon-pencil"></span>Simulation</a></li>
-                            <li><a href="../comingsoon.html"><span class="glyphicon glyphicon-stats"></span>Monitor</a></li>
+                            <li><a href="../monitor.html"><span class="glyphicon glyphicon-stats"></span>Monitor</a></li>
                         </ul>
                     </div>
                 </div>
@@ -64,12 +64,62 @@
                         </button>
                         <a href="datainput.html" class="btn btn-success center-block" style="margin-top: 25px; width: 130px;"><span class="glyphicon glyphicon-pencil"></span>Data input</a>
                     </div>
-                </div> 
-				<!-- End of page header section -->
+                </div> <!-- End of page header section -->
 
-                <!--Lower half of page-->        
+                <!--Lower half of page-->
+                <div class="row" style="background-color: #777;">
+                    <!--Left sidebar-->
+                 <div class="col-md-2" style="padding-left: 0px; padding-right: 0px;">
+                        <div class="bs-docs-sidebar nav nav-stacked fixed hidden-xs hidden-sm" role="complementary">
+                            <ul class="nav nav-sidebar">
+                                <ul id="tree" class="treeview col-xs-12">
+                                    <li class="expandable">
+                                        <div class="hitarea expandable-hitarea"></div>
+                                        <span id="span_1" class="major"><a href="system.html#system">System name</span>
+                                        <ul id="ul_1" class="treeview" style="display: none;">
+                                            <li class="tree-branch expandable lastExpandable">
+                                                <div class="hitarea tree-branch-hitarea expandable-hitarea lastExpandable-hitarea"></div>
+                                                <span id="span_1" style="margin-left: 20px;"><a href="component.html#components">Component 1</a></span>
+                                                <ul id="ul_1_1" style="display: none;">
+                                                    <li class="tree-branch">
+                                                        <label for="BuildingContext_Climate" style="margin-left: 40px;">Material 1</label>
+                                                    </li>
+                                                    <li class="tree-branch">
+                                                        <label for="BuildingContext_BuildingInformation" style="margin-left: 40px;">Material 2</label>
+                                                    </li>
+                                                    <li class="tree-branch">
+                                                        <label for="BuildingContext_BuildingClassification" style="margin-left: 40px;">Material 3</label>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+										<ul id="ul_1" class="treeview" style="display: none;">
+                                            <li class="tree-branch expandable lastExpandable">
+                                                <div class="hitarea tree-branch-hitarea expandable-hitarea lastExpandable-hitarea"></div>
+                                                <span id="span_1" style="margin-left: 20px;"><a href="component.html#components">Component 2</a></span>
+                                                <ul id="ul_1_1" style="display: none;">
+                                                    <li class="tree-branch">
+                                                        <label for="BuildingContext_Climate" style="margin-left: 40px;">Material 1</label>
+                                                    </li>
+                                                    <li class="tree-branch">
+                                                        <label for="BuildingContext_BuildingInformation" style="margin-left: 40px;">Material 2</label>
+                                                    </li>
+                                                    <li class="tree-branch">
+                                                        <label for="BuildingContext_BuildingClassification" style="margin-left: 40px;">Material 3</label>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                           
+                                        </ul>
+                                    </li>
+                             </ul>
+                        </div>
+                    </div> <!-- End of left sidebar -->
+
                     <!--Main content div-->
-                    <div class="col-md-10 bs-docs-section" style="background-color: white; color: black;>
+                    <div class="col-md-10 bs-docs-section" style="background-color: white; color: black; padding-left: 35px; padding-top: 10px; padding-bottom: 20px;">
                         <!--Bread crumbs-->
                         <div class="row" style="margin-bottom: 15px;">
                             <ol class="breadcrumb col-sm-12">
@@ -80,40 +130,12 @@
                         <!-- End of bread crumbs -->
 
                         <!--Start of main content-->
-                        <div class="row" style="background-color: white; padding-top: 25px; padding-bottom: 90px;">
-                  <div class="col-sm-4">
-                     <div class="panel panel-success">
-                        <div class="panel-heading">
-                           <h3>Surroundings</h3>
-                        </div>
-                        <div class="panel-body">
-                           <a href="surroundings.html"><img src="../img/accordion/exterior.jpeg" class="img-circle" alt=""></a>
-                           <p>Click to learn about the weather and surroundings at the location of your building</p>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-sm-4">
-                     <div class="panel panel-success">
-                        <div class="panel-heading">
-                           <h3>Exteriors</h3>
-                        </div>
-                        <div class="panel-body">
-                           <a href="exteriors.html"><img src="../img/accordion/barriers.jpg" class="img-circle" alt=""></a>
-                           <p>Click to view all the parts that belong to the exteriors of the building</p>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-sm-4">
-                     <div class="panel panel-success">
-                        <div class="panel-heading">
-                           <h3>Interiors</h3>
-                        </div>
-                        <div class="panel-body">
-                           <a href="interiors.html"><img src="../img/accordion/machines1.jpg" class="img-circle" alt=""></a>
-                           <p>Click to view all the parts that belong to the interiors of the building</p>
-                        </div>
-                     </div>
-                  </div>
+                        <h4>View images, properties and statistics of our library of materials</h4>
+						<h4>Select an item from the left</h4>
+                        <!-- bar chart canvas element -->
+                        <canvas id="income" width="500" height="270"></canvas>
+                        <!-- pie chart canvas element -->
+                        <canvas id="countries" width="500" height="270"></canvas>
                     </div> <!-- End of main content div -->
                 </div>
                 <!-- End of lower half of page -->
@@ -193,7 +215,7 @@
                         </div>
                     </div>
                 </div>
- 
+            </div>
         </div>
         <!-- End of SEARCH MODAL -->
         <!-- Placed at the end of the document so the pages load faster -->

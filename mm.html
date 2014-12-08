@@ -1,0 +1,290 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        ul {         
+            padding:0 0 0 0;
+            margin:0 0 0 0;
+        }
+        ul li {     
+            list-style:none;
+            margin-bottom:25px;           
+        }
+        ul li img {
+            cursor: pointer;
+        }
+        .modal-body {
+            padding:5px !important;
+        }
+        .modal-content {
+            border-radius:0;
+        }
+        .modal-dialog img {
+            text-align:center;
+            margin:0 auto;
+        }
+        .controls{          
+            width:50px;
+            display:block;
+            font-size:11px;
+            padding-top:8px;
+            font-weight:bold;          
+        }
+        .next {
+            float:right;
+            text-align:right;
+        }
+        /*override modal for demo only*/
+        .modal-dialog {
+            max-width:500px;
+            padding-top: 90px;
+        }
+        @media screen and (min-width: 768px){
+            .modal-dialog {
+                width:500px;
+                padding-top: 90px;
+            }          
+        }
+        @media screen and (max-width:1500px){
+            #ads {
+                display:none;
+            }
+        }
+    </style>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>WBEPA-Browse</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/treeview.css" />
+        <link rel="stylesheet" href="css/ToolSelection.css">
+
+        <!-- Custom styles for this template -->
+        <link href="css/custom.css" rel="stylesheet">
+
+        <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+        <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script>
+        <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+        <![endif]-->
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+    </head>
+
+    <!-- HTML code from Bootply.com editor -->
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">     
+            <div class="navbar-header">
+                <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="navbar-brand" href="#">Whole Building Energy Parametric Analysis Tool</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="#browse" >Browse</a></li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Library <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Submit</a></li>
+                            <li><a href="library/materials.html">Search</a></li>
+                            <li><a id="instruction">User Guide</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="simulation.html" class="dropdown-toggle" data-toggle="dropdown">Simulation <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="simulation.html">Existing Case</a></li>
+                            <li><a href="#">New IDF</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Monitor <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">eeAHUB</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#weather" data-toggle="modal" data-target="#weatherModal">Weather  </a></li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+
+                <!-- Side panel -->       
+                <div class="col-sm-3 col-md-2 sidebar">
+                    <ul class="nav nav-sidebar">
+                        <ul id="tree" class="treeview col-xs-12">
+                            <li class="expandable">
+                                <div class="hitarea expandable-hitarea"></div>
+                                <span id="span_2" class="major">Geometry and Zone Flexibility</span>
+                                <ul id="ul_2" class="treeview" style="display: none;">
+                                    <li class="tree-branch expandable">
+                                        <div class="hitarea tree-branch-hitarea expandable-hitarea">  
+                                        </div>
+                                        <span id="span_2_1">Geometry</span>
+                                        <ul id="ul_2_1" style="display: none;">
+                                            <li class="tree-branch">
+                                                <label for="Geometry_GeometryInputBasicBlock">Geometry Input: Basic Block</label>
+                                            </li>
+                                            <li class="tree-branch">
+                                                <label for="Geometry_GeometryInputVectors">Geometry Input: Vectors</label>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+                
+                <!-- Image gallery -->
+                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-6" id="MtrxGllry0" comp="wysiwyg.viewer.components.MatrixGallery" dataquery="#c1g3f" propertyquery="#c3sf" width="939" height="760" x="20" y="240" scale="1" angle="0" styleid="mg2" skin="wysiwyg.viewer.skins.gallerymatrix.MatrixGalleryDefaultSkin" class="wysiwyg_viewer_skins_gallerymatrix_MatrixGalleryDefaultSkinmg2 " state="hiddenChildren" style="visibility: visible; width: 939px; height: 760px; left: 20px; top: 240px; min-height: 760px; position: absolute;">
+
+                    <div class="container">    
+
+                        <ul class="row">
+                            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                                <img class="img-responsive" src="img/SubCategories/BuildingContext.jpg">
+                            </li>
+                        </ul>             
+                    </div> <!-- /container -->
+
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">         
+                                <div class="modal-body">                
+                                </div>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div><!-- /.modal -->
+
+                </div>
+
+
+
+
+
+                <!-- Weather Modal -->
+                <div class="modal fade" id="weatherModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                <h4 class="modal-title" id="myModalLabel">Weather</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>Location: Pittsburgh</p>
+                                <p>Weather: 17, Overcast</p>
+                                <p>Sunday</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                </body>
+
+                <script>
+                    $(document).ready(function() {
+                        $('li img').on('click', function() {
+                            var src = $(this).attr('src');
+                            var img = '<img src="' + src + '" class="img-responsive"/>';
+
+                            //start of new code new code
+                            var index = $(this).parent('li').index();
+
+                            var html = '';
+                            html += img;
+                            html += '<div style="height:25px;clear:both;display:block;">';
+                            html += '<a class="controls next" href="' + (index + 2) + '">next &raquo;</a>';
+                            html += '<a class="controls previous" href="' + (index) + '">&laquo; prev</a>';
+                            html += '</div>';
+
+                            $('#myModal').modal();
+                            $('#myModal').on('shown.bs.modal', function() {
+                                $('#myModal .modal-body').html(html);
+                                //new code
+                                $('a.controls').trigger('click');
+                            })
+                            $('#myModal').on('hidden.bs.modal', function() {
+                                $('#myModal .modal-body').html('');
+                            });
+
+
+
+
+                        });
+
+                    })
+
+                    //new code
+                    $(document).on('click', 'a.controls', function() {
+                        var index = $(this).attr('href');
+                        var src = $('ul.row li:nth-child(' + index + ') img').attr('src');
+
+                        $('.modal-body img').attr('src', src);
+
+                        var newPrevIndex = parseInt(index) - 1;
+                        var newNextIndex = parseInt(newPrevIndex) + 2;
+
+                        if ($(this).hasClass('previous')) {
+                            $(this).attr('href', newPrevIndex);
+                            $('a.next').attr('href', newNextIndex);
+                        } else {
+                            $(this).attr('href', newNextIndex);
+                            $('a.previous').attr('href', newPrevIndex);
+                        }
+
+                        var total = $('ul.row li').length + 1;
+                        //hide next button
+                        if (total === newNextIndex) {
+                            $('a.next').hide();
+                        } else {
+                            $('a.next').show()
+                        }
+                        //hide previous button
+                        if (newPrevIndex === 0) {
+                            $('a.previous').hide();
+                        } else {
+                            $('a.previous').show()
+                        }
+
+
+                        return false;
+                    });
+
+
+
+                </script>
+                <script type="text/javascript" src="js/jquery.treeview.js"></script>
+                <script type="text/javascript" src="js/ToolSelection.js"></script>
+
+                </html>

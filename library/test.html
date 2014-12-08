@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Whole Building Energy Parametric Analysis Tool - Library</title>
+        <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+        <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="css/treeview.css" />
+        <link rel="stylesheet" href="css/ToolSelection.css">
+        <link href="../css/custom.css" rel="stylesheet" type="text/css">
+        <link href="../css/fonts.css" rel="stylesheet" type="text/css">
+        <link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/ToolSelection.css">
+
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    </head>
+
+    <body>
+        <div>
+            <!--<%@ include file="header.html" %>-->
+            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="navbar-brand" href="../home.html"><img src="../img/WBEPT_logo1.png" alt="WBEPTlogo" style="max-height: 45px;"></a>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="../home.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                            <!--<li><a href="../browse.html" ><span class="glyphicon glyphicon-folder-open"></span> Browse</a></li>-->
+
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-book"></span> Library <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="library.html"><span class="glyphicon glyphicon-folder-open"></span>Browse</a></li>
+                                    <li><a href="datainput.html"><span class="glyphicon glyphicon-pencil"></span>Data input</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="../simulation.html" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-stats"></span> Simulation <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="../simulation.html">Existing Case</a></li>
+                                    <li><a href="#">New IDF</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-eye-open"></span> Monitor <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">eeAHUB</a></li>
+                                </ul>
+                            </li>
+                            <!--                       <li><a href="#weather" data-toggle="modal" data-target="#weatherModal">Weather  </a></li>-->
+
+                        </ul> <!-- Pull right navbar elements -->
+                    </div>
+                </div>
+            </nav> <!-- End of navbar -->
+
+            <!-- ============================ Bootstrap core JavaScript ========================== -->
+            <!--            <h1></h1>
+                        <h1></h1>
+                        <h1></h1>-->
+
+            <div class="container bs-docs-container" style="margin-top: 20px;">
+
+                <!--Page header section-->
+                <div>
+                    <div class="row" style="margin-top:30px;">
+                        <div class="col-md-12" role="main">
+                            <!--Headings-->
+                            <h1 id="overview" class="page-header"  style="color: #1bee4e;">Library</h1>
+                        </div>
+                    </div>
+                    <div class="row" style="padding-bottom: 10px;">
+                        <div class="col-md-8">
+                            <h4 style="font-style: italic; font-weight: bold; color: #1BEE4E;">Building properties database</h4>
+                        </div>
+                        <!--Page header buttons-->
+                        <div class="col-md-4">
+                            <div class="pull-right">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                                        <span class="glyphicon glyphicon-chevron-right"></span>Go to <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Materials</a></li>
+                                        <li><a href="#">Components</a></li>
+                                        <li><a href="#">Systems</a></li>
+                                    </ul>
+                                </div>
+                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#searchModal" style="margin: 0px 5px;">
+                                    <span class="glyphicon glyphicon-search"></span>Search
+                                </button>
+                                <a href="datainput.html" class="btn btn-success">
+                                    <span class="glyphicon glyphicon-pencil"></span>Data input
+                                </a>
+                            </div>
+                        </div>
+                    </div> <!-- End of page header buttons -->
+                </div> <!-- End of page header section -->
+
+                <!--Lower half of page-->
+                <div class="row" style="background-color: #777;">
+                    <!--Left sidebar-->
+                    <div class="col-md-2" style="margin-top: 20px; padding-left: 0px; padding-right: 0px;">
+                        <div class="bs-docs-sidebar nav nav-stacked fixed hidden-xs hidden-sm" role="complementary">
+                            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingOne">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                Material definition
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                        <div class="panel-body">
+                                            <ul class="nav sidenav-subgroup">
+                                                <li><a href="#">Mass material</a></li>
+                                                <li><a href="#">No mass material</a></li>
+                                                <li><a href="#">Infrared transparent material</a></li>
+                                                <li><a href="#">Air gap material</a></li>
+                                                <li><a href="#">Roof vegetation material</a></li>
+                                                <li><a href="#">Don't know material type</a></li>
+                                            </ul>    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingTwo">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                Opaque envelope component definition type
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                        <div class="panel-body">
+                                            <ul class="nav sidenav-subgroup">
+                                                <li><a href="#">Layer-by-layer definition</a></li>
+                                                <li><a href="#">C-Factor underground wall</a></li>
+                                                <li><a href="#">F-Factor ground floor</a></li>
+                                                <li><a href="#">Internal source</a></li>
+                                                <li><a href="#">Don't know construction type</a></li>
+                                            </ul>    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingThree">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                Window definition type
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                        <div class="panel-body">
+                                            <ul class="nav sidenav-subgroup">
+                                                <li><a href="#">Glazing system: simple glazing system</a></li>
+                                                <li><a href="#">Glazing system: layer by layer definition</a></li>
+                                                <li><a href="#">Glazing</a></li>
+                                                <li><a href="#">Gas</a></li>
+                                                <li><a href="#">Gas mixture</a></li>
+                                                <li><a href="#">Frame and dividers</a></li>
+                                                <li><a href="#">Blind</a></li>
+                                                <li><a href="#">Shade</a></li>
+                                                <li><a href="#">Screen</a></li>
+                                                <li><a href="#">Don't know window type</a></li>
+                                            </ul>    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div><a class="back-to-top" href="#top">Back to top</a></div>
+                        </div>
+                    </div>
+                    <!-- End of left sidebar -->
+
+                    <!--Main content div-->
+                    <div class="col-md-10 bs-docs-section" style="background-color: white; color: black; font-size: 18px; padding-left: 35px; padding-top: 10px; padding-bottom: 20px;">
+                        <!--Bread crumbs-->
+                        <div class="row">
+                            <ol class="breadcrumb col-sm-12">
+                                <li><a href="../home.html">Home</a></li>
+                                <li><a href="library.html">Library</a></li>
+                                <li class="active">Materials</li>
+                            </ol> 
+                        </div> <!-- End of bread crumbs -->
+
+                        <!--Start of main content-->
+                        <a id="grid-material" class="anchor"></a>
+                        <h1 class="page-header">Material definition</h1>
+                        <p>Here is a list of our indoor facilities:</p>
+
+                        <h3 id="grid-glass">Glass</h3>
+                        <div class="row">
+                            <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/glass/glass1.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                            <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/glass/glass2.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                            <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/glass/glass3.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                            <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/glass/glass4.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                            <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/glass/glass5.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                            <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/glass/glass6.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                        </div>
+
+                        <h3 id="grid-light">Light</h3>
+                        <div class="row">
+                            <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/light/light1.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                            <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/light/light2.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                            <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/light/light3.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                            <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/light/light4.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                            <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/light/light5.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                            <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/light/light6.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                        </div>
+
+                        <div class="row"><a class="back-to-top pull-right" href="#top">Back to top</a></div>
+
+                        <a id="grid-opaque" class="anchor"></a>
+                        <h1 class="page-header">Opaque envelope component definition type</h1>
+                        <p>Here is a list of our indoor facilities:</p>
+
+                        <h3 id="grid-wall">Wall</h3>
+                        <div class="row">
+                            <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/wall/wall1.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                            <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/wall/wall2.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                            <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/wall/wall3.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                            <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/wall/wall4.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                            <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/wall/wall5.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                            <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/wall/wall6.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                        </div>
+
+                        <div class="row"><a class="back-to-top pull-right" href="#top">Back to top</a></div>
+
+                        <a id="grid-window" class="anchor"></a>
+                        <h1 class="page-header">Window definition type</h1>
+                        <h3 id="grid-window-sub">Window</h3>
+                        <div class="row">
+                            <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/window/window1.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                            <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/window/window2.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                            <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/window/window3.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                            <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/window/window4.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                            <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/window/window5.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                            <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/window/window6.jpg"><div class="caption" style="text-align: center;">Material name</div></a></div>
+                        </div>
+
+                        <div class="row"><a class="back-to-top pull-right" href="#top">Back to top</a></div>
+
+                    </div> <!-- End of main content div -->
+                </div>
+
+                <!-- ============================== FOOTER ============================== -->
+                <div class="row" style="padding-bottom: 10px;">
+                    <div class="footer-bar" style="height: 15px;"></div>
+                    <section class="footer">
+                        <div class="container">
+                            <ul class="col-lg-3 col-sm-9 col-xs-9" style="padding-left: 35px;">
+                                <li><a href="/about" data-track="link" data-event="About Us menu">Learn about us</a></li>
+                                <li><a href="http://blog.fundbox.com" data-track="link" data-event="Blog menu">Read our blog</a></li>
+                                <li><a href="/contact-us" data-track="link" data-event="Contact us menu">Contact Us</a></li>            
+                                <li>
+                                    <a href="#">Terms of Use</a> & <a href="#">Privacy Policy</a>
+                                </li>
+                            </ul>
+                            <div class="col-lg-6 text-center">
+                                <img src="../img/mainlogo.png" style="max-height: 45px;">
+                                <img src="../img/doe_logo.png" style="max-height: 45px; margin-left: 25px;">
+                                <img src="../img/Sel_Title.png" style="max-height: 45px; margin-left: 25px;">
+                            </div>
+                            <div class="col-lg-3 text-right">
+                                <a target="_blank" href="http://facebook.com/fundboxcom">
+                                    <img src="https://d2k0u7ej7vpxec.cloudfront.net/static/img/homepage_v3/facebook.svg" alt="Follow Fundbox on Facebook"/>
+                                </a>
+                                <a target="_blank" href="http://twitter.com/fundbox">
+                                    <img src="https://d2k0u7ej7vpxec.cloudfront.net/static/img/homepage_v3/twitter.svg" alt="Follow Fundbox on Twitter"/>
+                                </a>
+                                <a target="_blank" href="http://linkedin.com/company/fundbox">
+                                    <img
+                                        src="https://d2k0u7ej7vpxec.cloudfront.net/static/img/homepage_v3/linkedin.svg" alt="Follow Fundbox on Linkedin"/>
+                                </a>
+                                <a target="_blank" href="https://plus.google.com/112520500941208906342">
+                                    <img src="https://d2k0u7ej7vpxec.cloudfront.net/static/img/homepage_v3/google_plus.svg" alt="Follow Fundbox on Google+"/>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                </div> <!-- End of footer -->
+            </div> <!-- End of lower half of page -->
+
+            <!-- ============SEARCH MODAL=========== -->
+            <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Search</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form action="#">
+                                <div class="form-group col-sm-12">
+                                    <label for="searchterm">Material name:</label>
+                                    <input type="text" class="form-control" id="searchterm" placeholder="Enter name of material">
+                                </div>
+                                <div class="form-group col-sm-6">
+                                    <label for="category">Category:</label>
+                                    <select class="form-control" id="category">
+                                        <option>Select material category</option>
+                                        <option>Material definition</option>
+                                        <option>Opaque envelope component definition type</option>
+                                        <option>Window definition type</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-sm-6">
+                                    <label for="subcategory">Subcategory:</label>
+                                    <select class="form-control" id="subcategory">
+                                        <option>Select material subcategory</option>
+                                        <option>Mass material</option>
+                                        <option>Infrared transparent material</option>
+                                        <option>Air gap material</option>
+                                        <option>Roof vegetation material</option>
+                                        <option>Don't know material type</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bootstrap core JavaScript
+            ================================================== -->
+            <script src="../js/jquery-1.11.1.min.js"></script>
+            <script src="../js/bootstrap.js"></script>
+            <!-- <script src="../js/docs.min.js"></script> -->
+            <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+            <script>
+                window.twttr = (function(d, s, id) {
+                    var t, js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id))
+                        return;
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.async = 1;
+                    js.src = "https://platform.twitter.com/widgets.js";
+                    fjs.parentNode.insertBefore(js, fjs);
+                    return window.twttr || (t = {_e: [], ready: function(f) {
+                            t._e.push(f)
+                        }});
+                }(document, "script", "twitter-wjs"));
+            </script>
+
+            <!-- Analytics
+            ================================================== -->
+            <script>
+                var _gauges = _gauges || [];
+                (function() {
+                    var t = document.createElement('script');
+                    t.async = true;
+                    t.id = 'gauges-tracker';
+                    t.setAttribute('data-site-id', '4f0dc9fef5a1f55508000013');
+                    t.src = 'http://secure.gaug.es/track.js';
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(t, s);
+                })();
+            </script>
+        </div>
+    </body>
+</html>

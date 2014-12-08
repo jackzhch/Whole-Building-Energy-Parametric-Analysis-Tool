@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>User Guide</title>
+        <link href="../css/bootstrap.css" rel="stylesheet">
+        <link href="../css/custom.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="../js/bootstrap.js"></script>
+        <script src="../../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    </head>
+    <body>
+        <!--<%@ include file="header.html" %>-->
+        <div class="navbar-wrapper">
+            <div class="container">
+                <div class="navbar navbar-default navbar-fixed-top">
+
+                    <div class="navbar-header">
+                        <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="navbar-brand" href="#">Whole Building Energy Parametric Analysis Tool</a>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="#browse" >Browse</a></li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Library <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Submit</a></li>
+                                    <li><a href="materials.html">Search</a></li>
+                                    <li><a href="userGuide.html">User Guide</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Simulation <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Existing Case</a></li>
+                                    <li><a href="#">New IDF</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Monitor <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">eeAHUB</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#weather" data-toggle="modal" data-target="#weatherModal">Weather  </a></li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div><!-- /container -->
+        </div><!-- /navbar wrapper -->
+
+        <div>
+            <iframe src="http://128.2.109.83:8888/ProductData/files/instruction.pdf" width="1200" height="600"></iframe>
+        </div>
+
+        <!--<%@ include file="footer.jsp" %>-->
+        <section class="section-footer footer">
+            <div class="container">
+                <div class="col-lg-6 about-text">
+                    <p class="col-lg-12">This project is focused on the systematic development process of whole building energy simulation models as benchmarks for retrofit projects. building 661, Navy Yard, PA is selected as the case study to demonstrate the proposed process. The study suggests energy model development approach for retrofit projects.</p>
+                </div>
+                <ul class="col-lg-3 col-sm-9 col-xs-9">
+                    <li><a href="/about" data-track="link" data-event="About Us menu">Learn about us</a></li>
+                    <li><a href="http://blog.fundbox.com" data-track="link" data-event="Blog menu">Read our blog</a></li>
+                    <li><a href="/contact-us" data-track="link" data-event="Contact us menu">Contact Us</a></li>            
+                    <li>
+                        <a target="" href="/tou" data-track="link" data-event="Bottom Tou">Terms of Use</a> &
+                        <a target="" href="/privacy" data-track="link" data-event="Bottom Privacy">Privacy Policy</a></li>
+                </ul>
+
+                <div class="col-lg-2 col-sm-3 col-xs-3 pull-right social">
+                    <a target="_blank" href="http://facebook.com/fundboxcom"><img
+                            src="https://d2k0u7ej7vpxec.cloudfront.net/static/img/homepage_v3/facebook.svg" alt="Follow Fundbox on Facebook"/></a>
+                    <a target="_blank" href="http://twitter.com/fundbox"><img src="https://d2k0u7ej7vpxec.cloudfront.net/static/img/homepage_v3/twitter.svg"
+                                                                              alt="Follow Fundbox on Twitter"/></a>
+                    <a target="_blank" href="http://linkedin.com/company/fundbox"><img
+                            src="https://d2k0u7ej7vpxec.cloudfront.net/static/img/homepage_v3/linkedin.svg" alt="Follow Fundbox on Linkedin"/></a>
+                    <a target="_blank" href="https://plus.google.com/112520500941208906342"><img
+                            src="https://d2k0u7ej7vpxec.cloudfront.net/static/img/homepage_v3/google_plus.svg" alt="Follow Fundbox on Google+"/></a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="col-lg-12 col-sm-12 col-12" id="copy">
+                    <div class="col-md-6 pull-right"><img src="../img/mainlogo.png">
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

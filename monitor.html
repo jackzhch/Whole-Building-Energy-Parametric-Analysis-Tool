@@ -22,6 +22,7 @@ and open the template in the editor.
       <link rel="stylesheet" href="css/ToolSelection.css">
       <link href="css/custom.css" rel="stylesheet">
       <link href="css/fonts.css" rel="stylesheet" type="text/css">
+      <link href="css/monitor.css" rel="stylesheet" type="text/css">
       <link href='http://fonts.googleapis.com/css?family=Bitter:400italic' rel='stylesheet' type='text/css'>
    </head>
    <body>
@@ -80,108 +81,127 @@ and open the template in the editor.
         <div>
           <!-- left bar -->
           <div class="col-lg-3" style="background-color: #777; height:820px; width:20%; position:relative; float:left;">
-      
-            <div style="padding-down: 50px">
-              <h3 class="edison-check">Energy Performance</h3>
-              
-              <div style="padding-left: 10%;">
-                  <ul class="nav nav-sidebar" style="padding-left: 2%;">
-                      <ul id="tree" class="treeview col-xs-12" style="margin-top: 15px; margin-bottom: -10px;">
-                            <li class="expandable" style="margin-bottom:-10px;">
-                                  <div class="hitarea expandable-hitarea"></div>
-                                  <span id="span_1" class="major edison-font">HVAC Energy</span>
-                                  <ul id="ul_1" class="treeview" style="display: none; list-style-type:none;">
-                                        <li class="tree-branch expandable lastExpandable">
-                                              <div class="hitarea tree-branch-hitarea expandable-hitarea lastExpandable-hitarea"></div>
-                                              <div class="checkbox" style="margin-top:-20px; margin-bottom:-20px;">
-                                                <label>
-                                                  <input type="checkbox">HVAC Pump
-                                                </label>
-                                              </div>
-                                        </li>
-
-                                        <li class="tree-branch expandable lastExpandable">
-                                              <div class="hitarea tree-branch-hitarea expandable-hitarea lastExpandable-hitarea"></div>
-                                              
-                                                <div class="checkbox edison-checkpad">
-                                                <label>
-                                                  <input type="checkbox"> HVAC Cooling
-                                                </label>
-                                              </div>
-                                        </li>
-
-                                        <li class="tree-branch expandable lastExpandable">
-                                              <div class="hitarea tree-branch-hitarea expandable-hitarea lastExpandable-hitarea"></div>
-                                                
-                                               <div class="checkbox edison-checkpad">
-                                                <label>
-                                                  <input type="checkbox">HVAC Fans
-                                                </label>
-                                              </div>
-                                        </li>
-
-                                        <li class="tree-branch expandable lastExpandable">
-                                              <div class="hitarea tree-branch-hitarea expandable-hitarea lastExpandable-hitarea"></div>
-                                              
-                                              <div class="checkbox edison-checkpad">
-                                                <label>
-                                                  <input type="checkbox">HVAC Heating
-                                                </label>
-                                              </div>
-                                        </li>
-
-                                        <li class="tree-branch expandable lastExpandable">
-                                              <div class="hitarea tree-branch-hitarea expandable-hitarea lastExpandable-hitarea"></div>
-                                              
-                                              <div class="checkbox edison-checkpad">
-                                                <label>
-                                                  <input type="checkbox">HVAC HeatRecovery
-                                                </label>
-                                              </div>
-                                        </li>
-                                  </ul>
-                            </li>
-                      </ul>
-                </ul>
-              
-                <div class="checkbox" style="margin-top:-10px;">
-                  <label>
-                    <input type="checkbox"> <span>Lighting Energy</span>
-                  </label>
-                  <label style="margin-top:-20px;">
-                    <input type="checkbox"> <span>Plugload Energy</span>
-                  </label>
-                  <label style="margin-top:-20px;">
-                    <span><button type="button" class="btn btn-default">IW Dashboard</button></span>
-                  </label>
-                </div>
-              
-
-            </div>
           
-            <div>
-              <h3 class="edison-check">IEQ Performance</h3>
-              <div class="radio" style="padding-left: 10%;">
-                <label style="margin-top:-20px;">
-                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                  <span>AirTemperature</span>
-                </label>
-                <label style="margin-top:-20px;">
-                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" checked>
-                  <span>Relative Humidity</span>
-                </label>
-                <label style="margin-top:-20px;">
-                  <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" checked>
-                  <span>CO2</span>
-                </label>
-                <label style="margin-top:-20px;">
-                  <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4" checked>
-                  <span>Particulates</span>
-                </label>
-                <label style="margin-top:-20px;">
-                  <input type="radio" name="optionsRadios" id="optionsRadios5" value="option5" checked>
-                  <span>TVOC</span>
-                </label>
+
+            <div style="padding-down: 50px">
+              
+
+              <div class="col-sm-4" style="width:120%; margin-left:-10%; margin-top:20px;">
+                 <div class="panel panel-success">
+                    <div class="panel-heading">
+                       <h3 class="edison-title">Energy Performance</h3>
+                    </div>
+                    <div class="panel-body">
+                      <div style="padding-left: 10%;">
+                        <ul class="nav nav-sidebar">
+                          <ul id="tree" class="treeview col-xs-12" style="margin-top: 5px;">
+                            <li class="expandable" style="margin-bottom:-10px;">
+                              <div class="hitarea expandable-hitarea"></div>
+                              <span id="span_1" class="major edison-font" style="color:#333; font-size: 12pt;">HVAC Energy</span>
+                              <ul id="ul_1" class="treeview" style="display: none; list-style-type:none; margin-left:-50px; margin-top:5px; margin-bottom:5px;">
+                                <li class="tree-branch expandable lastExpandable edison-margin">
+                                  <div class="hitarea tree-branch-hitarea expandable-hitarea lastExpandable-hitarea"></div>
+                                  <div class="checkbox" style="margin-top:-20px; margin-bottom:-20px;">
+                                    <label style="color:#333;">
+                                      <input type="checkbox">HVAC Pump
+                                    </label>
+                                  </div>
+                                </li>
+
+                                <li class="tree-branch expandable lastExpandable edison-margin">
+                                  <div class="hitarea tree-branch-hitarea expandable-hitarea lastExpandable-hitarea"></div>
+                                                  
+                                  <div class="checkbox edison-checkpad">
+                                    <label style="color:#333;">
+                                      <input type="checkbox"> HVAC Cooling
+                                    </label>
+                                  </div>
+                                </li>
+
+                                <li class="tree-branch expandable lastExpandable edison-margin">
+                                  <div class="hitarea tree-branch-hitarea expandable-hitarea lastExpandable-hitarea"></div>
+                                                      
+                                  <div class="checkbox edison-checkpad">
+                                    <label style="color:#333;">
+                                      <input type="checkbox">HVAC Fans
+                                    </label>
+                                  </div>
+                                </li>
+
+                                <li class="tree-branch expandable lastExpandable edison-margin">
+                                  <div class="hitarea tree-branch-hitarea expandable-hitarea lastExpandable-hitarea"></div>
+                                  
+                                  <div class="checkbox edison-checkpad">
+                                    <label style="color:#333;">
+                                      <input type="checkbox">HVAC Heating
+                                    </label>
+                                  </div>
+                                </li>
+
+                                <li class="tree-branch expandable lastExpandable edison-margin">
+                                  <div class="hitarea tree-branch-hitarea expandable-hitarea lastExpandable-hitarea"></div>
+                                                    
+                                  <div class="checkbox edison-checkpad">
+                                    <label style="color:#333;">
+                                      <input type="checkbox">HVAC HeatRecovery
+                                    </label>
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </ul>
+                      
+                        <div class="checkbox" style="margin-top:-10px;">
+                          <label style="color:#333;">
+                            <input type="checkbox"> <span>Lighting Energy</span>
+                          </label>
+                          <label style="margin-top:-25px; color:#333;">
+                            <input type="checkbox"> <span>Plugload Energy</span>
+                          </label>
+                          <label style="margin-top:-25px; color:#333;">
+                            <span><button type="button" class="btn btn-default">IW Dashboard</button></span>
+                          </label>
+                        </div> 
+
+
+
+                      </div>
+                    </div>
+                 </div>
+              </div>
+          
+
+              <div class="col-sm-4" style="width:120%; margin-left:-10%; margin-top:20px;">
+                <div class="panel panel-success">
+                  <div class="panel-heading">
+                     <h3 class="edison-title">IEQ Performance</h3>
+                  </div>
+                  <div class="panel-body">
+                    <div class="radio" style="padding-left: 10%;">
+                      <label style="margin-top:-20px; color:#333;">
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                        <span>AirTemperature</span>
+                      </label>
+                      <label style="margin-top:-25px; color:#333;">
+                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" checked>
+                        <span>Relative Humidity</span>
+                      </label>
+                      <label style="margin-top:-25px; color:#333;">
+                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" checked>
+                        <span>CO2</span>
+                      </label>
+                      <label style="margin-top:-25px; color:#333;">
+                        <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4" checked>
+                        <span>Particulates</span>
+                      </label>
+                      <label style="margin-top:-25px; color:#333;">
+                        <input type="radio" name="optionsRadios" id="optionsRadios5" value="option5" checked>
+                        <span>TVOC</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

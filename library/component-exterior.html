@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Whole Building Energy Parametric Analysis Tool - Library</title>
+        <title>Whole Building Energy Parametric Analysis Tool - Exterior Component</title>
 
         <!-- Bootstrap core CSS -->
         <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
@@ -39,14 +39,14 @@
                             <li><a href="../home.html"><span class="glyphicon glyphicon-home"></span>Home</a></li>
                             <li class="active"><a href="library.html"><span class="glyphicon glyphicon-book"></span>Library</a></li>
                             <li><a href="../simulation/simulationWelcome.html"><span class="glyphicon glyphicon-pencil"></span>Simulation</a></li>
-                            <li><a href="../comingsoon.html"><span class="glyphicon glyphicon-stats"></span>Monitor</a></li>
+                            <li><a href="../monitor.html"><span class="glyphicon glyphicon-stats"></span>Monitor</a></li>
                         </ul>
                     </div>
                 </div>
             </nav> <!-- End of navbar -->
             <div class="container bs-docs-container" style="margin-top: 10px;">            
                 <!--Page header section-->
-                <div class="row" style="padding-left: 20px; padding-bottom:20px;">
+                <div class="row" style="padding-left: 20px;">
                     <h1 id="overview" class="page-header"  style="margin-top: 40px; color: #1bee4e;">Library</h1>
                     <h4 style="font-style: italic; font-weight: bold; color: #1BEE4E;">Building properties database</h4>
                     <div class="col-md-9">
@@ -69,77 +69,63 @@
                 <!--Lower half of page-->
                 <div class="row" style="background-color: #777;">
                     <!--Left sidebar-->
-                       <div class="col-md-2" style="padding-left: 0px; padding-right: 0px;">
+                    <div class="col-md-2" style="margin-top: 20px; padding-left: 0px; padding-right: 0px;">
                         <div class="bs-docs-sidebar nav nav-stacked fixed hidden-xs hidden-sm" role="complementary">
-                            <ul class="nav nav-sidebar">
-                                <ul id="tree" class="treeview col-xs-12">
-                                    <li class="expandable">
-                                        <div class="hitarea expandable-hitarea"></div>
-                                        <span id="span_1" class="major">System name</span>
-                                        <ul id="ul_1" class="treeview" style="display: none;">
-                                            <li class="tree-branch expandable lastExpandable">
-                                                <div class="hitarea tree-branch-hitarea expandable-hitarea lastExpandable-hitarea"></div>
-                                                <span id="span_1" style="margin-left: 20px;"><a href="component.html#components">Component 1</a></span>
-                                                <ul id="ul_1_1" style="display: none;">
-                                                    <li class="tree-branch">
-                                                        <label for="BuildingContext_Climate" style="margin-left: 40px;">Material 1</label>
-                                                    </li>
-                                                    <li class="tree-branch">
-                                                        <label for="BuildingContext_BuildingInformation" style="margin-left: 40px;">Material 2</label>
-                                                    </li>
-                                                    <li class="tree-branch">
-                                                        <label for="BuildingContext_BuildingClassification" style="margin-left: 40px;">Material 3</label>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-										<ul id="ul_1" class="treeview" style="display: none;">
-                                            <li class="tree-branch expandable lastExpandable">
-                                                <div class="hitarea tree-branch-hitarea expandable-hitarea lastExpandable-hitarea"></div>
-                                                <span id="span_1" style="margin-left: 20px;"><a href="component.html#components">Component 2</a></span>
-                                                <ul id="ul_1_1" style="display: none;">
-                                                    <li class="tree-branch">
-                                                        <label for="BuildingContext_Climate" style="margin-left: 40px;">Material 1</label>
-                                                    </li>
-                                                    <li class="tree-branch">
-                                                        <label for="BuildingContext_BuildingInformation" style="margin-left: 40px;">Material 2</label>
-                                                    </li>
-                                                    <li class="tree-branch">
-                                                        <label for="BuildingContext_BuildingClassification" style="margin-left: 40px;">Material 3</label>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                           
-                                        </ul>
-                                    </li>
-                             </ul>
+                            <ul class="nav bs-docs-sidenav">
+                                <li>
+                                    <a href="#">Opaque Construction</a>
+                                    <ul class="nav sidenav-subgroup">
+                                        <li><a href="#">Roof/Ceiling Properties</a></li>
+                                        <li><a href="#">Wall Properties</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#window">Window / Skylight</a>
+                                    <ul class="nav sidenav-subgroup">
+                                        <li><a href="#">Window Properties</a></li>
+                                        <li><a href="#">Window Gas Fill Properties</a></li>
+                                        <li><a href="#">Continuous Layout Winow Properties</a></li>
+                                        <li><a href="#">Discrete Layout Window Properties</a></li>
+                                        <li><a href="#">Operable Windows</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="back-to-top" href="#top">Back to top</a>
+                                </li>
+                            </ul>
                         </div>
-                    </div> <!-- End of left sidebar -->
+                    </div> <!-- End of left sidebar --> <!-- End of left sidebar -->
 
                     <!--Main content div-->
-                    <div class="col-md-10 bs-docs-section" style="background-color: white; color: black; padding-left: 35px; padding-top: 10px; padding-bottom: 20px;">
+                    <div class="col-md-10 bs-docs-section" style="background-color: white; color: black; font-size: 18px; padding-left: 35px; padding-top: 10px; padding-bottom: 100px;">
                         <!--Bread crumbs-->
-                        <div id="system"; class="row" style="margin-bottom: 15px;">
+                        <div class="row">
                             <ol class="breadcrumb col-sm-12">
                                 <li><a href="../home.html">Home</a></li>
-								<li><a href="library.html">Library</a></li>
-                                <li class="active">System Name</li>
+                                <li><a href="library.html">Library</a></li>
+                                <li><a href="exteriors.html">Exterior</a></li>
+                                <li><a href="system-exterior.html">System</a></li>
+                                <li><a href="system-exterior.html">Building Envelope</a></li>
+                                <li class="active">Components</li>
                             </ol> 
                         </div>
                         <!-- End of bread crumbs -->
 
                         <!--Start of main content-->
-                        <h3>Systems name</h3>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <p>
-                                    <img src="../img/systems/EnvelopeSystems.jpg"class="thumbnail; img-responsive">
-                                    <img src="../img/systems/EnvelopeSystems2.jpg"class="thumbnail; img-responsive">
-                                    </p>
-                                </div>
-                            </div>
+                        <h3 id="opaque">Opaque Construction</h3>
+                        <div class="row">
+                            <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/glass/glass1.jpg"><div class="caption" style="text-align: center;">Roof/Ceiling Properties</div></a></div>
+                            <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/glass/glass2.jpg"><div class="caption" style="text-align: center;">Wall Properties</div></a></div>
+                        </div>
+                        
+                        <h3 id="window" style="padding-top: 60px">Winow / Skylight</h3>
+                        <div class="row">
+                            <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/glass/glass1.jpg"><div class="caption" style="text-align: center;">Window Properties</div></a></div>
+                            <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/glass/glass2.jpg"><div class="caption" style="text-align: center;">Window Gas Fill Properties</div></a></div>
+                            <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/glass/glass3.jpg"><div class="caption" style="text-align: center;">Continuous</div></a></div>
+                            <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/glass/glass4.jpg"><div class="caption" style="text-align: center;">Discrete Layout Window Properties</div></a></div>
+                            <div class="col-md-4"><a href="#" class="thumbnail"><img src="../img/glass/glass5.jpg"><div class="caption" style="text-align: center;">Operable Windows</div></a></div>
+                        </div>
                     </div> <!-- End of main content div -->
                 </div>
                 <!-- End of lower half of page -->
@@ -219,138 +205,138 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- End of SEARCH MODAL -->
-        <!-- Placed at the end of the document so the pages load faster -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="../js/bootstrap.js"></script>
-        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-        <script src="../js/ie10-viewport-bug-workaround.js"></script>
-        <script>
-            $(document).ready(function() {
-                $('li img').on('click', function() {
-                    var src = $(this).attr('src');
-                    var img = '<img src="' + src + '" class="img-responsive"/>';
+                <!-- End of SEARCH MODAL -->
+                <!-- Placed at the end of the document so the pages load faster -->
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+                <script src="../js/bootstrap.js"></script>
+                <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+                <script src="../js/ie10-viewport-bug-workaround.js"></script>
+                <script>
+                    $(document).ready(function() {
+                        $('li img').on('click', function() {
+                            var src = $(this).attr('src');
+                            var img = '<img src="' + src + '" class="img-responsive"/>';
 
-                    //start of new code new code
-                    var index = $(this).parent('li').index();
+                            //start of new code new code
+                            var index = $(this).parent('li').index();
 
-                    var html = '';
-                    html += img;
-                    html += '<div style="height:25px;clear:both;display:block;">';
-                    html += '<a class="controls next" href="' + (index + 2) + '">next &raquo;</a>';
-                    html += '<a class="controls previous" href="' + (index) + '">&laquo; prev</a>';
-                    html += '</div>';
+                            var html = '';
+                            html += img;
+                            html += '<div style="height:25px;clear:both;display:block;">';
+                            html += '<a class="controls next" href="' + (index + 2) + '">next &raquo;</a>';
+                            html += '<a class="controls previous" href="' + (index) + '">&laquo; prev</a>';
+                            html += '</div>';
 
-                    $('#myModal').modal();
-                    $('#myModal').on('shown.bs.modal', function() {
-                        $('#myModal .modal-body').html(html);
-                        //new code
-                        $('a.controls').trigger('click');
+                            $('#myModal').modal();
+                            $('#myModal').on('shown.bs.modal', function() {
+                                $('#myModal .modal-body').html(html);
+                                //new code
+                                $('a.controls').trigger('click');
+                            })
+                            $('#myModal').on('hidden.bs.modal', function() {
+                                $('#myModal .modal-body').html('');
+                            });
+                        });
                     })
-                    $('#myModal').on('hidden.bs.modal', function() {
-                        $('#myModal .modal-body').html('');
+
+                    //new code
+                    $(document).on('click', 'a.controls', function() {
+                        var index = $(this).attr('href');
+                        var src = $('ul.row li:nth-child(' + index + ') img').attr('src');
+
+                        $('.modal-body img').attr('src', src);
+
+                        var newPrevIndex = parseInt(index) - 1;
+                        var newNextIndex = parseInt(newPrevIndex) + 2;
+
+                        if ($(this).hasClass('previous')) {
+                            $(this).attr('href', newPrevIndex);
+                            $('a.next').attr('href', newNextIndex);
+                        } else {
+                            $(this).attr('href', newNextIndex);
+                            $('a.previous').attr('href', newPrevIndex);
+                        }
+
+                        var total = $('ul.row li').length + 1;
+                        //hide next button
+                        if (total === newNextIndex) {
+                            $('a.next').hide();
+                        } else {
+                            $('a.next').show()
+                        }
+                        //hide previous button
+                        if (newPrevIndex === 0) {
+                            $('a.previous').hide();
+                        } else {
+                            $('a.previous').show()
+                        }
+
+
+                        return false;
                     });
-                });
-            })
+                </script>
+                <script type="text/javascript" src="../js/jquery.treeview.js"></script>
+                <script type="text/javascript" src="../js/ToolSelection.js"></script>
+                <script src='../js/Chart.min.js'></script>
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                        $("#instruction").click(function() {
+                            window.open('library/instruction.pdf');
+                        });
+                    });
+                </script>
+                <script>
 
-            //new code
-            $(document).on('click', 'a.controls', function() {
-                var index = $(this).attr('href');
-                var src = $('ul.row li:nth-child(' + index + ') img').attr('src');
-
-                $('.modal-body img').attr('src', src);
-
-                var newPrevIndex = parseInt(index) - 1;
-                var newNextIndex = parseInt(newPrevIndex) + 2;
-
-                if ($(this).hasClass('previous')) {
-                    $(this).attr('href', newPrevIndex);
-                    $('a.next').attr('href', newNextIndex);
-                } else {
-                    $(this).attr('href', newNextIndex);
-                    $('a.previous').attr('href', newPrevIndex);
-                }
-
-                var total = $('ul.row li').length + 1;
-                //hide next button
-                if (total === newNextIndex) {
-                    $('a.next').hide();
-                } else {
-                    $('a.next').show()
-                }
-                //hide previous button
-                if (newPrevIndex === 0) {
-                    $('a.previous').hide();
-                } else {
-                    $('a.previous').show()
-                }
-
-
-                return false;
-            });
-        </script>
-        <script type="text/javascript" src="../js/jquery.treeview.js"></script>
-        <script type="text/javascript" src="../js/ToolSelection.js"></script>
-        <script src='../js/Chart.min.js'></script>
-        <script type="text/javascript">
-            $(document).ready(function() {
-                $("#instruction").click(function() {
-                    window.open('library/instruction.pdf');
-                });
-            });
-        </script>
-        <script>
-
-            // pie chart data
-            var pieData = [
-                {
-                    value: 20,
-                    color: "#878BB6"
-                },
-                {
-                    value: 40,
-                    color: "#4ACAB4"
-                },
-                {
-                    value: 10,
-                    color: "#FF8153"
-                },
-                {
-                    value: 30,
-                    color: "#FFEA88"
-                }
-            ];
-            // pie chart options
-            var pieOptions = {
-                segmentShowStroke: false,
-                animateScale: true
-            }
-            // get pie chart canvas
-            var countries = document.getElementById("countries").getContext("2d");
-            // draw pie chart
-            new Chart(countries).Pie(pieData, pieOptions);
-            // bar chart data
-            var barData = {
-                labels: ["January", "February", "March", "April", "May", "June"],
-                datasets: [
-                    {
-                        fillColor: "#48A497",
-                        strokeColor: "#48A4D1",
-                        data: [456, 479, 324, 569, 702, 600]
-                    },
-                    {
-                        fillColor: "rgba(73,188,170,0.4)",
-                        strokeColor: "rgba(72,174,209,0.4)",
-                        data: [364, 504, 605, 400, 345, 320]
+                    // pie chart data
+                    var pieData = [
+                        {
+                            value: 20,
+                            color: "#878BB6"
+                        },
+                        {
+                            value: 40,
+                            color: "#4ACAB4"
+                        },
+                        {
+                            value: 10,
+                            color: "#FF8153"
+                        },
+                        {
+                            value: 30,
+                            color: "#FFEA88"
+                        }
+                    ];
+                    // pie chart options
+                    var pieOptions = {
+                        segmentShowStroke: false,
+                        animateScale: true
                     }
-                ]
-            }
-            // get bar chart canvas
-            var income = document.getElementById("income").getContext("2d");
-            // draw bar chart
-            new Chart(income).Bar(barData);
-        </script>
-    </body>
-</html>
+                    // get pie chart canvas
+                    var countries = document.getElementById("countries").getContext("2d");
+                    // draw pie chart
+                    new Chart(countries).Pie(pieData, pieOptions);
+                    // bar chart data
+                    var barData = {
+                        labels: ["January", "February", "March", "April", "May", "June"],
+                        datasets: [
+                            {
+                                fillColor: "#48A497",
+                                strokeColor: "#48A4D1",
+                                data: [456, 479, 324, 569, 702, 600]
+                            },
+                            {
+                                fillColor: "rgba(73,188,170,0.4)",
+                                strokeColor: "rgba(72,174,209,0.4)",
+                                data: [364, 504, 605, 400, 345, 320]
+                            }
+                        ]
+                    }
+                    // get bar chart canvas
+                    var income = document.getElementById("income").getContext("2d");
+                    // draw bar chart
+                    new Chart(income).Bar(barData);
+                </script>
+
+
+                </body>
+                </html>

@@ -11,8 +11,10 @@
   <!-- Bootstrap core CSS -->
   <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
   <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="../css/jasny-bootstrap.css" rel="stylesheet" type="text/css">
   <link href="../css/custom.css" rel="stylesheet" type="text/css">
   <link href="../css/fonts.css" rel="stylesheet" type="text/css">
+  <link href="../css/easyTree.css" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
 
   <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
@@ -54,119 +56,221 @@
        <li><a href="../home.html"><span class="glyphicon glyphicon-home"></span>Home</a></li>
        <li><a href="../library/library.html"><span class="glyphicon glyphicon-book"></span>Library</a></li>
        <li class="active"><a href="simulationWelcome.html"><span class="glyphicon glyphicon-pencil"></span>Simulation</a></li>
-     <li><a href="../monitor.html"><span class="glyphicon glyphicon-stats"></span>Monitor</a></li>
-   </ul>
+       <li><a href="../monitor.html"><span class="glyphicon glyphicon-stats"></span>Monitor</a></li>
+     </ul>
+   </div>
  </div>
-</div>
 </nav> <!-- End of navbar -->
 
 <div class="container-fluid" style="margin-top: 20px;">
-<!--Page header section-->
-                <div class="row">
-                   <div class="col-md-12" role="main">
-                      <h1 id="overview" class="page-header"  style="margin-top: 40px; color: #1bee4e;">Simulation</h1>
-                      <h4 style="font-style: italic; font-weight: bold; color: #1BEE4E;">Example models</h4>
-                   </div>
-               </div> <!-- End of page header section -->
+  <!--Page header section-->
   <div class="row">
-       <!--Main content section-->
-               <div class="row" style="background-color: #777;  padding: 25px 18px 90px;">
-                  <div class="col-sm-2">
-                     <h2 style="font-weight: bold; color: white; font-style: italic;">Example model</h2>
-                     <p style="font-size: 18px;">
-                        This is an example model that other users of WBEPT are currently working on.
-                     </p>
-                  </div>
+   <div class="col-md-12" role="main">
+    <h1 id="overview" class="page-header"  style="margin-top: 40px; color: #1bee4e;">Simulation</h1>
+    <div class="jumbotron" >
 
-                  <div class="col-sm-10" style="background-color: white; padding: 10px 18px 50px; color: black; min-height: 450px;">
-        <!--Bread crumbs-->
-        <div class="row" style="margin-bottom: 15px;">
-           <ol class="breadcrumb col-sm-12">
-              <li><a href="../home.html">Home</a></li>
-              <li><a href="simulationWelcome.html">Simulation</a></li>
-              <li class="active">Examples</li>
-           </ol> 
-        </div> <!-- End of bread crumbs -->
-        <h1 class="page-header">Dashboard</h1>
+      <div class="text-center"><img src="../img/accordion/exterior.jpeg" height="400" width="1130"  style="margin: -40px"></div>
+    </div>
 
-        <div class="row">
-           <div class="col-xs-7">
-              <img src="../img/simulationbarchart.png" height="250" width="550">
-              <h4>Energy Use</h4>
-           </div>
-           <div class="col-xs-5">
-              <img src="../img/simulationpiechart.png" height="250" width="400" >
-              <h4>Energy Use Intensity</h4>
-           </div>
-        </div>
-
-        <h2 class="sub-header page-header">Result</h2>
-        <div class="table-responsive">
-           <table class="table">
-              <thead>
-                 <tr>
-                    <th>#</th>
-                    <th>Energy Use (KWh)</th>
-                    <th>EUI (KWh/m2)</th>
-                    <th>Energy Use (KBtu)</th>
-                    <th>EUI (KBtu/ft2)</th>
-                 </tr>
-              </thead>
-              <tbody>
-                 <tr>
-                    <td>Building Total</td>
-                    <td>10.3</td>
-                    <td>20.1</td>
-                    <td>30.2</td>
-                    <td>20.6</td>
-                 </tr>
-                 <tr>
-                    <td>Heating</td>
-                    <td>10.7</td>
-                    <td>36.4</td>
-                    <td>5.5</td>
-                    <td>40.7</td>
-                 </tr>
-                 <tr>
-                    <td>Cooling</td>
-                    <td>70.4</td>
-                    <td>67.4</td>
-                    <td>54.5</td>
-                    <td>20.3</td>
-                 </tr>
-                 <tr>
-                    <td>Fans</td>
-                    <td>75.4</td>
-                    <td>70.6</td>
-                    <td>84.5</td>
-                    <td>93.4</td>
-                 </tr>
-                 <tr>
-                    <td>Pump</td>
-                    <td>50.1</td>
-                    <td>43.2</td>
-                    <td>50.4</td>
-                    <td>67.8</td>
-                 </tr>
-                 <tr>
-                    <td>Int.Light</td>
-                    <td>40.5</td>
-                    <td>57.4</td>
-                    <td>59.4</td>
-                    <td>12.3</td>
-                 </tr>
-                 <tr>
-                    <td>Ext.Light</td>
-                    <td>89.4</td>
-                    <td>57.8</td>
-                    <td>70.6</td>
-                    <td>90.4</td>
-                 </tr>
-              </tbody>
-           </table>
-        </div>
-     </div>
   </div>
+</div> <!-- End of page header section -->
+
+<div class="row">
+ <!--Main content section-->
+ <div class="row" style="background-color: #777;  padding: 25px 18px 120px;">
+  <div class="col-sm-3">
+   <h2 style="font-weight: bold; color: white; font-style: italic;">Example model</h2>
+   <p style="font-size: 18px;">
+    This is an example model that other users of WBEPT are currently working on.
+  </p>
+
+  <div class="easy-tree">
+            <ul>
+               <li>Zone: PLENUM-1</li>
+               <li>Zone: PLENUM-2</li>
+               <li>Zone: PLENUM-1
+                  <ul>
+                     <li>Surface: WALL-1PF</li>
+                     <li>Zone: SPACE1-1
+                        <ul>
+                           <li>Surface: SB10</li>
+                           <li>Surface: SB12</li>
+                           <li>Surface: SB13</li>
+                           <li>Surface: SB14</li>
+                        </ul>
+                     </li>
+                     <li>EZone: SPACE2-1</li>
+                     <li>Zone: SPACE2-3</li>
+                  </ul>
+               </li>
+            </ul>
+         </div>
+</div>
+
+<div class="col-sm-9" style="background-color: white; padding: 10px 18px 50px; color: black; min-height: 450px;">
+  <!--Bread crumbs-->
+  <div class="row" style="margin-bottom: 15px;">
+   <ol class="breadcrumb col-sm-12">
+    <li><a href="../home.html">Home</a></li>
+    <li><a href="simulationWelcome.html">Simulation</a></li>
+    <li class="active">Examples</li>
+  </ol> 
+</div> <!-- End of bread crumbs -->
+<h1 class="page-header">Dashboard</h1>
+
+<div class="row">
+ <div class="col-sm-7">
+  <img src="../img/simulationbarchart.png" height="250" >
+  <h4>Energy Use</h4>
+</div>
+<div class="col-sm-5">
+  <img src="../img/simulationpiechart.png" height="250" >
+  <h4>Energy Use Intensity</h4>
+</div>
+</div>
+
+<h2 class="sub-header page-header">Result</h2>
+<div class="table-responsive">
+ <table class="table">
+  <thead>
+   <tr>
+    <th>#</th>
+    <th>Energy Use (KWh)</th>
+    <th>EUI (KWh/m2)</th>
+    <th>Energy Use (KBtu)</th>
+    <th>EUI (KBtu/ft2)</th>
+  </tr>
+</thead>
+<tbody>
+ <tr>
+  <td>Building Total</td>
+  <td>10.3</td>
+  <td>20.1</td>
+  <td>30.2</td>
+  <td>20.6</td>
+</tr>
+<tr>
+  <td>Heating</td>
+  <td>10.7</td>
+  <td>36.4</td>
+  <td>5.5</td>
+  <td>40.7</td>
+</tr>
+<tr>
+  <td>Cooling</td>
+  <td>70.4</td>
+  <td>67.4</td>
+  <td>54.5</td>
+  <td>20.3</td>
+</tr>
+<tr>
+  <td>Fans</td>
+  <td>75.4</td>
+  <td>70.6</td>
+  <td>84.5</td>
+  <td>93.4</td>
+</tr>
+<tr>
+  <td>Pump</td>
+  <td>50.1</td>
+  <td>43.2</td>
+  <td>50.4</td>
+  <td>67.8</td>
+</tr>
+<tr>
+  <td>Int.Light</td>
+  <td>40.5</td>
+  <td>57.4</td>
+  <td>59.4</td>
+  <td>12.3</td>
+</tr>
+<tr>
+  <td>Ext.Light</td>
+  <td>89.4</td>
+  <td>57.8</td>
+  <td>70.6</td>
+  <td>90.4</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h2 id="overview" class="page-header" >Model</h2>
+<div class="text-center"><img src="../img/sampleidf.png" width="600" height="300" class="img-thumbnail"></div>
+<div class="row well" style="margin: 10px 20px;">
+ <div class="col-lg-6">
+  <p>File Name: Sample.idf</p>
+  <p>Construct Name: ROOF-1</p>
+  <p>Layer-1: BR01</p>
+</div>
+<div class="col-lg-6">
+  <p>Layer-2: IN46</p>
+  <p>Layer-3: WD01</p>
+  <p>Layer-4: IU70</p>
+</div>
+</div>
+
+<h2 id="overview" class="page-header">Substitute</h2>
+<div class="row">
+ <form role="form" class="col-sm-12 form-horizontal" style="margin-top: 13px">
+  <div class="col-sm-3"><div class="form-group">
+   <label for="input-layer" class="control-label">Layer-1</label>
+   <div>
+    <select class="form-control" id="input-type">
+     <option>--Select Material--</option>
+     <option>Sub1</option>
+     <option>Sub2</option>
+     <option>Sub3</option>
+   </select>
+ </div>
+</div></div>
+
+<div class="col-sm-3"><div class="form-group">
+ <label for="input-layer" class="control-label">Layer-2</label>
+ <div>
+  <select class="form-control" id="input-type">
+   <option>--Select Material--</option>
+   <option>Sub1</option>
+   <option>Sub2</option>
+   <option>Sub3</option>
+ </select>
+</div>
+</div></div>
+
+<div class="col-sm-3"><div class="form-group">
+ <label for="input-layer" class="control-label">Layer-3</label>
+ <div>
+  <select class="form-control" id="input-type">
+   <option>--Select Material--</option>
+   <option>Sub1</option>
+   <option>Sub2</option>
+   <option>Sub3</option>
+ </select>
+</div>
+</div></div>
+
+<div class="col-sm-3"><div class="form-group">
+ <label for="input-layer" class="control-label">Layer-4</label>
+ <div>
+  <select class="form-control" id="input-type">
+   <option>--Select Material--</option>
+   <option>Sub1</option>
+   <option>Sub2</option>
+   <option>Sub3</option>
+ </select>
+</div>
+</div></div>
+</form>
+<div class="col-sm-12 pull-right" style="text-align: right; padding-top: 15px;"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#" style="margin: 0px 5px;">
+  <span class="glyphicon glyphicon-send"></span>Substitute
+</button></div>
+</div>
+
+</div>
+</div>
+
+
+
 </div>
 
 <!-- ============================== FOOTER ============================== -->
@@ -213,6 +317,48 @@
     });
   });
 </script>
+
+            <!-- Bootstrap core JavaScript
+            ================================================== -->
+            <script src="../js/jquery-1.11.1.min.js"></script>
+            <script src="../js/bootstrap.js"></script>
+            <script src="../js/jasny-bootstrap.js"></script>
+            <script src="../js/ie10-viewport-bug-workaround.js"></script>
+            <script src="../js/easyTree.js"></script>
+
+
+            <script>
+              window.twttr = (function(d, s, id) {
+                var t, js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id))
+                  return;
+                js = d.createElement(s);
+                js.id = id;
+                js.async = 1;
+                js.src = "https://platform.twitter.com/widgets.js";
+                fjs.parentNode.insertBefore(js, fjs);
+                return window.twttr || (t = {_e: [], ready: function(f) {
+                  t._e.push(f)
+                }});
+              }(document, "script", "twitter-wjs"));
+            </script>
+
+<!-- TreeView JavaScript
+  ================================================== -->
+  <script>
+    (function ($) {
+      function init() {
+        $('.easy-tree').EasyTree({
+          selectable: true,
+          deletable: false,
+          editable: false,
+          addable: false,
+        });
+      }
+
+      window.onload = init();
+    })(jQuery)
+  </script>
 
 </body>
 </html>

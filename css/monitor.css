@@ -1,0 +1,67 @@
+.edison-back {
+  background-color:#ddd;
+}
+
+.edison-check {
+  color: #333;
+  text-align: left;
+  padding-left: 10%;
+  padding-top: 10px;
+  background-color:#fff;
+  padding-bottom: 10px;
+}
+
+.edison-font {
+  font-family: 'Roboto';
+  font-size: 12pt;
+  font-weight: 400;
+  padding-left: 7%;
+}
+
+.edison-subfont {
+  font-family: 'Roboto';
+  font-size: 13pt;
+  font-weight: 400;
+}
+
+.edison-title {
+  font-size: 12pt;
+  font-weight: 300;
+}
+
+.edison-pad {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+
+.edison-checkpad {
+  margin-top: -40px;
+  margin-bottom: -40px;
+}
+
+.edison-dropdown {
+  background-color: #333;
+  font-size: 13pt;
+  font-weight: 400;
+  color: #1bee4e;
+}
+
+.edison-subdrop {
+  padding-left: -40px;
+}
+
+.edison-margin {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+label {
+  font-size: 12pt;
+  padding: 20px 0;
+  width: 100%;
+}
+
+
+
+

@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Whole Building Energy Parametric Analysis Tool - Library</title>
+        <title>Whole Building Energy Parametric Analysis Tool - Interior</title>
 
         <!-- Bootstrap core CSS -->
         <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
@@ -69,77 +69,60 @@
                 <!--Lower half of page-->
                 <div class="row" style="background-color: #777;">
                     <!--Left sidebar-->
-                       <div class="col-md-2" style="padding-left: 0px; padding-right: 0px;">
+                    <div class="col-md-2" style="padding-left: 0px; padding-right: 0px;">
                         <div class="bs-docs-sidebar nav nav-stacked fixed hidden-xs hidden-sm" role="complementary">
-                            <ul class="nav nav-sidebar">
-                                <ul id="tree" class="treeview col-xs-12">
-                                    <li class="expandable">
-                                        <div class="hitarea expandable-hitarea"></div>
-                                        <span id="span_1" class="major">System name</span>
-                                        <ul id="ul_1" class="treeview" style="display: none;">
-                                            <li class="tree-branch expandable lastExpandable">
-                                                <div class="hitarea tree-branch-hitarea expandable-hitarea lastExpandable-hitarea"></div>
-                                                <span id="span_1" style="margin-left: 20px;"><a href="component.html#components">Component 1</a></span>
-                                                <ul id="ul_1_1" style="display: none;">
-                                                    <li class="tree-branch">
-                                                        <label for="BuildingContext_Climate" style="margin-left: 40px;">Material 1</label>
-                                                    </li>
-                                                    <li class="tree-branch">
-                                                        <label for="BuildingContext_BuildingInformation" style="margin-left: 40px;">Material 2</label>
-                                                    </li>
-                                                    <li class="tree-branch">
-                                                        <label for="BuildingContext_BuildingClassification" style="margin-left: 40px;">Material 3</label>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-										<ul id="ul_1" class="treeview" style="display: none;">
-                                            <li class="tree-branch expandable lastExpandable">
-                                                <div class="hitarea tree-branch-hitarea expandable-hitarea lastExpandable-hitarea"></div>
-                                                <span id="span_1" style="margin-left: 20px;"><a href="component.html#components">Component 2</a></span>
-                                                <ul id="ul_1_1" style="display: none;">
-                                                    <li class="tree-branch">
-                                                        <label for="BuildingContext_Climate" style="margin-left: 40px;">Material 1</label>
-                                                    </li>
-                                                    <li class="tree-branch">
-                                                        <label for="BuildingContext_BuildingInformation" style="margin-left: 40px;">Material 2</label>
-                                                    </li>
-                                                    <li class="tree-branch">
-                                                        <label for="BuildingContext_BuildingClassification" style="margin-left: 40px;">Material 3</label>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                           
-                                        </ul>
-                                    </li>
-                             </ul>
+                            <ul class="nav bs-docs-sidenav">
+                                <li>
+                                    <a href="system-interior.html">HVAC Distribution and Control</a>
+                                    <ul class="nav sidenav-subgroup">
+                                        <li><a href="component-interior.html">Fan</a></li>
+                                        <li><a href="component-interior.html#pump">Pump</a></li>
+                                        <li><a href="component-interior.html#control">HVAC Control</a></li>
+                                        <li><a href="component-interior.html#zone">Zone Terminal Units</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="system-interior.html#heating">HVAC Heating Systems</a>
+                                    <ul class="nav sidenav-subgroup">
+                                        <li><a href="component-interior2.html">HVAC Heating Plant Side Equipment</a></li>
+                                        <li><a href="component-interior2.html#zone">Zone Local Heating Units</a></li>
+                                        <li><a href="component-interior2.html#unitary">Unitary Heating Units</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </div>
                     </div> <!-- End of left sidebar -->
 
                     <!--Main content div-->
-                    <div class="col-md-10 bs-docs-section" style="background-color: white; color: black; padding-left: 35px; padding-top: 10px; padding-bottom: 20px;">
+                    <div class="col-md-10 bs-docs-section" style="background-color: white; color: black; font-size: 18px; padding-left: 35px; padding-top: 10px; padding-bottom: 100px;">
                         <!--Bread crumbs-->
-                        <div id="system"; class="row" style="margin-bottom: 15px;">
+                        <div class="row">
                             <ol class="breadcrumb col-sm-12">
                                 <li><a href="../home.html">Home</a></li>
-								<li><a href="library.html">Library</a></li>
-                                <li class="active">System Name</li>
+                                <li><a href="library.html">Library</a></li>
+                                <li><a href="interiors.html">Interior</a></li>
+                                <li class="active">System</li>
                             </ol> 
                         </div>
                         <!-- End of bread crumbs -->
 
                         <!--Start of main content-->
-                        <h3>Systems name</h3>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <p>
-                                    <img src="../img/systems/EnvelopeSystems.jpg"class="thumbnail; img-responsive">
-                                    <img src="../img/systems/EnvelopeSystems2.jpg"class="thumbnail; img-responsive">
-                                    </p>
-                                </div>
-                            </div>
+                        <h3>HVAC Distribution and Control</h3>
+                        <div class="row">
+                            <div class="col-md-4"><a href="component-interior.html" class="thumbnail"><img src="../img/glass/glass1.jpg"><div class="caption" style="text-align: center;">Fan</div></a></div>
+                            <div class="col-md-4"><a href="component-interior.html#pump" class="thumbnail"><img src="../img/glass/glass2.jpg"><div class="caption" style="text-align: center;">Pump</div></a></div>
+                            <div class="col-md-4"><a href="component-interior.html#control" class="thumbnail"><img src="../img/glass/glass3.jpg"><div class="caption" style="text-align: center;">HVAC Control</div></a></div>
+                            <div class="col-md-4"><a href="component-interior.html#zone" class="thumbnail"><img src="../img/glass/glass4.jpg"><div class="caption" style="text-align: center;">Zone Terminal Units</div></a></div>
+                        </div>
+                        
+                        <h3 id="heating" style="padding-top: 60px">HVAC Heating Systems</h3>
+                        <div class="row">
+                            <div class="col-md-4"><a href="component-interior2.html" class="thumbnail"><img src="../img/glass/glass1.jpg"><div class="caption" style="text-align: center;">HVAC Heating Plant Side Equipment</div></a></div>
+                            <div class="col-md-4"><a href="component-interior2.html#zone" class="thumbnail"><img src="../img/glass/glass2.jpg"><div class="caption" style="text-align: center;">Zone Local Heating Units</div></a></div>
+                            <div class="col-md-4"><a href="component-interior2.html#unitary" class="thumbnail"><img src="../img/glass/glass3.jpg"><div class="caption" style="text-align: center;">Unitary Heating Units</div></a></div>                          
+                            <div class="col-md-4"><a href="component-interior2.html#zone" class="thumbnail"><img src="../img/glass/glass2.jpg"><div class="caption" style="text-align: center;">Component4</div></a></div>
+                            <div class="col-md-4"><a href="component-interior2.html#unitary" class="thumbnail"><img src="../img/glass/glass3.jpg"><div class="caption" style="text-align: center;">Component5</div></a></div>                                                  
+                        </div>
                     </div> <!-- End of main content div -->
                 </div>
                 <!-- End of lower half of page -->

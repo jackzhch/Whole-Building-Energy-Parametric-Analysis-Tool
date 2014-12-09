@@ -67,27 +67,38 @@
   <div class="row">
    <div class="col-md-12" role="main">
     <h1 id="overview" class="page-header"  style="margin-top: 40px; color: #1bee4e;">Simulation</h1>
-    <div class="jumbotron" >
-
-      <div class="text-center"><img src="../img/accordion/exterior.jpeg" height="400" width="1130"  style="margin: -40px"></div>
-    </div>
-
   </div>
 </div> <!-- End of page header section -->
 
 <div class="row">
  <!--Main content section-->
- <div class="row" style="background-color: #777;  padding: 25px 18px 120px;">
+ <div class="row" style="background-color: #777;  padding-bottom: 80px; margin: 0px;">
   <div class="col-sm-3">
-   <h2 style="font-weight: bold; color: white; font-style: italic;">Example model</h2>
+   <h2 style="font-weight: bold; color: white; font-style: italic;">Building navigator</h2>
    <p style="font-size: 18px;">
-    This is an example model that other users of WBEPT are currently working on.
+    Click on the building below to navigate to that zone.
   </p>
+  <img src="../img/bldg_navigator.jpg" class="img-responsive img-thumbnail" alt="" style="border: 3px solid black;">
 
-  <div class="easy-tree">
+</div>
+
+<div class="col-sm-9" style="background-color: white; padding: 10px 18px 50px; color: black; min-height: 450px;">
+  <!--Bread crumbs-->
+  <div class="row" style="margin: 15px;">
+   <ol class="breadcrumb col-sm-12">
+    <li><a href="../home.html">Home</a></li>
+    <li><a href="simulationWelcome.html">Simulation</a></li>
+    <li class="active">Examples</li>
+  </ol> 
+</div> <!-- End of bread crumbs -->
+
+<h2 id="overview" class="page-header" >Building 101</h2>
+<div class="row" style="padding: 0px; border: 1px solid black; margin: 0px 20px;">
+<div class="col-sm-8 text-center"><img src="../img/sampleidf.png" width="600" height="300" class="img-responsive"></div>
+<div class="col-sm-4" style="background-color: black;">
+   <div class="easy-tree">
             <ul>
                <li>Zone: PLENUM-1</li>
-               <li>Zone: PLENUM-2</li>
                <li>Zone: PLENUM-1
                   <ul>
                      <li>Surface: WALL-1PF</li>
@@ -95,45 +106,107 @@
                         <ul>
                            <li>Surface: SB10</li>
                            <li>Surface: SB12</li>
-                           <li>Surface: SB13</li>
-                           <li>Surface: SB14</li>
                         </ul>
                      </li>
                      <li>EZone: SPACE2-1</li>
-                     <li>Zone: SPACE2-3</li>
                   </ul>
                </li>
             </ul>
          </div>
+</div></div>
+<div class="row well" style="margin: 10px 20px;">
+ <div class="col-lg-6">
+  <p>File Name: Sample.idf</p>
+</div>
+<div class="col-lg-6">
+  <p>Construct Name: ROOF-1</p>
+</div>
 </div>
 
-<div class="col-sm-9" style="background-color: white; padding: 10px 18px 50px; color: black; min-height: 450px;">
-  <!--Bread crumbs-->
-  <div class="row" style="margin-bottom: 15px;">
-   <ol class="breadcrumb col-sm-12">
-    <li><a href="../home.html">Home</a></li>
-    <li><a href="simulationWelcome.html">Simulation</a></li>
-    <li class="active">Examples</li>
-  </ol> 
-</div> <!-- End of bread crumbs -->
-<h1 class="page-header">Dashboard</h1>
+<div class="row">
+ <form role="form" class="col-sm-12 form-horizontal" style="margin-top: 13px">
+  <div class="col-sm-3"><div class="form-group">
+   <label for="input-layer" class="control-label">Layer-1</label>
+   <div>
+    <select class="form-control" id="input-type">
+     <option>--Select Material--</option>
+     <option>Sub1</option>
+     <option>Sub2</option>
+     <option>Sub3</option>
+   </select>
+ </div>
+</div></div>
+
+<div class="col-sm-3"><div class="form-group">
+ <label for="input-layer" class="control-label">Layer-2</label>
+ <div>
+  <select class="form-control" id="input-type">
+   <option>--Select Material--</option>
+   <option>Sub1</option>
+   <option>Sub2</option>
+   <option>Sub3</option>
+ </select>
+</div>
+</div></div>
+
+<div class="col-sm-3"><div class="form-group">
+ <label for="input-layer" class="control-label">Layer-3</label>
+ <div>
+  <select class="form-control" id="input-type">
+   <option>--Select Material--</option>
+   <option>Sub1</option>
+   <option>Sub2</option>
+   <option>Sub3</option>
+ </select>
+</div>
+</div></div>
+
+<div class="col-sm-3"><div class="form-group">
+ <label for="input-layer" class="control-label">Layer-4</label>
+ <div>
+  <select class="form-control" id="input-type">
+   <option>--Select Material--</option>
+   <option>Sub1</option>
+   <option>Sub2</option>
+   <option>Sub3</option>
+ </select>
+</div>
+</div></div>
+</form>
+<div class="col-sm-12 pull-right" style="text-align: right; padding-top: 15px;"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#" style="margin: 0px 5px;">
+  <span class="glyphicon glyphicon-send"></span>Substitute
+</button></div>
+</div>
+
+<h1 class="page-header">Energy Profile Information</h1>
 
 <div class="row">
  <div class="col-sm-7">
-  <img src="../img/simulationbarchart.png" height="250" >
-  <h4>Energy Use</h4>
+    <div class="panel panel-success">
+       <div class="panel-heading">
+         <h4>Energy Use</h4>
+       </div>
+       <div class="panel-body">
+         <img src="../img/simulationbarchart.png" class="img-responsive">
+       </div>
+    </div>
 </div>
-<div class="col-sm-5">
-  <img src="../img/simulationpiechart.png" height="250" >
-  <h4>Energy Use Intensity</h4>
+ <div class="col-sm-5">
+    <div class="panel panel-success">
+       <div class="panel-heading">
+         <h4>Energy Use Intensity</h4>
+       </div>
+       <div class="panel-body">
+         <img src="../img/simulationpiechart.png" class="img-responsive">
+       </div>
+    </div>
 </div>
 </div>
 
-<h2 class="sub-header page-header">Result</h2>
 <div class="table-responsive">
- <table class="table">
+ <table class="table table-hover">
   <thead>
-   <tr>
+   <tr class="success">
     <th>#</th>
     <th>Energy Use (KWh)</th>
     <th>EUI (KWh/m2)</th>
@@ -195,81 +268,8 @@
 </table>
 </div>
 
-<h2 id="overview" class="page-header" >Model</h2>
-<div class="text-center"><img src="../img/sampleidf.png" width="600" height="300" class="img-thumbnail"></div>
-<div class="row well" style="margin: 10px 20px;">
- <div class="col-lg-6">
-  <p>File Name: Sample.idf</p>
-  <p>Construct Name: ROOF-1</p>
-  <p>Layer-1: BR01</p>
-</div>
-<div class="col-lg-6">
-  <p>Layer-2: IN46</p>
-  <p>Layer-3: WD01</p>
-  <p>Layer-4: IU70</p>
 </div>
 </div>
-
-<h2 id="overview" class="page-header">Substitute</h2>
-<div class="row">
- <form role="form" class="col-sm-12 form-horizontal" style="margin-top: 13px">
-  <div class="col-sm-3"><div class="form-group">
-   <label for="input-layer" class="control-label">Layer-1</label>
-   <div>
-    <select class="form-control" id="input-type">
-     <option>--Select Material--</option>
-     <option>Sub1</option>
-     <option>Sub2</option>
-     <option>Sub3</option>
-   </select>
- </div>
-</div></div>
-
-<div class="col-sm-3"><div class="form-group">
- <label for="input-layer" class="control-label">Layer-2</label>
- <div>
-  <select class="form-control" id="input-type">
-   <option>--Select Material--</option>
-   <option>Sub1</option>
-   <option>Sub2</option>
-   <option>Sub3</option>
- </select>
-</div>
-</div></div>
-
-<div class="col-sm-3"><div class="form-group">
- <label for="input-layer" class="control-label">Layer-3</label>
- <div>
-  <select class="form-control" id="input-type">
-   <option>--Select Material--</option>
-   <option>Sub1</option>
-   <option>Sub2</option>
-   <option>Sub3</option>
- </select>
-</div>
-</div></div>
-
-<div class="col-sm-3"><div class="form-group">
- <label for="input-layer" class="control-label">Layer-4</label>
- <div>
-  <select class="form-control" id="input-type">
-   <option>--Select Material--</option>
-   <option>Sub1</option>
-   <option>Sub2</option>
-   <option>Sub3</option>
- </select>
-</div>
-</div></div>
-</form>
-<div class="col-sm-12 pull-right" style="text-align: right; padding-top: 15px;"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#" style="margin: 0px 5px;">
-  <span class="glyphicon glyphicon-send"></span>Substitute
-</button></div>
-</div>
-
-</div>
-</div>
-
-
 
 </div>
 

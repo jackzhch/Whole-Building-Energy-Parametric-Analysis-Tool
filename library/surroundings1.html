@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Whole Building Energy Parametric Analysis Tool - Library</title>
+
+        <!-- Bootstrap core CSS -->
+        <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+        <link href="../css/bootstrap.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/treeview.css">
+        <link rel="stylesheet" href="../css/ToolSelection.css">
+        <link href="../css/familytree.css" rel="stylesheet" type="text/css">
+        <!-- Custom styles for this template -->
+        <link href="../css/custom.css" rel="stylesheet">
+
+        <!--Font style sheets-->
+        <link href="../css/fonts.css" rel="stylesheet" type="text/css">
+        <link href='http://fonts.googleapis.com/css?family=Bitter:400italic' rel='stylesheet' type='text/css'>
+
+    </head>
+    <body>
+        <div>
+            <!--<%@ include file="header.html" %>-->
+            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="navbar-brand" href="../home.html"><img src="../img/WBEPT_logo1.png" alt="WBEPTlogo" style="max-height: 45px;"></a>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="../home.html"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+                            <li class="active"><a href="library.html"><span class="glyphicon glyphicon-book"></span>Library</a></li>
+                            <li><a href="../simulation/simulationWelcome.html"><span class="glyphicon glyphicon-pencil"></span>Simulation</a></li>
+                            <li><a href="../monitor.html"><span class="glyphicon glyphicon-stats"></span>Monitor</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav> <!-- End of navbar -->
+            
+            <div style="margin-top: 10px;">            
+               <!--Page header section-->
+               <div class="col-sm-12" style="padding: 0px; background-image: url('../img/accordion/exterior.jpeg'); background-size: cover;">
+                  <div class="col-sm-12" style="background-color: rgba(0,0,0,0.7);"><h1 id="overview" class="page-header"  style="margin-top: 40px; color: #1bee4e;">Surroundings</h1>
+				  </div>
+               </div> <!-- End of page header section -->
+
+               <!--Main content div-->
+               <div class="col-sm-12" style="background-color: #777; padding-right: 0px;">
+                  <!-- Left sidebar -->
+                  <div class="col-sm-2">
+                     <h2 style="font-weight: bold; color: white; font-style: italic;">Weather information</h2>
+                     <p style="font-size: 18px;">
+                        Enter the address here to get a weather report and panoroma of the surroundings
+                     </p>
+					 <div>
+                    <textarea style="color: black;"name='new_address' class="address">5000 Forbes Avenue, Pittsburgh, PA</textarea>					
+					</div>
+					<div>
+                   <button type="button" class="btn btn-success" data-toggle="modal" data-target="#submitModal" style="margin: 10px 10px;"> <span class="glyphicon glyphicon-globe"></span>Retrieve context</button>
+					</div>
+					<div>
+                   <button type="button" class="btn btn-success" data-toggle="modal" data-target="#submitModal" style="margin: 10px 10px;"> <span class="glyphicon glyphicon-save"></span>Download weather file</button>
+					</div>
+                  </div> <!-- End of sidebar -->
+                  <!-- Start of white section -->
+                  <div class="col-sm-10 bs-docs-section" style="background-color: white; color: black; padding: 15px 20px 50px;">
+                     <!--Bread crumbs-->
+                     <div class="row" style="margin: 15px;">
+                        <ol class="breadcrumb col-sm-12">
+                           <li><a href="../home.html">Home</a></li>
+                           <li><a href="library.html">Library</a></li>
+                           <li class="active">Surroundings</li>
+                        </ol> 
+                     </div> <!-- End of bread crumbs -->
+                     <!-- Start of cities -->
+                     <div class="row" style="background-color: white; padding-top: 25px; padding-bottom: 10px;">
+                        <div class="col-sm-4">
+						<img src="../img/currentweather.jpg" alt="" class="img-responsive"/>
+						</div>						
+						<div class="col-sm-8">
+                        <iframe class="col-sm-12" height=445px width=100% frameBorder="0" src="googlemaps.html?add=5000 Forbes Avenue, Pittsburgh, PA"></iframe><!-- End of cities -->
+						</div>
+					 
+                     </div> 
+					 
+                  </div> <!-- End of white section -->
+               </div>
+            </div> <!-- End of lower half of page -->
+                
+                <!-- ============================== FOOTER ============================== -->
+                <div class="navbar-fixed-bottom" style="padding-bottom: 10px;background-color:black">
+                    <div class="footer-bar" style="height: 15px;"></div>
+                    <section class="footer">
+                        <div class="container">
+                            <div class="col-lg-3 col-sm-9 col-xs-9" style="padding-left: 35px; line-height: 2;">
+                                <a href="../about.html" class="btn btn-xs btn-success"><span class="glyphicon glyphicon-user"></span>About us</a>
+                                <a href="../contact.html" class="btn btn-xs btn-success"><span class="glyphicon glyphicon-envelope"></span>Contact us</a>
+                            </div>
+                            <div class="col-lg-7 footer-center text-center">
+                                <a href="http://www.cmu.edu"><img src="../img/cmulogo.png" alt="CMU"></a>
+                                <a href="http://www.cbei.psu.edu/"><img src="../img/eebhublogo.png" alt="eebhub"></a>
+                                <a href="http://www.cbei.psu.edu/"><img src="../img/Sel_Title.png" alt="cBEI"></a>
+                                <a href="http://www.energy.gov"><img src="../img/doe-wide-logo.png" alt="DOE"></a>
+                            </div>
+                            <div class="col-lg-2 text-right">
+                                <a target="_blank" href="https://www.facebook.com/pages/Carnegie-Mellon-School-of-Architecture/286447510184">
+                                    <img src="https://d2k0u7ej7vpxec.cloudfront.net/static/img/homepage_v3/facebook.svg" alt="Follow CMU School of Architecture on Facebook"/>
+                                </a>
+                                <a target="_blank" href="https://twitter.com/cmusoarch">
+                                    <img src="https://d2k0u7ej7vpxec.cloudfront.net/static/img/homepage_v3/twitter.svg" alt="Follow CMU School of Architecture on Twitter"/>
+                                </a>
+                                <a target="_blank" href="https://www.linkedin.com/edu/carnegie-mellon-university-19232">
+                                    <img
+                                        src="https://d2k0u7ej7vpxec.cloudfront.net/static/img/homepage_v3/linkedin.svg" alt="Follow CMU on Linkedin"/>
+                                </a>
+                                <a target="_blank" href="https://plus.google.com/+carnegiemellon/">
+                                    <img src="https://d2k0u7ej7vpxec.cloudfront.net/static/img/homepage_v3/google_plus.svg" alt="Follow CMU on Google+"/>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!-- End of footer -->
+                <!-- ============SEARCH MODAL=========== -->
+                <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                <h4 class="modal-title" id="myModalLabel">Search</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form action="#">
+                                    <div class="form-group col-sm-12">
+                                        <label for="searchterm">Material name:</label>
+                                        <input type="text" class="form-control" id="searchterm" placeholder="Enter name of material">
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                        <label for="category">Category:</label>
+                                        <select class="form-control" id="category">
+                                            <option>Select material category</option>
+                                            <option>Material definition</option>
+                                            <option>Opaque envelope component definition type</option>
+                                            <option>Window definition type</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                        <label for="subcategory">Subcategory:</label>
+                                        <select class="form-control" id="subcategory">
+                                            <option>Select material subcategory</option>
+                                            <option>Mass material</option>
+                                            <option>Infrared transparent material</option>
+                                            <option>Air gap material</option>
+                                            <option>Roof vegetation material</option>
+                                            <option>Don't know material type</option>
+                                        </select>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="../comingsoon.html" class="btn btn-success center-block" style="margin-top: 25px; width: 130px;"><span class="glyphicon glyphicon-search"></span>Search</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+ 
+        </div>
+        <!-- End of SEARCH MODAL -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="../js/bootstrap.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="../js/ie10-viewport-bug-workaround.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('li img').on('click', function() {
+                    var src = $(this).attr('src');
+                    var img = '<img src="' + src + '" class="img-responsive"/>';
+
+                    //start of new code new code
+                    var index = $(this).parent('li').index();
+
+                    var html = '';
+                    html += img;
+                    html += '<div style="height:25px;clear:both;display:block;">';
+                    html += '<a class="controls next" href="' + (index + 2) + '">next &raquo;</a>';
+                    html += '<a class="controls previous" href="' + (index) + '">&laquo; prev</a>';
+                    html += '</div>';
+
+                    $('#myModal').modal();
+                    $('#myModal').on('shown.bs.modal', function() {
+                        $('#myModal .modal-body').html(html);
+                        //new code
+                        $('a.controls').trigger('click');
+                    })
+                    $('#myModal').on('hidden.bs.modal', function() {
+                        $('#myModal .modal-body').html('');
+                    });
+                });
+            })
+
+            //new code
+            $(document).on('click', 'a.controls', function() {
+                var index = $(this).attr('href');
+                var src = $('ul.row li:nth-child(' + index + ') img').attr('src');
+
+                $('.modal-body img').attr('src', src);
+
+                var newPrevIndex = parseInt(index) - 1;
+                var newNextIndex = parseInt(newPrevIndex) + 2;
+
+                if ($(this).hasClass('previous')) {
+                    $(this).attr('href', newPrevIndex);
+                    $('a.next').attr('href', newNextIndex);
+                } else {
+                    $(this).attr('href', newNextIndex);
+                    $('a.previous').attr('href', newPrevIndex);
+                }
+
+                var total = $('ul.row li').length + 1;
+                //hide next button
+                if (total === newNextIndex) {
+                    $('a.next').hide();
+                } else {
+                    $('a.next').show()
+                }
+                //hide previous button
+                if (newPrevIndex === 0) {
+                    $('a.previous').hide();
+                } else {
+                    $('a.previous').show()
+                }
+
+
+                return false;
+            });
+        </script>
+        <script type="text/javascript" src="../js/jquery.treeview.js"></script>
+        <script type="text/javascript" src="../js/ToolSelection.js"></script>
+        <script src='../js/Chart.min.js'></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("#instruction").click(function() {
+                    window.open('library/instruction.pdf');
+                });
+            });
+        </script>
+        <script>
+
+            // pie chart data
+            var pieData = [
+                {
+                    value: 20,
+                    color: "#878BB6"
+                },
+                {
+                    value: 40,
+                    color: "#4ACAB4"
+                },
+                {
+                    value: 10,
+                    color: "#FF8153"
+                },
+                {
+                    value: 30,
+                    color: "#FFEA88"
+                }
+            ];
+            // pie chart options
+            var pieOptions = {
+                segmentShowStroke: false,
+                animateScale: true
+            }
+            // get pie chart canvas
+            var countries = document.getElementById("countries").getContext("2d");
+            // draw pie chart
+            new Chart(countries).Pie(pieData, pieOptions);
+            // bar chart data
+            var barData = {
+                labels: ["January", "February", "March", "April", "May", "June"],
+                datasets: [
+                    {
+                        fillColor: "#48A497",
+                        strokeColor: "#48A4D1",
+                        data: [456, 479, 324, 569, 702, 600]
+                    },
+                    {
+                        fillColor: "rgba(73,188,170,0.4)",
+                        strokeColor: "rgba(72,174,209,0.4)",
+                        data: [364, 504, 605, 400, 345, 320]
+                    }
+                ]
+            }
+            // get bar chart canvas
+            var income = document.getElementById("income").getContext("2d");
+            // draw bar chart
+            new Chart(income).Bar(barData);
+        </script>
+    </body>
+</html>

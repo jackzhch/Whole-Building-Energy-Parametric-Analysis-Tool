@@ -49,29 +49,37 @@
                <!--Page header section-->
                <div class="col-sm-12" style="padding: 0px; background-image: url('../img/accordion/exterior.jpeg'); background-size: cover;">
                   <div class="col-sm-12" style="background-color: rgba(0,0,0,0.7);"><h1 id="overview" class="page-header"  style="margin-top: 40px; color: #1bee4e;">Surroundings</h1>
-				  </div>
+                  <h4 style="font-style: italic; font-weight: bold; color: #1BEE4E;">Weather file database</h4>
+                  <div class="col-md-9">
+                     <blockquote>
+                        <p>
+                           In this section of the library you can browse and download weather files related to the
+                           location of your building. This weather data has been collected from different weather
+                           agencies and will serve as input to provide the appropriate context for 
+                           your whole building model.
+                        </p>
+                     </blockquote>
+                  </div> 
+                  <div class="col-md-3">
+                     <button type="button" class="btn btn-success center-block" data-toggle="modal" data-target="#searchModal" style="width: 130px;">
+                        <span class="glyphicon glyphicon-search"></span>Search
+                     </button>
+                     <a href="datainput.html" class="btn btn-success center-block" style="margin-top: 25px; width: 130px;"><span class="glyphicon glyphicon-pencil"></span>Data input</a>
+                  </div></div>
                </div> <!-- End of page header section -->
 
                <!--Main content div-->
                <div class="col-sm-12" style="background-color: #777; padding-right: 0px;">
                   <!-- Left sidebar -->
-                  <div class="col-sm-2">
-                     <h2 style="font-weight: bold; color: white; font-style: italic;">Weather information</h2>
+                  <div class="col-sm-3">
+                     <h2 style="font-weight: bold; color: white; font-style: italic;">Weather file database</h2>
                      <p style="font-size: 18px;">
-                        Enter the address here to get a weather report and panoroma of the surroundings
+                        Select the state and city where your building's model is located. Then hit 'Download file' to get
+                        the latest weather file.
                      </p>
-					 <div>
-                    <textarea style="color: black;"name='new_address' class="address">5000 Forbes Avenue, Pittsburgh, PA</textarea>					
-					</div>
-					<div>
-                   <button type="button" class="btn btn-success" data-toggle="modal" data-target="#submitModal" style="margin: 10px 10px;"> <span class="glyphicon glyphicon-globe"></span>Retrieve context</button>
-					</div>
-					<div>
-                   <button type="button" class="btn btn-success" data-toggle="modal" data-target="#submitModal" style="margin: 10px 10px;"> <span class="glyphicon glyphicon-save"></span>Download weather file</button>
-					</div>
                   </div> <!-- End of sidebar -->
                   <!-- Start of white section -->
-                  <div class="col-sm-10 bs-docs-section" style="background-color: white; color: black; padding: 15px 20px 50px;">
+                  <div class="col-sm-9 bs-docs-section" style="background-color: white; color: black; padding: 15px 20px 50px;">
                      <!--Bread crumbs-->
                      <div class="row" style="margin: 15px;">
                         <ol class="breadcrumb col-sm-12">
@@ -81,16 +89,96 @@
                         </ol> 
                      </div> <!-- End of bread crumbs -->
                      <!-- Start of cities -->
-                     <div class="row" style="background-color: white; padding-top: 25px; padding-bottom: 10px;">
-                        <div class="col-sm-4">
-						<img src="../img/currentweather.jpg" alt="" class="img-responsive"/>
-						</div>						
-						<div class="col-sm-8">
-                        <iframe class="col-sm-12" height=445px width=100% frameBorder="0" src="googlemaps.html?add=5000 Forbes Avenue, Pittsburgh, PA"></iframe><!-- End of cities -->
-						</div>
-					 
-                     </div> 
-					 
+                     <div class="row" style="background-color: white; padding-top: 25px; padding-bottom: 90px;">
+                        <div class="col-sm-9"><form role="form" class="form-horizontal">
+                           <div class="form-group">
+                              <label for="state" class="control-label col-sm-4">Select state:</label>
+                              <div class="col-sm-6">
+                                 <select class="form-control" id="state">
+                                    <option>--Select a state--</option>
+                                    <option value="AL">Alabama</option>
+                                    <option value="AK">Alaska</option>
+                                    <option value="AZ">Arizona</option>
+                                    <option value="AR">Arkansas</option>
+                                    <option value="CA">California</option>
+                                    <option value="CO">Colorado</option>
+                                    <option value="CT">Connecticut</option>
+                                    <option value="DE">Delaware</option>
+                                    <option value="DC">District Of Columbia</option>
+                                    <option value="FL">Florida</option>
+                                    <option value="GA">Georgia</option>
+                                    <option value="HI">Hawaii</option>
+                                    <option value="ID">Idaho</option>
+                                    <option value="IL">Illinois</option>
+                                    <option value="IN">Indiana</option>
+                                    <option value="IA">Iowa</option>
+                                    <option value="KS">Kansas</option>
+                                    <option value="KY">Kentucky</option>
+                                    <option value="LA">Louisiana</option>
+                                    <option value="ME">Maine</option>
+                                    <option value="MD">Maryland</option>
+                                    <option value="MA">Massachusetts</option>
+                                    <option value="MI">Michigan</option>
+                                    <option value="MN">Minnesota</option>
+                                    <option value="MS">Mississippi</option>
+                                    <option value="MO">Missouri</option>
+                                    <option value="MT">Montana</option>
+                                    <option value="NE">Nebraska</option>
+                                    <option value="NV">Nevada</option>
+                                    <option value="NH">New Hampshire</option>
+                                    <option value="NJ">New Jersey</option>
+                                    <option value="NM">New Mexico</option>
+                                    <option value="NY">New York</option>
+                                    <option value="NC">North Carolina</option>
+                                    <option value="ND">North Dakota</option>
+                                    <option value="OH">Ohio</option>
+                                    <option value="OK">Oklahoma</option>
+                                    <option value="OR">Oregon</option>
+                                    <option value="PA">Pennsylvania</option>
+                                    <option value="RI">Rhode Island</option>
+                                    <option value="SC">South Carolina</option>
+                                    <option value="SD">South Dakota</option>
+                                    <option value="TN">Tennessee</option>
+                                    <option value="TX">Texas</option>
+                                    <option value="UT">Utah</option>
+                                    <option value="VT">Vermont</option>
+                                    <option value="VA">Virginia</option>
+                                    <option value="WA">Washington</option>
+                                    <option value="WV">West Virginia</option>
+                                    <option value="WI">Wisconsin</option>
+                                    <option value="WY">Wyoming</option>
+                                 </select>
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label for="cities" class="control-label col-sm-4">Select a city</label>
+                              <div class="col-sm-6">
+                                 <select id="cities" class="form-control">
+                                    <option>--Select a city--</option>
+                                    <option>Anniston</option>
+                                    <option>Auburn</option>
+                                    <option>Birmingham</option>
+                                    <option>Dothan</option>
+                                    <option>Fort Rucker - Cairns Field</option>
+                                    <option>Gadsen</option>
+                                    <option>Huntsville</option>
+                                    <option>Maxwell</option>
+                                    <option>Mobile</option>
+                                    <option>Montgomery - Dannelly Field</option>
+                                    <option>Muscle Shoals</option>
+                                    <option>Troy Air Field</option>
+                                    <option>Tuscaloosa</option>
+                                 </select>
+                              </div>
+                           </div>
+                        <div class="col-sm-10 text-right"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#submitModal" style="margin: 0px 5px;">
+                           <span class="glyphicon glyphicon-save"></span>Download file
+                        </button></div>
+                        </form></div>
+                     <div class="col-sm-3">
+                        <img src="../img/weather.jpg" alt="" class="img-responsive"/>
+                     </div>
+                     </div> <!-- End of cities -->
                   </div> <!-- End of white section -->
                </div>
             </div> <!-- End of lower half of page -->
